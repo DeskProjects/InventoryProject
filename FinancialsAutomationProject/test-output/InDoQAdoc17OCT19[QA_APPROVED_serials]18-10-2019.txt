@@ -1,0 +1,5 @@
+ProductId,Batch,Serial
+ERP17OCT19S3,Batch,Esr5
+ERP17OCT19S3,Batch,Esr6
+ERP17OCT19BS4,BatchSerial,Esr5
+ERP17OCT19BS4,BatchSerial,Esr6

@@ -1,0 +1,34 @@
+ClickOnARFQ=//span[text()='Create Asset RFQ']
+CreateNew=//button[text()='Create New']
+SequenceFormat=//input[@name='sequenceformat']/following::input[1]
+RFQNo=//input[@name='number']
+Vendor=//div[@id='northFormassetrequestforquotation']/div/div/form/div/div/div/div[1]/div/div/div/div[1]/div/div/div[4]/label/following::div[1]/div/input[2]
+Memo=//textarea[@name='memo']
+AssetGroup=//div[@id='assetRequisitioneditproductdetailsgrid']/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[5]/div
+SelectG=//input[@name='productname']
+ADescription=//div[@id='assetRequisitioneditproductdetailsgrid']/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[8]/div
+AssetGroup1=//div[@id='assetrequestforquotationeditproductdetailsgrid']/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[5]/div
+ADescription1=//div[@id='assetrequestforquotationeditproductdetailsgrid']/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[8]/div
+View1=//div[@id='assetrequestforquotationeditproductdetailsgrid']/div/div/div/div[1]/div[2]/div[1]/div[1]/table/tbody/tr/td[36]/div/div
+AssetID=//div[text()='Asset Id']//following::div[26]
+AADescription=//div[text()='Description']//following::td[22]
+SaveDetail=//span[text()='Asset Details']/ancestor::div[4]/following::div[1]/div[2]/div/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+CrossSymbol=//li[@id='as__assetRequestForQuotation']//following::li[1]/a[1]
+QuickSearch=//*[@id='assetRequestForQuotation']//following::div[20]/div[1]/table/tbody/tr/td[1]/input
+CheckBox=//*[@id='assetRequestForQuotation']//following::div[35]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div/following::div[5]/div
+Delete=//button[text()='Delete']
+DeleteP=//a[@class='x-menu-focus']/following::a[2]
+Yes=//button[text()='Yes']
+Ok=//button[text()='OK']
+Copy=//button[text()='Copy']
+AssetGroup2=//*[text()='Asset Group']//following::div[81]/table/tbody/tr/td[5]
+View2=//*[@title='View']/ancestor::div[3]/div[1]//*[@title='View']
+AssetID1=//div[text()='Asset Id']//following::div[26]
+AssetID2=//div[text()='Asset Id']//following::div[22]/div[1]/div/table/tbody/tr/td[2]/div
+View2=//*[@title='View']/ancestor::div[3]/div[1]//*[@title='View']
+View3=//*[@title='View']/ancestor::div[3]/div[2]//*[@title='View']
+ClickOnARFQR=//*[text()='Asset RFQ List']
+Fetch=//button[text()='Fetch']
+QuickSearch=//input[@id='quickSearch88assetRequestForQuotationReport']
+CheckBox=//div[@id='gridmsg88assetRequestForQuotation']/div/div/div/div[1]/div[1]/div[2]/following::div[1]/div/div/table/tbody/tr[1]/td[1]/div/div
+Memo=//*[@id='gridmsg88assetRequestForQuotation']//*[text()='Memo']/following::div[63]

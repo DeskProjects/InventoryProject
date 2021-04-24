@@ -1,0 +1,79 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import krawler.erp.UserPermission.UserAdministrationMiscellaneous;
+import krawler.erp.UserPermission.UserAdministrationPurchase;
+import krawler.erp.UserPermission.UserAdministrationSales;
+import krawler.erp.UserPermission.UserAdministrationOther;
+import krawler.erp.UserPermission.UserAdmistrationMaster;
+import krawler.erp.page.Login;
+
+public class UserPermissionTC {
+	public static WebDriver driver;
+    public static String URL = "http://192.168.0.208:8080/dotcomsmoketesting/a/userpermission/";
+    public static String username = "admin";
+    public static String password = "1234";
+   
+    
+  
+    
+   // Login into ERP Application
+     
+      @Test(priority=1)
+      public void beforeTestLogin() throws InterruptedException, IOException, AWTException
+      {
+          Login ln = new Login();
+          WebDriver driver = Login.loginERP(URL, username, password,5);
+          	          this.driver = driver;
+          	              
+       }
+      @Test(priority=2)
+      public void AssignPermissionMaster() throws InterruptedException, AWTException, IOException{
+    	 // UserAdministration UA = new UserAdministration();
+    	// UA.UserPermission(driver);
+    	  UserAdmistrationMaster.UserPermission_ForMaster(driver);
+      }
+      
+      
+      
+
+	   @Test(priority=3)
+	      public void AssignPermissionPurchase() throws InterruptedException, AWTException, IOException{
+	    	 // UserAdministration UA = new UserAdministration();
+	    	// UA.UserPermission(driver);
+		   UserAdministrationPurchase.UserPermission_ForPurchase(driver);
+
+}
+	   
+
+	   @Test(priority=4)
+	      public void AssignPermissionSales() throws InterruptedException, AWTException, IOException{
+	    	 // UserAdministration UA = new UserAdministration();
+	    	// UA.UserPermission(driver);
+		   UserAdministrationSales.UserPermission_ForSales(driver);
+	   }   
+	  
+
+	   @Test(priority=5)
+	      public void AssignPermissionMiscellaneous() throws InterruptedException, AWTException, IOException{
+	    	 // UserAdministration UA = new UserAdministration();
+	    	// UA.UserPermission(driver);
+		   UserAdministrationMiscellaneous.UserPermission_ForMiscellaneous(driver);   
+	   } 
+	   
+      @Test(priority=6)
+      public void AssignPermissionOther() throws InterruptedException, AWTException, IOException{
+    	 // UserAdministration UA = new UserAdministration();
+    	// UA.UserPermission(driver);
+    	 UserAdministrationOther.UserPermission_ForOther(driver);
+ 	 
+      }
+
+    	   
+}

@@ -1,0 +1,46 @@
+LeaseContractIcon=.//span[text()='Lease Contract']
+CustomerId=.//*[@id='customeridnormalcontractcreationtab']
+LeaseOrderDLink=.//input[@id='salesordernormalcontractcreationtab']
+meomo=.//textarea[@id='memonormalcontractcreationtab']
+sequenceFormat=.//input[@id='sequenceformatnormalcontractcreationtab']
+ContractId=.//input[@id='contractidnormalcontractcreationtab']
+ContactPerson=.//input[@id='contactpersonnormalcontractcreationtab']
+ContractTerm1=.//input[@id='leasetermnormalcontractcreationtab']
+ContractTerm2=.//input[@id='termvaluenormalcontractcreationtab']
+ContractStartDate=.//input[@id='startdatenormalcontractcreationtab' and @name='startdate']/following-sibling::img
+MaintenanceSchedulebtn=//button[text()='Maintenance Schedule']
+ScheduleName=//input[@name='scheduleNumber']
+Scheduledate1=.//input[@name='startDate']/following-sibling::img
+TodayBtn=//div[@class='x-layer x-menu x-menu-plain x-date-menu' and contains(@style,'visible')]//button[text()='Today']
+Scheduleduration=//input[@name='scheduleDuration']
+Adhocsch=//input[@name='isAdHocSchedule']
+TotalEvent=//input[@name='totalEvents']
+Adhocbtn=//button[text()='Add Ad-hoc Events']
+Gridentry=//div[@id='centerpan1adhoc-scheduleGridId']/div/div/div/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[2]/div
+Griddate=.//input[@class=' x-form-text x-form-field x-form-focus']/following-sibling::img
+Gridsave=//button[text()='Save' and @class='x-btn-text' and @id='wtf-gen5781']
+TodayBtn1=//div[@class='x-layer x-menu x-menu-plain x-date-menu' and contains(@style,'visible')]//button[text()='Today']
+Blankspace=//div[@id='adhoc-scheduleGridId']/div/div/div/div/div/div/div/div/div/div[1]/div[2]
+Gridsave=//div[@class='x-window-bl']//button[text()='Save']
+TableSave=//div[@class='x-column-inner']//button[text()='Save']
+Yes1=//button[text()='Yes']
+
+saveButton=.//button[text()='Save']
+YesButton=.//button[text()='Yes']
+okButton=.//button[text()='OK']
+CloseContTab=//li[@id='as__normalcontractcreationtab']/a[1]
+
+
+------------------------------------------------------------------------Verification-------------------------------------------------------------------------
+LeaseContractReport=//span[text()='Contract Register']
+QuickSearch=//input[@id='quickSearchundefined' and @name='quickSearchundefined']
+BottomPannel=//div[@id='contractorderreportEntry']/div/div/div/div/div/div/div/div[3]/div
+reportCheckBox=//div[@id='contractorderreportEntry']/div/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[1]
+EditLObutton=//button[text()='Edit']
+EditMemo=//textarea[@id='memoeditnormalcontractcreationtab']
+buttonSave=//button[text()='Save']
+closeEditWin=//li[@id='as__editnormalcontractcreationtab']/a[1]
+Terminate=//button[text()='Terminate']
+DeleteButton=//button[text()='Delete']
+PermanantDelete=//button[text()='Yes']
+Title=//div[@id='contractorderreportEntry']/div/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div/div

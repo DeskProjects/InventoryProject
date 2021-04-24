@@ -1,0 +1,36 @@
+***********************************CreateWithRefund********************************************
+MakePaymentIcon=.//map[@name='AlienAreas1']/area[13]
+MakePaymentAgainstCustomer=.//*[text()='Make Payment to customer:']//following-sibling::div[1]/div/input
+SubmitButton1=//button[text()='Submit']
+SequenceFormat=.//*[@id='sequenceformatundefinedpaymentwindow']
+PaymentMethod=//input[@id='paymentMethodundefinedpaymentwindow']
+DocumentCurrency=//input[@id='currencyundefinedpaymentwindow']
+DocumentCurrencyIMg=//div[@id='x-form-el-currencyundefinedpaymentwindow']/div/img
+ChequeSequence=//div[@id="paymentwindowwrapperPanelNorth"]/div/div/div[2]/div/div/div/div/div/form/fieldset/div/div/div/div[1]/div/div/div/div/div/input[2]
+DocumentNo=.//*[@id='receiptNoundefinedpaymentwindow']
+ChequeNo=//input[@id='chequenumberundefinedpaymentwindowsouthform']
+vendorID=.//*[@id='accountundefinedpaymentwindow']
+SelectCreditNote=//div[@id='centerpannoteinfowindow']/div/div[2]/div/div/div/div/div/div[1]/div[1]/div/table/thead/tr/td[1]/div
+
+
+**************SumitXpath*************
+requicksearch=//input[@id='quickSearchadvancepaymentwindow']
+SelectRefDocu=//div[@id='centerpanadvancepaymentwindow']/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[1]/div
+
+*********************************************************************
+Memo=.//*[@id='memoundefinedpaymentwindow']
+CloseForm=//li[@id="as__paymentwindow"]/a[1]
+PaymentMethod=//input[@id='paymentMethodundefinedpaymentwindow']
+chqSeqFormat=//legend/following-sibling::div/div/div/div/div/div/div/div/div/input[@name='sequenceformat']/following-sibling::input
+chqNumb=//input[@name='chequenumber']
+clsRpt=//li[@id='as__PaymentMainTabPanel']/a[1]
+QuickSearchCreditNote=.//*[@id='quickSearchnoteinfowindow']
+firstCreditNote=//*[text()='Credit Note No']/ancestor::div[3]/following::div[1]/div[1]/div[1]/table/tbody/tr/td[1]/div/div
+DocumentType=.//*[@id='paymentwindowvendorgrid']/div/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[4]/div
+SaveButton=//button[text()='Save']
+YesButton=//button[text()='Yes']
+OKButton=//button[text()='OK']
+Dashboard=//span[text()='Dashboard']
+CloseMakePayment=.//li[@id='as__paymentwindow']/a[1]
+EnterAmount=.//*[@id='paymentwindowvendorgrid']/div/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[15]/div
+***********************************Invoice********************************************

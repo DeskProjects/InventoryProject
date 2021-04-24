@@ -1,0 +1,35 @@
+******************** Fund Transfer JE ********************
+ClcikOnJEIcon=.//map[@name='AlienAreas5']/area[1]
+SelectFundsJEOption=.//*[text()='Funds Transfer:']//following-sibling::div[1]/div/input  
+ClickOnSubmit=.//button[text()='Submit']
+SequenceFormat=.//*[text()='Journal Entry Number*:']//parent::div//preceding-sibling::div[1]/div/div/input[2]
+EnterJENo.=.//*[text()='Journal Entry Number*:']//following-sibling::div[1]/input
+SelectPaymentMethod=.//*[@id='paymentMethodundefinedJournalEntry3']
+CheNOSeq=//fieldset[@id="JournalEntry3southformcheque"]/div/div/div/div[1]/div/div/div[1]/div[1]/div/input[2]
+memo=.//textarea[@name='memo']
+CheNO=//label[text()="Cashier's Cheque/Cheque Number:"]/parent::div/div[1]/input
+ClickOnSaveButtton=.//button[text()='Save']
+ClickOnYes=.//button[text()='Yes']
+ClickOnOk=.//button[text()='OK']
+CloseForm=.//li[@id='as__JournalEntry3']/a[1]
+***********************verify****************************
+JournalEntryReport=//map[@name='AlienAreas3']/area[9]
+QuickSearch=.//input[@id='quickSearch24']
+FetchButton=.//button[text()='Fetch']
+CloseJournalEntryReport=.//li[@id='as__JEMainTab']/a[1]
+Firtrowcheck=//div[@id="gridmsg24NormalJournalEntryDetails"]/div/div[2]/div/div/div[2]/div/div[1]/table/tbody/tr[1]/td[3]/div
+*********************************copyeditdeletecodeNormalJE******************************************
+DocumentCheckBox=.//div[@id='gridmsg24NormalJournalEntryDetails']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[2]/div/div
+copyfundtfrButton=//button[@class='x-btn-text accountingbase copy' and text()='Copy Journal Entry']
+copyfundJEId=.//*[contains(@id,'COPYJournalEntry3')]/div/div/div/div/div/div[1]/div/div/div/div[1]/div/form/div/div/div/div[1]/div/div/div/div[1]/div/div/div[3]/div/input
+saveCopiedfundJEId=//button[@class='x-btn-text pwnd save' and text()='Save']
+CopyNormalJEClose=//li[contains(@id,'as__COPYJournalEntry3')]/a[1]
+editBtn= //button[@class='x-btn-text accountingbase edit' and text()='Edit Journal Entry']
+JEEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+EditJECloseBtn=//li[contains(@id,'as__EDITJournalEntry')]/a[1]
+deleteJEButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deleteJEPermButton=//*[contains(@style,'visible')]//*[contains(text(), 'Delete Journal Entry Permanently')]/img
+******************Print************************************
+chqSeqFormat=//*[contains(@id,'formcheque')]//*[@id='sequenceformat']/following::input[1]
+chqNumb=//input[@name='checkNo']
+******************ReportPrint******************************

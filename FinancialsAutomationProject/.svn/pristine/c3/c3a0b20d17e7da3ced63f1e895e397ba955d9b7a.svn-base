@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <parameter name="server" value="http://192.168.0.208:8080/dotcomsmoketesting/a/testsmoke/#  "/>
+    <parameter name="password" value="1234"/>
+    <parameter name="username" value="admin"/>
+    <classes>
+      <class name="krawler.erp.testCases.Smt">
+        <methods>
+          <include name="goodReceipt"/>
+          <include name="MakePaymentVendorAdvance"/>
+          <include name="CreditNoteSalesInvoice"/>
+          <include name="ReceivePaymentVendor"/>
+          <include name="ReceivePaymentVendorAdvance"/>
+          <include name="beforeTestLogin"/>
+          <include name="ReceivePaymentCustomerDebitNote"/>
+          <include name="ReceivePaymentCustomerAdvance"/>
+          <include name="CloseBrowser"/>
+          <include name="CreditNoteSalesInvoice1"/>
+          <include name="ReceivePaymentCustomerAdvance1"/>
+          <include name="goodReceipt1"/>
+          <include name="MakePaymentVendorCreditNote"/>
+          <include name="MakePaymentVendorCreditNote1"/>
+          <include name="lodindWait"/>
+          <include name="MakePaymentVendorAdvance1"/>
+          <include name="ReceivePayment1"/>
+          <include name="ReceivePaymentCustomerInvoice"/>
+          <include name="ReceivePayment"/>
+          <include name="ReceivePaymentVendorAdvance1"/>
+        </methods>
+      </class> <!-- krawler.erp.testCases.Smt -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

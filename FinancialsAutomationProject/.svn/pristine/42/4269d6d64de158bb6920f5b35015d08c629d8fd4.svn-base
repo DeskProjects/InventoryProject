@@ -1,0 +1,41 @@
+//*************EXPORT********************************
+fromIcon=//span[text()='From']/following::div[1]/img
+toIcon=//span[text()='From']/following::div[2]/img
+selectToday=//div[@class='x-layer x-menu x-menu-plain x-date-menu' and contains(@style,'visible')]//*[text()='Today']
+
+
+AllDocumentCheckBox=//div[text()='Account Code']/ancestor::tr[1]/td[1]/div/div
+ExportToCSV=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to CSV File']
+WindowExportBtn=//div[@class='x-window-bl']//button[text()='Export ']
+ExcelInDetail=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to Excel File(Details)']
+ExcelInSummary=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to Excel File(Summary)']
+ExportToExcel=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to Excel File']
+ExportToPDF=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to PDF File']
+ExportToHtml=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Print To HTML']
+pdfTemplate=//div[@id='templateName']//div[@class='x-grid3-scroller']/div/div[1]/table/tbody/tr[1]/td[2]/div
+
+******twoTypePDFspecific
+SummaryPDF=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Export to Invoice Summary PDF']
+DetailPDF=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Export to Invoice Detail PDF']
+ExportToPDF=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to PDF File']
+ExportToPDFtagA=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Export to PDF File']
+
+*******SpecificHTML***
+ExportToHtml2=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Print To HTML']
+PrintAllRecord=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Print All Record(s)']
+
+****JESpecific*******
+JESummary=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Summary']
+JEDetailed=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Detailed']
+JEPortrait=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Portrait']
+JELandscape=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Landscape']
+ExportselectedtoCSV=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export selected record(s) to CSV File']
+ExportselectedtoPDF=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export selected to PDF File']
+ExportselectedtoXLS=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export selected record(s) to XLS File']
+
+************************Aklesh*********************************
+Print=//button[text()='Print']
+Print1=//div[@id='selectexportwincsv']//button[text()='Print']
+AssetPrint=//div[@id='centerpan1assetMaintenanceScheduleGridIDmaintenanceSchedulerId']//button[text()='Print']
+
+

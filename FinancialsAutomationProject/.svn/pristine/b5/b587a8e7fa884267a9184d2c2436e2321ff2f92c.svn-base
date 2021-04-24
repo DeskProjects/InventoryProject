@@ -1,0 +1,26 @@
+DebitNotePurchaseInvoiceIcon=//map[@name='AlienAreas1']/area[11]
+SelectDebitNotePurchaseInvoice=.//*[text()='Debit Note against Purchase Invoice:']//following-sibling::div[1]/div/input
+ClickSubmit=//button[text()='Submit']
+sequenceFormat=.//*[@id='sequenceformatundefineddebitnotepanel']
+DocumentNo=.//*[@id='cndnNumberundefineddebitnotepanel']
+VendorId=.//*[@id='selectCustomerundefineddebitnotepanel']
+selectPurchaseInvoice=.//*[@id='centerpandebitnotepanel']/div/div/div[3]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[1]/div
+memo=.//*[@id='memoundefineddebitnotepanel']
+EnterAmount=.//*[@id='centerpandebitnotepanel']/div/div/div[3]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[9]/div
+AccountName=.//*[@id='centerpandebitnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[1]/div
+AccountAmount=.//*[@id='centerpandebitnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[3]/div
+EnterReason=.//*[@id='centerpandebitnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[9]/div
+buttonSave=//button[text()='Save']
+buttonYes=//button[text()='Yes']
+clickOk=//button[text()='OK']
+CloseForm=.//li[@id='as__debitnotepanel']/a[1]
+*********************************editdeletecode******************************************
+DebitNoteReport=//map[@name='AlienAreas3']/area[19]
+QuickSearch=//*[@id='quickSearch22']
+DocumentCheckBox=.//div[@id='gridmsg22DebitNoteDetails']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div
+EditDNPIClose=//li[contains(@id,'as__EditDebitNote')]/a[1]
+EditDNPIButton=//button[@class='x-btn-text accountingbase edit' and text()='Edit']
+DNPIMemo=//textarea[contains(@id,'memo13EditDebitNote')]
+DNPIEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+deleteDNPIButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deleteDNPIPermButton=//*[contains(@style,'visible')]//*[contains(text(), 'Delete Debit Note Permanently')]/img

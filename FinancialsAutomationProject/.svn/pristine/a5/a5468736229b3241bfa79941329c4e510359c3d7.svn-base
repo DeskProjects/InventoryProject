@@ -1,0 +1,122 @@
+package krawler.erp.testCases;
+
+
+	import java.awt.AWTException;
+	import java.io.IOException;
+
+	import org.openqa.selenium.WebDriver;
+	import org.testng.annotations.Parameters;
+	import org.testng.annotations.Test;
+
+	import krawler.erp.FixedAsset.AssetFixLogin;
+	import krawler.erp.FixedAsset.AssetGR;
+	import krawler.erp.FixedAsset.AssetGroup;
+	import krawler.erp.FixedAsset.AssetMenu;
+	import krawler.erp.FixedAsset.AssetAcquiredInvoice;
+	import krawler.erp.FixedAsset.AssetDO;
+	import krawler.erp.FixedAsset.AssetDepreciation;
+	import krawler.erp.FixedAsset.AssetDepreciationDetailReport;
+	import krawler.erp.FixedAsset.AssetDetailReport;
+	import krawler.erp.FixedAsset.AssetDisposalInvoice;
+	import krawler.erp.FixedAsset.AssetPurchaseRequisition;
+	import krawler.erp.FixedAsset.AssetRFQ;
+	import krawler.erp.FixedAsset.AssetSummaryReport;
+	import krawler.erp.FixedAsset.AssetVQ;
+	import krawler.erp.page.Login;
+
+	public class FixedAssetModuleFlow {
+		
+       public static WebDriver driver =null;
+		public static String url ="http://192.168.0.208:8080/dotcomsmoketestingv21/a/208asset/";
+		public static String user= "admin";
+		public static String pwd= "1234";
+		public static String documentid="Doc12Dec"; 
+		public static String vendorid= "Ved12Dec";
+		public static String customerid="Cus12Dec"; 
+		public static String Group="Grp12Dec";
+		public static String Assetid="Aid12Dec";
+		
+		// Login into ERP Application
+		
+	     @Test(priority=1)
+	     public void beforeTestLogin() throws InterruptedException, IOException, AWTException
+	     {
+	       Login  ln = new Login();
+	         WebDriver driver = AssetFixLogin.loginERP(url, user,pwd);
+	         	          this.driver = driver;
+	         	         Thread.sleep(1000);      
+	         	        
+	      }
+	     
+	  // Click on Asset Menu Button
+	     
+	        @Test(priority=2)
+	     public void Asset_Menu() throws IOException, InterruptedException{
+	    	  AssetMenu Am= new AssetMenu();
+	    	     Am.FixedAssetExpander(driver);
+	    	     Thread.sleep(1000);
+	     }
+
+      // Create Asset Acquired Invoice
+	     	
+	 /*       @Test(priority=3)
+	       public void Asset_AI() throws IOException, InterruptedException, AWTException{
+	      	 AssetAcquiredInvoice AAI= new AssetAcquiredInvoice();
+	     	AAI.Create_AssetAI (documentid, driver);
+	     	Thread.sleep(1000);
+
+	        }
+	           
+	     // Create Asset Goods Receipt
+	             
+	       @Test(priority=4)
+	       public void Asset_GR() throws IOException, InterruptedException, AWTException{
+	      	 AssetGR AGR= new AssetGR();
+	        AGR.Create_AssetGR (documentid, driver);
+	     	Thread.sleep(1000);
+	     	
+	        }
+	      
+	      */    
+	      
+	        // Generate Asset Depreciation
+	          
+	       @Test(priority=5)
+	       public void Asset_Depreciation() throws IOException, InterruptedException, AWTException{
+	      	 AssetDepreciation AD= new AssetDepreciation();
+	     	AD.Generate_AssetDepreciation (documentid, driver);
+	     	Thread.sleep(1000);
+	      }
+	        
+	       // Verify  Asset Detail Report
+	       
+	 /*      @Test(priority=6)
+	       public void Asset_DetailReport() throws IOException, InterruptedException, AWTException
+	       {
+	      	 AssetDetailReport AD= new AssetDetailReport();
+	     	AD.Generate_AssetDetailReport (documentid, driver);
+	     	Thread.sleep(1000);
+	      }
+	      
+	       // Verify  Asset Depreciation Detail Report
+	       
+	       @Test(priority=7)
+	       public void Asset_DepreciationDetailReport() throws IOException, InterruptedException, AWTException
+	       {
+	      	 AssetDepreciationDetailReport ADDR= new AssetDepreciationDetailReport();
+	     	ADDR.Generate_AssetDepreciationDetailReport (documentid, driver);
+	     	Thread.sleep(1000);
+	      }
+	       
+
+	          // Verify  Asset Summary Report
+	       
+	       @Test(priority=8)
+	       public void Asset_SummaryReport() throws IOException, InterruptedException, AWTException
+	       {
+	      	 AssetSummaryReport ASR= new AssetSummaryReport();
+	     	ASR.Generate_AssetSummaryReport (documentid, driver);
+	     	Thread.sleep(1000);
+	      } */
+	             
+}

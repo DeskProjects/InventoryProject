@@ -1,0 +1,34 @@
+ClickOnADO=//*[text()='Create Asset Delivery Order']
+Customer=//*[@id='customer11FixedAssetdeliveryorder']
+SequenceFormat=//input[@id='sequenceFormatCombobox11FixedAssetdeliveryorder']
+ADONo=//input[@name='number']
+Link=//input[@id='linkToOrder11FixedAssetgoodsreceiptdelivery']
+Linkto=//input[@name='fromLinkCombo']
+AssetGroup1=//div[@id='FixedAssetdeliveryorderbillingproductdetailsgrid']/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[5]/div
+UnitPrice1=//*[text()='Unit Price']//following::div[34]/ancestor::td
+Quantity1=//*[text()='Quantity']//following::div[42]/ancestor::td
+View=//div[@title='View Asset Details ']
+AssetID=//input[@id='assetCombo']/following::input/following::img
+AssetID1=//div[text()='Asset Id']//following::div[26]
+AssetrID2=//input[@id='assetCombo']/following::div[2]/following::div[27]
+SaveDetail=//span[text()='Asset Details']/ancestor::div[4]/following::div[1]/div[2]/div/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+Memo=//textarea[@name='memo']
+Save=//button[text()='Save']
+Yes=//button[text()='Yes']
+Ok=//button[text()='OK']
+Close=//li[@id='as__FixedAssetgoodsreceiptdelivery']/a[1]
+ClickOnADOR=//*[text()='Asset Delivery List']
+Fetch=//button[text()='Fetch']
+QuickSearch=//*[@id='quickSearch52FixedAssetDeliveryOrderListEntry']
+CheckBox=//div[@id='gridmsg52FixedAssetDeliveryOrderListEntry']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div
+Edit=//button[text()='Edit']
+Delete=//div[@id='EditFixedAssetgoodsreceiptdeliverybillingproductdetailsgrid']/div/div/div/div[1]/div[2]/div/div[2]/table/tbody/tr/td[29]/div/div
+DeleteB=//button[text()='Delete']
+DeleteP=//a[@class='x-menu-focus']/following::a[2]
+ClickOnAGRR=//*[text()='Asset Delivery List']
+Fetch=//button[text()='Fetch']
+QuickSearch=//input[@id='quickSearch52FixedAssetDeliveryOrderListEntry']
+CheckBox=//div[@id='gridmsg52FixedAssetDeliveryOrderListEntry']/div/div/div/div[1]/div[1]/div[2]/following::div[1]/div/div/table/tbody/tr[1]/td[1]/div/div
+TotalAmount=//*[@id='gridmsg52FixedAssetDeliveryOrderListEntry']//*[text()='Total Amount']/following::div[47]
+TotalAmountInBase=//*[@id='gridmsg52FixedAssetDeliveryOrderListEntry']//*[text()='Total Amount']/following::div[49]
+GrossTotalAmount=//*[@id='gridmsg52FixedAssetDeliveryOrderListEntry']//*[text()='Total Amount']/following::div[63]

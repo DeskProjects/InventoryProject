@@ -1,0 +1,4 @@
+Product Type,Product Name,Product ID,Description,Unit Of Measure,Sales Account,Sales Return Account,Purchase Account,Purchase Return Account,Initial Quantity,Initial Purchase Price,Sales Price,Sales GL,As Of Date,Currency,Stock UOM,Activate Warehouse,Activate Location,Default Location,Default Warehouse
+Inventory Part,Pen,Automation91, Precast Modular Walls (704-06),Unit,Sales,Sales,Purchases,Purchases,0,100,200,Sales,01-01-2018,SG Dollar (SGD),Unit, T, T, Default Location,DS - Default Store
+Inventory Part,Pencil,Automation92, Precast Modular Walls (704-06),Unit,Sales,Sales,Purchases,Purchases,0,100,200,Sales,01-01-2018,SG Dollar (SGD),Unit,T, T, Default Location,DS - Default Store
+Inventory Part,Book,Automation93, Precast Modular Walls (704-06),Unit,Sales,Sales,Purchases,Purchases,0,100,200,Sales,01-01-2018,SG Dollar (SGD),Unit, T, T, Default Location,DS - Default Store

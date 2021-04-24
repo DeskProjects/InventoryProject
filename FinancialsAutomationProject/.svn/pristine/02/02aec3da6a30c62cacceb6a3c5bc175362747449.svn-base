@@ -1,0 +1,13 @@
+***********************************Creation********************************************
+LeftPaneMenuExpander=.//*[@class='x-tool x-tool-expand-west']
+MastersExpander=.//*[@id='mastersNavigationPanelID']/div/div
+MiscellaneousExpander=.//*[@id='MiscellaneousNavigationPanelID']/div/div
+PaymentMethodLink=//span[text()='Payment Method']
+updateBtn=//button[text()='Update']
+closeBtn= //button[text()='Close']
+******************************Verification**************************
+allArrow=//div[@class='x-panel-bbar x-panel-bbar-noborder']/div/table/tbody/tr/td[14]/div/img
+*****************************EditDelete********************************
+editdropDwn=//input[contains(@class,' x-form-text x-form-field x-combo-noedit')]/following-sibling::img
+editselectAll=//div[text()='All']
+deleteAll= //div[@id='PaymentMethodReportWin']/following-sibling::div[5]/div/div[text()='All']

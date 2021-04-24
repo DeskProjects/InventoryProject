@@ -1,0 +1,5 @@
+ProductId,Batch,Serial
+prod12FebS3,Batch,QAIS1
+prod12FebS3,Batch,QAIS2
+prod12FebBS4,BatchSerial,QAIS6
+prod12FebBS4,BatchSerial,QAIS4

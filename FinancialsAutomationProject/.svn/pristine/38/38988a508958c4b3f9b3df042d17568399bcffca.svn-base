@@ -1,0 +1,11 @@
+InventoryExpander=.//*[@id='inventory']/div/div
+ReportsExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/div/img
+CycleCountReportLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/ul/li[21]/div/a
+QuickSearch=//input[contains(@id,'Quickid')]
+FromDateBtn= //input[@name='fromBusinessDate']/following-sibling::img
+ToDateBtn= //input[@name='toBusinessDate']/following-sibling::img
+fromDateToday= //form[@id='designpanelpreview']/following-sibling::div[11]/ul/li/div/table/tbody/tr[3]/td/table/tbody/tr/td[2]/em/button 
+toDateToday= //form[@id='designpanelpreview']/following-sibling::div[12]/ul/li/div/table/tbody/tr[3]/td/table/tbody/tr/td[2]/em/button
+searchButton= //div[contains(@id,'id')]/div/div/div/table/tbody/tr/td[11]/table/tbody/tr/td[2]/em/button[text()='Search']
+TotalFindResult= //div[@class='x-paging-info']
+CycleCountReportClsBtn= //li[@id='as__CycleCountReportTabId']/a[1]

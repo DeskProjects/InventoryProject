@@ -1,0 +1,57 @@
+***********************************StockStoreCreation********************************************
+MastersExpander=.//*[@id='mastersNavigationPanelID']/div/div
+InventoryMasterLink=.//*[@id='masters']/div/div/div/div/div/ul/div/li[4]/div/img[1]
+StoreMasterLink=.//*[@id='masters']/div/div/div/div/div/ul/div/li[4]/ul/li[8]/div/a
+QuickSearchInput=.//*[@id='Quickinvstoremastergrid']
+NewStoreAddBtn=//button[@class='x-btn-text pwnd add' and text()='New Store']
+NewStoreCodeInput=.//*[@name='abbreviations']
+NewStoreDescInput=.//*[@name='descriptions']
+NewStoreAddressInput=.//*[@name='address']
+NewStoreTypeInput=.//*[@id='StoreformIdAddstoreMasterGrid']/div[2]//div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div/div/div/form/div[7]/div[1]/div/input[2]
+NewStoreManagerInput=.//*[@id='StoreformIdAddstoreMasterGrid']/div[2]//div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div/div/div/form/div[8]/div[1]/div/input
+NewStoreExecutiveInput=.//*[@id='StoreformIdAddstoreMasterGrid']/div[2]//div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div/div/div/form/div[9]/div[1]/div/input
+NewStoreSubmitBtn=//button[@class='x-btn-text' and text()='Submit']
+StoreMasterCloseBtn=//li[contains(@id,'as__storeMasterGrid')]/a[1]
+***********************************StockIssueCreation********************************************
+InventoryExpander=.//*[@id='inventory']/div/div
+EntryExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/div/img
+StockIssueLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/ul/li[3]/div/a
+StockIssueSequenceFormat=.//input[@name='seqFormat']
+StockIssueDocumentId=.//input[@name='documentNo']
+StockIssueFromStoreArrow=//*[@id='fromstore']/following::img[1]
+StockIssueToStore=.//*[@id='northForm2goodissue111goodsIssueParentTab']/div/div/form/div/div/div/div[1]/div/div/div/div[2]/div/div/div[1]/div/div/input[2]
+StockIssueAddPrdButton=.//*[@class='pwnd add-gridrow']
+StockIssueSearch=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+StockIssueSelectProducts=//*[contains(@id,'ProductSelectionWindow')]/div[2]/div/div/div/div/div/div/div[2]/div/div[1]/div[1]/div/div/table/thead/tr/td[1]
+StockIssueSelectProductsResultCount=//*[contains(@id,'ProductSelectionWindow')]/div[2]/div/div/div/div/div/div/div[3]/div/div
+StockIssueAddButton=.//button[text()='Add' and @class='x-btn-text']
+saveStockIssueQtyLocationButton=//button[@class='x-btn-text' and text()='Save']
+StockIssueSearchSerial=.//*[@id='avialblesearchserialSelectWindow']
+StockIssueRightArrowImg=.//*[@id='Northform']/div/div/form/div/div/div/div/div[2]/div/div/div/div/div/div/img[1]
+StockIssueSelectAllSerialsSubmit=.//*[@id='serialSelectWindow']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+saveStockIssueBtn=//button[@class='x-btn-text pwnd save' and text()='Save']
+StockIssueCloseBtn=//li[contains(@id,'as__goodsIssueParentTab')]/a[1]
+***********************************StockIssueFulfilledOrders********************************************
+StockIssueFulfilledOrdersTabLink=.//li[@id='goodstransfertabpanelgoodsIssueParentTab__goodsapprovedgoodsIssueParentTab']/a[2]
+QuickSearch=.//input[@id='QuickgoodsEditorGridPanelgoodsapprovedgoodsIssueParentTab']
+QuickSearchResultCount=//div[@id='goodsEditorGridPanelgoodsapprovedgoodsIssueParentTab']/div/div[3]/div/div
+***********************************Issue_StoreOrders********************************************
+StoreOrdersTabLink=.//li[@id='goodstransfertabpanelgoodsIssueParentTab__interstocktransferreqgoodsIssueParentTab']/a[2]
+StoreOrdersQuickSearch=.//input[@id='QuickgoodsEditorGridPanelinterstocktransferreqgoodsIssueParentTab']
+StoreOrdersQuickSearchResultText=//div[@id='goodsEditorGridPanelinterstocktransferreqgoodsIssueParentTab']/div/div[2]/div/div[1]/div[2]/div/div/div[1]/div
+StoreOrdersSelectAllChkBox=//div[@id='goodsEditorGridPanelinterstocktransferreqgoodsIssueParentTab']/div/div[2]/div/div[1]/div[1]/div[1]/div/table/thead/tr/td[2]
+StoreOrdersQuickSearchResultCount=//div[@id='goodsEditorGridPanelinterstocktransferreqgoodsIssueParentTab']/div/div[3]/div/table/following-sibling::div
+StoreOrdersIssueBtn=//button[@class='x-btn-text accountingbase sync' and text()='Issue']
+***********************************Reject_StoreOrders********************************************
+StoreOrdersRejectBtn=//button[@class='x-btn-text accountingbase menu-delete' and text()='Reject']
+StoreOrdersRemarkText=.//*[@id='rmrkwindow']/div[2]/div[1]/div/div/div/div[2]/div/div/div/div/div/div/div/div/form/div/div[1]/textarea
+StoreOrdersRemarkSubmitBtn=//button[@class='x-btn-text pwnd ReasonSubmiticon caltb' and text()='Submit']
+StoreOrdersRejectConfirmationBtn=//button[@class='x-btn-text' and text()='Yes']
+StoreOrdersRejectedSuccessOKBtn=//button[@class='x-btn-text' and text()='OK']
+
+
+
+firstProduct=//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+SelectProductS=//*[contains(@id,'ProductSelectionWindow')]//*[contains(text(),'Product ID')]/ancestor::tr//*[@class='x-grid3-hd-checker']
+TotalFindProducts=//*[text()='Product Category: (None)']/parent::div/following-sibling::div//table/tbody/tr/td[1]/div/div
+addProducts=//*[contains(@id,'ProductSelectionWindow')]//*[@class='x-btn-text' and text()='Add']

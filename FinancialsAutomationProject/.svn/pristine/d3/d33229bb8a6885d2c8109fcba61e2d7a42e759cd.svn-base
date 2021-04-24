@@ -1,0 +1,21 @@
+****************** PRDOUCTION URL ******************
+US2 for TAG v10 : https://us2.accounting.deskera.com/a/us2productiontesting/         		 	 admin/us2prod 
+SG16/17/18 for TAG v21: https://sg16.accounting.deskera.com/a/sg16productiontesting/			 admin/sg16prod
+
+US2 for TAG v10 INVENTORY : https://us2.accounting.deskera.com/a/us2productiontestinginv/		admin/us2prodinv
+SG18 :::                    https://sg18.accounting.deskera.com/a/sg18productiontesting/		admin/sg18prod
+
+****************** v10 208 URL ******************
+v10 : http://192.168.0.208:8080/dotcomsmoketesting/a/rahulv10/                		 admin/1234
+ERPv10 : http://192.168.0.208:8080/dotcomsmoketesting/a/automationtest/     		 admin/1234
+Invv10 : http://192.168.0.208:8080/dotcomsmoketesting/a/mydebugtest1/          		 admin/1234
+
+****************** v21 208 URL ******************
+ERPv21 : http://192.168.0.208:8080/dotcomsmoketestingv21/a/v21erp/                   admin/1234
+Invv21 : http://192.168.0.208:8080/dotcomsmoketestingv21/a/smoketestv21/       		 admin/1234
+
+
+
+******************* 21 svr **************************
+http://192.168.0.217:8080/stagingaccounting/a/mukeshtest11/      admin/1234
+

@@ -1,0 +1,83 @@
+CreateVendorInvoiceIcon=//map[@name='AlienAreas1']/area[8]
+VendorId=.//*[@id='customer15goodsreceipt']
+sequenceFormat=.//*[@id='sequenceFormatCombobox15goodsreceipt']
+VendorInvoiceNumber=.//*[@id='invoiceNo15goodsreceipt']
+DebitTerm=.//*[@id='creditTerm15goodsreceipt']
+addButton=.//*[@class='pwnd add-gridrow']
+searchProductId=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+clickCheckBox=.//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+clickAdd=//*[contains(@id,'ProductSelectionWindow')]//*[@class='x-btn-text' and text()='Add']
+clickOnQuantity=.//div[@id='goodsreceipteditproductdetailsgrid']/div/div/div/div/div[2]/div/div/table/tbody/tr/td[15]/div
+memo=.//*[@id='memo15goodsreceipt']
+buttonSave=//button[text()='Save']
+clickYes=//button[text()='Yes']
+clickOk=//button[text()='OK']
+closeVendorInvoice=.//li[@id='as__goodsreceipt']/a[1]
+currencyType=//*[@id='currencyid']/following::input[1]
+includeproducttax=//*[@id='includeprotax']/following::input[1]
+
+**************************Verification*************************************
+SalesInvoiceReport=.//map[@name='AlienAreas3']/area[18]
+QuickSearch=//input[@id='quickSearch21GRListEntry']
+*********************************copyeditdeletecode******************************************
+DocumentCheckBox=.//div[@id='gridmsg21GRListEntry']/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[1]/div
+copyVendorInvoiceButton=//button[@class='x-btn-text accountingbase copy' and text()='Copy Invoice']
+copyVendorInvoiceId=//*[contains(@id,'invoiceNo66Copy')]/input
+saveCopiedVendorInvoiceId=//button[@class='x-btn-text pwnd save' and text()='Save']
+CopyVendorInvoiceClose=//li[contains(@id,'as__Copy')]/a[1]
+EditVendorInvoiceClose=//li[contains(@id,'as__Edit')]/a[1]
+EditVendorInvoiceButton=//button[@class='x-btn-text accountingbase edit' and text()='Edit']
+VendorInvoiceMemo=//textarea[contains(@id,'memo66Edit')]
+VendorInvoiceEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+deleteVendorInvoiceButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deleteVendorInvoicePermButton=//*[contains(@style,'visible')]//*[contains(text(), 'Delete Purchase Invoice Permanently')]
+closeReport=//li[@id='as__GRListMainTabEntry']/a[1]
+*******************************Expense*************************************
+ExpenseTab= //li[@id='goodsreceiptinvoicegrid__goodsreceiptexpensegrid']/a[2]/em/span/span
+
+includingGST=//*[@name='includingGST']
+SelectProductS=//*[contains(@id,'ProductSelectionWindow')]//*[contains(text(),'Product ID')]/ancestor::tr//*[@class='x-grid3-hd-checker']
+TotalFindProducts=//*[text()='Product Category: (None)']/parent::div/following-sibling::div//table/tbody/tr/td[1]/div/div
+addProducts=//*[contains(@id,'ProductSelectionWindow')]//*[@class='x-btn-text' and text()='Add']
+HeaderNames=//div[@id='goodsreceipteditproductdetailsgrid']/div/div/div/div/div[1]/div[1]/div/table/thead/tr/td/div
+**************************************************************************************************
+includeGlobalTax=//*[@id='includetax']/following::input[1]
+GlobalTaxValue=//*[@id='tax']/following::input[1]
+
+PIDate=//*[@id='invoiceDate15goodsreceipt']//following-sibling::img
+
+
+----------------------------------------OpeningPI_OR Rahul-----------------------------------------------------------------------------------------------------------
+
+VendorIcon=//div[@id='DashboardContent']/div[3]/following::map[4]/area[2]
+VendorChkbox=//div[@id='VendorDetails']/div/div/div/div/div/div[2]/div/div[2]/div/div/div/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[1]
+OpeningBalBtn=//button[text()='Opening Balance']
+CreatenewforOpen=//button[text()='Create New']
+TransactioNo=//input[@id='invoiceNocreateTransactionFormId']
+AmountforOpening=//input[@name='transactionGstAmount']
+PartyInvNo=//input[@id='ponumbercreateTransactionFormId']
+Save=//button[text()='Save']
+Gridmainheader=//button[text()='Create New']/ancestor::div[16]/div/div/div/div[2]/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[1]/div/div/table/thead/tr/td/div
+Gridrowheader=//button[text()='Create New']/ancestor::div[16]/div/div/div/div[2]/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td/div
+Editbtn=//button[text()='Edit']
+DeleteBtn=//button[text()='Delete']
+OpeningMemo=//textarea[@name='memo']
+CurrencyforOpening=//input[@id='currencycreateTransactionFormId']
+CurrencySelector=//div[@class='x-layer x-combo-list ' and contains(@style,'visible')]
+Firstrowchckbox=//button[text()='Create New']/ancestor::div[16]/div/div/div/div[2]/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[1]/div
+Secondrowchckbox=//button[text()='Create New']/ancestor::div[16]/div/div/div/div[2]/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div[2]/table/tbody/tr/td[1]/div
+Massrow=//button[text()='Create New']/ancestor::div[16]/div/div/div/div[2]/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div[1]/div[1]/div/table/thead/tr/td[1]/div/div
+Closebtn=//div[@id='openBalWinId']/div[1]/div/div/div/div
+Accounttabclose=//li[@id='as__mainVendorDetails']/a[1]
+SalesInvoiceReport1=.//map[@name='AlienAreas3']/area[18]
+QuickSearch1=//input[@id='quickSearch16InvoiceListEntry']
+Filter=//div[@id='InvoiceListEntry']/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/div/div/div[1]/div/table/tbody/tr/td[24]/div/img
+OpenOption=//div[text()='Opening Balance Records']
+PIInvoiceReport=//map[@name='AlienAreas3']/area[18]
+QuickSearch1=//input[@id='quickSearch21GRListEntry']
+Viewdropdown=//div[@id='GRListEntry']/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/div/div/div[1]/div/table/tbody/tr/td[24]/div/img
+Opendocusel1=//div[text()='Opening Balance Records']
+Bottomselct=//div[@id='GRListEntry']/div/div/div/div/div/div[2]/div/div[3]/div/table/following::div[1]
+DocumentCurrency=//*[@id='currency15goodsreceipt']
+ExchRate=//a[text()='SG Dollar (SGD) to US Dollars (USD)']
+inputexchange=//div[@class='x-window x-window-plain x-window-dlg' and contains(@style,'visible')]/div[2]/div[1]/div/div/div/div/div[2]//input[@type='text']

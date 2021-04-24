@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="44" failed="0" total="44" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="3594" started-at="2021-04-24T12:11:14Z" finished-at="2021-04-24T12:11:17Z">
+    <groups>
+    </groups>
+    <test name="SmokeTestInventory" duration-ms="3594" started-at="2021-04-24T12:11:14Z" finished-at="2021-04-24T12:11:17Z">
+      <class name="krawler.erp.testCases.Inventory.InventoryModule">
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_Vendor()[pri:8, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="create_Vendor" duration-ms="2" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_Vendor -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="customerMaster()[pri:9, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="customerMaster" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customerMaster -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="Create_INV_NormalProduct()[pri:10, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="Create_INV_NormalProduct" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_INV_NormalProduct -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_abProduct()[pri:11, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="create_abProduct" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_abProduct -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_AssemblyProduct()[pri:12, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="create_AssemblyProduct" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_AssemblyProduct -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="Create_ERP_NormalProduct()[pri:13, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="Create_ERP_NormalProduct" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_ERP_NormalProduct -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="StockIN_without_QA()[pri:20, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="StockIN_without_QA" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StockIN_without_QA -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="StockOUT_without_QA()[pri:22, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="StockOUT_without_QA" duration-ms="3" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StockOUT_without_QA -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="StockSales_without_QA()[pri:23, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="StockSales_without_QA" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StockSales_without_QA -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="Create_StockIn_withQA()[pri:40, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="Create_StockIn_withQA" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_StockIn_withQA -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="QA_ApprovalApproveReject()[pri:50, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="QA_ApprovalApproveReject" duration-ms="2" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QA_ApprovalApproveReject -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="StockRepair_ApproveReject()[pri:60, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="StockRepair_ApproveReject" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StockRepair_ApproveReject -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_StockRequest()[pri:70, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="create_StockRequest" duration-ms="4" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_StockRequest -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="StockRequest_IssueandCollect()[pri:71, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="StockRequest_IssueandCollect" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StockRequest_IssueandCollect -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="validate_StockRequest()[pri:72, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="validate_StockRequest" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_StockRequest -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_StockIssue()[pri:80, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="create_StockIssue" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_StockIssue -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="validate_StockIssue()[pri:81, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="validate_StockIssue" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_StockIssue -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_InterStoreStockTransfer()[pri:90, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="create_InterStoreStockTransfer" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_InterStoreStockTransfer -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="acceptANDreturn_InterStoreStockTransfer()[pri:91, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="acceptANDreturn_InterStoreStockTransfer" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acceptANDreturn_InterStoreStockTransfer -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="validate_InterStoreStockTransfer()[pri:92, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="validate_InterStoreStockTransfer" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_InterStoreStockTransfer -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_InterLocationStockTransfer()[pri:100, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="create_InterLocationStockTransfer" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_InterLocationStockTransfer -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="validate_InterLocationStockTransfer()[pri:101, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="validate_InterLocationStockTransfer" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_InterLocationStockTransfer -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="testCycleCountCalendar()[pri:120, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="testCycleCountCalendar" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCycleCountCalendar -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="testCycleCountForm()[pri:121, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="testCycleCountForm" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCycleCountForm -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.InventoryModule@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- krawler.erp.testCases.Inventory.InventoryModule -->
+      <class name="krawler.erp.testCases.Inventory.BuildAssembly">
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_AutoBuildDO()[pri:410, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="create_AutoBuildDO" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_AutoBuildDO -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_AutoBuildCS()[pri:412, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="create_AutoBuildCS" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_AutoBuildCS -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_AutoBuildSI()[pri:414, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="create_AutoBuildSI" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_AutoBuildSI -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="create_JobWorkOut_Order()[pri:430, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="create_JobWorkOut_Order" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_JobWorkOut_Order -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="createANDverify_JobWorkOut_StockTransfer()[pri:433, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="createANDverify_JobWorkOut_StockTransfer" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createANDverify_JobWorkOut_StockTransfer -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="verify_JobWorkOut_Order()[pri:435, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="verify_JobWorkOut_Order" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_JobWorkOut_Order -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="createANDverify_JobWorkOut_GR()[pri:438, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="createANDverify_JobWorkOut_GR" duration-ms="24" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createANDverify_JobWorkOut_GR -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="createANDverify_JobWorkOut_PI()[pri:440, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="createANDverify_JobWorkOut_PI" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createANDverify_JobWorkOut_PI -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_buildAssemble()[pri:450, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="create_buildAssemble" duration-ms="2" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_buildAssemble -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_UNbuildAssemble()[pri:455, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="create_UNbuildAssemble" duration-ms="2" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_UNbuildAssemble -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- krawler.erp.testCases.Inventory.BuildAssembly -->
+      <class name="krawler.erp.testCases.Inventory.BaseSetUp">
+        <test-method status="FAIL" signature="beforeTestLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:krawler.erp.testCases.Inventory.BaseSetUp@3f49dace]" name="beforeTestLogin" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:14Z" finished-at="2021-04-24T17:41:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://in5.accounting.deskera.com/a/sg12/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Returned value cannot be converted to WebElement: {stacktrace=Backtrace:
+	Ordinal0 [0x00E7A903+1550595]
+	Ordinal0 [0x00DFA701+1025793]
+	Ordinal0 [0x00D7C58E+509326]
+	Ordinal0 [0x00D10FB9+69561]
+	Ordinal0 [0x00D28DD7+167383]
+	Ordinal0 [0x00D277F2+161778]
+	Ordinal0 [0x00D273CA+160714]
+	Ordinal0 [0x00D0221E+8734]
+	Ordinal0 [0x00D02606+9734]
+	Ordinal0 [0x00D02C80+11392]
+	Ordinal0 [0x00E142C7+1131207]
+	GetHandleVerifier [0x00F170FD+523789]
+	GetHandleVerifier [0x00F16E90+523168]
+	GetHandleVerifier [0x00F1E1E7+552695]
+	GetHandleVerifier [0x00F178FA+525834]
+	Ordinal0 [0x00E0B7FC+1095676]
+	Ordinal0 [0x00D02053+8275]
+	Ordinal0 [0x00D01DA7+7591]
+	GetHandleVerifier [0x0127A3BC+4075724]
+	BaseThreadInitThunk [0x7648FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C47A4E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C47A1E+238]
+, error=invalid session id, message=invalid session id}
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'DESKTOP-O2IJE2R', ip: '192.168.43.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=Backtrace:
+	Ordinal0 [0x00E7A903+1550595]
+	Ordinal0 [0x00DFA701+1025793]
+	Ordinal0 [0x00D7C58E+509326]
+	Ordinal0 [0x00D10FB9+69561]
+	Ordinal0 [0x00D28DD7+167383]
+	Ordinal0 [0x00D277F2+161778]
+	Ordinal0 [0x00D273CA+160714]
+	Ordinal0 [0x00D0221E+8734]
+	Ordinal0 [0x00D02606+9734]
+	Ordinal0 [0x00D02C80+11392]
+	Ordinal0 [0x00E142C7+1131207]
+	GetHandleVerifier [0x00F170FD+523789]
+	GetHandleVerifier [0x00F16E90+523168]
+	GetHandleVerifier [0x00F1E1E7+552695]
+	GetHandleVerifier [0x00F178FA+525834]
+	Ordinal0 [0x00E0B7FC+1095676]
+	Ordinal0 [0x00D02053+8275]
+	Ordinal0 [0x00D01DA7+7591]
+	GetHandleVerifier [0x0127A3BC+4075724]
+	BaseThreadInitThunk [0x7648FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C47A4E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C47A1E+238]
+, error=invalid session id, message=invalid session id}
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'DESKTOP-O2IJE2R', ip: '192.168.43.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:651)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at krawler.erp.page.Utilities.enterTextNormalBox(Utilities.java:340)
+	at krawler.erp.page.Login.loginERP(Login.java:25)
+	at krawler.erp.testCases.Inventory.BaseSetUp.beforeTestLogin(BaseSetUp.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:656)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	... 36 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestLogin -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:krawler.erp.testCases.Inventory.BaseSetUp@3f49dace]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- krawler.erp.testCases.Inventory.BaseSetUp -->
+      <class name="krawler.erp.testCases.Inventory.ERPModule">
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_GRNwithoutQA()[pri:300, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="create_GRNwithoutQA" duration-ms="9" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_GRNwithoutQA -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_GRNwithQA()[pri:301, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="create_GRNwithQA" duration-ms="2" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_GRNwithQA -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="GRN_QAapproveANDreject()[pri:305, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="GRN_QAapproveANDreject" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GRN_QAapproveANDreject -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="GRN_QA_Repair()[pri:307, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="GRN_QA_Repair" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GRN_QA_Repair -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="validate_GRN()[pri:310, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="validate_GRN" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_GRN -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_DeleiveryOrder_woQA()[pri:320, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="create_DeleiveryOrder_woQA" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_DeleiveryOrder_woQA -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_DeleiveryOrder_withQA()[pri:325, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="create_DeleiveryOrder_withQA" duration-ms="2" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_DeleiveryOrder_withQA -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="DO_QAapproveANDreject()[pri:326, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="DO_QAapproveANDreject" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DO_QAapproveANDreject -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="DO_QARepair_ApproveandReject()[pri:327, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="DO_QARepair_ApproveandReject" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DO_QARepair_ApproveandReject -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="expander()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="expander" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expander -->
+        <test-method status="SKIP" signature="create_PurchaseReturn()[pri:330, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="create_PurchaseReturn" duration-ms="1" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_PurchaseReturn -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:krawler.erp.testCases.Inventory.ERPModule@490ab905]" name="afterMethod" is-config="true" duration-ms="0" started-at="2021-04-24T17:41:17Z" finished-at="2021-04-24T17:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- krawler.erp.testCases.Inventory.ERPModule -->
+    </test> <!-- SmokeTestInventory -->
+  </suite> <!-- Suite -->
+</testng-results>

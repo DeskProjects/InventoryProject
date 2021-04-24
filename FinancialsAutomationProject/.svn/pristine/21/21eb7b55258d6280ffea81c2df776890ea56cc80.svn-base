@@ -1,0 +1,7 @@
+DatePickerButton= html/body/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div/div/div/div/div/div/div[1]/div/div/div/div/div/form/div/div[2]/div/div/div[1]/div[1]/div/img
+DateTable=//table[@class='x-date-inner']
+MonthYearButton=//div[@class='x-layer x-menu x-menu-plain x-date-menu']/ul/li/div/table/tbody/tr[1]/td[2]/table/tbody/tr/td[2]
+MonthYearTable=//div[@class='x-date-mp']
+PreviousYear=//a[@class='x-date-mp-prev']
+NextYear=//a[@class='x-date-mp-next']
+CycleCountForm=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/ul/li[7]/div/a

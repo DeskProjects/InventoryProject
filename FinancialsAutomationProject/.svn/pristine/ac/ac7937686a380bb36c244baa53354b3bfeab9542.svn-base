@@ -1,0 +1,12 @@
+ClickOnUAD=//span[text()='Unpost Asset Depreciation']
+SelectAG=//input[@name='productname']
+SelectAG1=//input[@name='productname']/following::span/img[2]
+Cross=//div[@id='DepreciationUnpost']//following::div[5]/input/following::span[1]/img[1]
+Asset=//div[@id='DepreciationUnpost']//following::div[5]/input
+AssetId=//form[@id='designpanelpreview']/following::div[80]/div[3]/div[3]/following::div[3]/table/tbody/tr
+Fetch=//button[text()='Fetch']
+CheckBox=//div[@id='DepreciationUnpost']/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/div[2]/div/table/tbody/tr/td[1]/div/div
+UnPost=//button[text()='Unpost']
+Submit=//button[text()='Submit']
+Yes=//button[text()='Yes']
+Ok=//button[text()='OK']

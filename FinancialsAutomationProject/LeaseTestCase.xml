@@ -1,0 +1,32 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+	<test name="SmokeTestERP">
+		<parameter name="server1"
+			value="https://in5.accounting.deskera.com/a/in5test/"></parameter>
+		<parameter name="server2"
+			value="http://192.168.0.21:8080/stagingcrm/a/rahulerptest122/"></parameter>
+		<parameter name="server"
+			value="http://192.168.0.208:8080/dotcomsmoketesting/a/integration2/"></parameter>
+		<parameter name="server"
+			value="http://192.168.0.208:8080/dotcomsmoketestingv21/a/automationtest1/"></parameter>
+
+		<parameter name="username" value="nilesh.korpadin5test"></parameter>
+		<parameter name="password" value="in5test"></parameter>
+
+		<classes>
+
+			<!--class name="krawler.erp.testCases.LeaseManagementWithInventoryFlowTC" -->
+			<!--class name="krawler.erp.testCases.LeaseManagementWithFixedAssetFlowTC"/ -->
+			<!--class name="krawler.erp.testCases.RegressionLeaseManagementwithFixedAssetTC"/ -->
+			<class
+				name="krawler.erp.testCases.RegressionLeaseManagementwithInventoryTC" />
+
+
+
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

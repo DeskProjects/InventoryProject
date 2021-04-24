@@ -1,0 +1,484 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import krawler.erp.OpeningDocuments.CustomerMasterForOpening;
+import krawler.erp.OpeningDocuments.OpeningCustomerCNCreation;
+import krawler.erp.OpeningDocuments.OpeningCustomerDNCreation;
+import krawler.erp.OpeningDocuments.OpeningMPCreation;
+import krawler.erp.OpeningDocuments.OpeningPICreation;
+import krawler.erp.OpeningDocuments.OpeningRPCreation;
+import krawler.erp.OpeningDocuments.OpeningSICreation;
+import krawler.erp.OpeningDocuments.OpeningVendorCNCreation;
+import krawler.erp.OpeningDocuments.OpeningVendorDNCreation;
+import krawler.erp.OpeningDocuments.VendorMasterForOpening;
+import krawler.erp.page.Login;
+import krawler.erp.page.Utilities;
+
+public class OpeningDocumentsTC {
+ public static WebDriver driver;
+ // Note:= Please give the unique "Document id", "Customer ID" , "Vendor ID" before run all below test cases. 
+ public static String documentid="OpeningDoc1";
+ public static String CustomerID= "Cust1";
+ public static String VendorID= "Vend1";
+ 
+   // Login into ERP Application
+  @Test(priority=1)
+  public void beforeTestLogin() throws InterruptedException, IOException, AWTException
+  {
+      Login ln = new Login();
+      WebDriver driver = Login.loginERP("http://192.168.0.21:8080/stagingaccounting/a/rahulerptest125/", "admin", "1234",10);
+      	          this.driver = driver;
+      	              
+   }
+  
+  // Create Customer
+  @Test(priority=2)
+  public void Create_Customer()throws InterruptedException, AWTException, IOException{
+	  CustomerMasterForOpening CMO = new CustomerMasterForOpening();
+	  CMO.create_Customer(CustomerID, driver);
+	  Thread.sleep(1000);
+	  CMO.verify_Customer(CustomerID, driver);
+  }
+  
+  // Create Opening SI with Base Currency
+  @Test(priority=3)
+  public void Create_OpeningSalesInvoice_WithBaseCurrency() throws InterruptedException, AWTException, IOException{
+	  OpeningSICreation OSI= new OpeningSICreation();
+	  OSI.Create_OPSI_With_BaseCurrency(documentid, driver);
+  }
+  
+//Create Opening SI with Foreign Currency
+  @Test(priority=4)
+  public void Create_OpeningSalesInvoice_With_ForeignCurrency() throws InterruptedException, AWTException, IOException{
+	  OpeningSICreation OSI = new OpeningSICreation();
+	  OSI.Create_OPSI_With_ForeignCurrency(documentid, driver);
+	  
+  }
+  
+  // Edit Opening SI with Base and Foreign Currency
+  @Test(priority=5)
+  public void Edit_OpeningSalesInvoice() throws InterruptedException, AWTException, IOException{
+	  OpeningSICreation OSI = new OpeningSICreation();
+	  OSI.Edit_OPSI_With_BaseCurrency(documentid, driver);
+	  Thread.sleep(1000);
+	  
+	 OSI.Edit_OPSI_With_ForeignCurrency(documentid, driver);
+  }
+  
+  // Delete both Opening SI document 
+  @Test(priority=6)
+  public void Delete_OpeningSalesInvoice() throws InterruptedException, AWTException, IOException{
+	  OpeningSICreation OSI = new OpeningSICreation();
+	  OSI.Delete_OPSI_With_BasendForeignCurrency(documentid, driver);
+  }
+  
+  //Again create opening SI with base and foreign currency
+   @Test(priority=7)
+   public void Create_OpeningSI_WithBaseandForeign_currency() throws InterruptedException, AWTException, IOException{
+	   OpeningSICreation OSI = new OpeningSICreation();
+		  OSI.Create_OPSI_With_BaseCurrency1(documentid, driver);
+		  OSI.Create_OPSI_With_ForeignCurrency1(documentid, driver);
+		  Utilities.refresh();
+		  
+		    Thread.sleep(2000);
+		    OSI.OpeningSIDocument_Verifcation(driver, CustomerID); // Verifying Opening SI document through SI main report
+			Utilities.refresh();
+	
+   }
+   
+   // Create Opening Receive Payment with Base Currency
+   @Test(priority=8)
+   public void Create_OpeningRP_withBaseCurrency()throws InterruptedException, AWTException, IOException{
+	   //Call to Customer Report 
+ 	  CustomerMasterForOpening CMO = new CustomerMasterForOpening();
+ 	  CMO.verify_Customer(CustomerID, driver);
+ 	  Thread.sleep(2000);
+ 	  
+ 	  // Now Call for Opening RP document
+ 	  OpeningRPCreation ORP = new OpeningRPCreation();
+ 	  ORP.Create_OPRP_With_BaseCurrency(documentid, driver); 
+   }
+  
+   
+ //Create Opening RP with Foreign Currency
+   @Test(priority=9)
+   public void Create_OpeningReceivePayment_With_ForeignCurrency() throws InterruptedException, AWTException, IOException{
+	   OpeningRPCreation ORP = new OpeningRPCreation();
+	   ORP.Create_OPRP_With_ForeignCurrency(documentid, driver);
+ 	  
+   }
+   
+   // Edit Opening RP with Base and Foreign Currency
+   @Test(priority=10)
+   public void Edit_OpeningReceivePayment() throws InterruptedException, AWTException, IOException{
+	   OpeningRPCreation ORP = new OpeningRPCreation();
+ 	   ORP.Edit_OPRP_With_BaseCurrency(documentid, driver);
+ 	  Thread.sleep(1000);
+ 	  
+ 	  ORP.Edit_OPRP_With_ForeignCurrency(documentid, driver);
+   }
+   
+   // Delete both Opening RP document 
+   @Test(priority=11)
+   public void Delete_OpeningReceivePayment() throws InterruptedException, AWTException, IOException{
+	   OpeningRPCreation ORP = new OpeningRPCreation();
+ 	   ORP.Delete_OPRP_With_BaseandForeignCurrency(documentid, driver);
+   }
+   
+   //Again create opening RP with base and foreign currency
+    @Test(priority=12)
+    public void Create_OpeningRP_WithBaseandForeign_currency() throws InterruptedException, AWTException, IOException{
+    	  OpeningRPCreation ORP = new OpeningRPCreation();
+    	  ORP.Create_OPRP_With_BaseCurrency1(documentid, driver);
+ 		  ORP.Create_OPRP_With_ForeignCurrency1(documentid, driver);
+ 		  Utilities.refresh();
+ 		  
+ 		    Thread.sleep(1000);
+ 		    ORP.OpeningRPDocument_Verifcation(driver, CustomerID);// Verifying Opening RP document through Receive Payment report
+			Utilities.refresh();
+    }
+
+  
+  
+  // Create Opening Customer CN with Base Currency
+  @Test(priority=13)
+  public void Create_OpeningCustomerCN_withBaseCurrency()throws InterruptedException, AWTException, IOException{
+	   //Call to Customer Report 
+	  CustomerMasterForOpening CMO = new CustomerMasterForOpening();
+	  CMO.verify_Customer(CustomerID, driver);
+	  Thread.sleep(2000);
+	  
+	  // Now Call for Opening Customer CN document
+	  OpeningCustomerCNCreation OPCCN = new OpeningCustomerCNCreation();
+	  OPCCN.Create_OPCustomerCN_With_BaseCurrency(documentid, driver);
+  }
+ 
+  
+//Create Opening Customer CN with Foreign Currency
+  @Test(priority=14)
+  public void Create_OpeningCustomerCN_With_ForeignCurrency() throws InterruptedException, AWTException, IOException{
+	  OpeningCustomerCNCreation OPCCN = new OpeningCustomerCNCreation();
+	  OPCCN.Create_OPCustomerCN_With_ForeignCurrency(documentid, driver);
+	  
+  }
+  
+  // Edit Opening Customer CN with Base and Foreign Currency
+  @Test(priority=15)
+  public void Edit_OpeningCustomerCN() throws InterruptedException, AWTException, IOException{
+	  OpeningCustomerCNCreation OPCCN = new OpeningCustomerCNCreation();
+	  OPCCN.Edit_OPCustomerCN_With_BaseCurrency(documentid, driver);
+	  Thread.sleep(1000);
+	  
+	  OPCCN.Edit_OPCustomerCN_With_ForeignCurrency(documentid, driver);
+  }
+  
+  // Delete both Opening Customer CN document 
+  @Test(priority=16)
+  public void Delete_OpeningCustomerCN() throws InterruptedException, AWTException, IOException{
+	  OpeningCustomerCNCreation OPCCN = new OpeningCustomerCNCreation();
+	  OPCCN.Delete_OPCustomerCN_With_BaseandForeignCurrency(documentid, driver);
+  }
+  
+  //Again create opening Customer CN with base and foreign currency
+   @Test(priority=17)
+   public void Create_OpeningCustomerCN_WithBaseandForeign_currency() throws InterruptedException, AWTException, IOException{
+	   OpeningCustomerCNCreation OPCCN = new OpeningCustomerCNCreation();
+	   OPCCN.Create_OPCustomerCN_With_BaseCurrency1(documentid, driver);
+	   OPCCN.Create_OPCustomerCN_With_ForeignCurrency1(documentid, driver);
+	   Utilities.refresh();
+	   
+	    Thread.sleep(2000);
+	    OPCCN.OpeningCustomerCNDocument_Verifcation(driver, CustomerID); // Verifying Opening Customer Credit Note document through Credit Note report
+		Utilities.refresh();
+	
+   } 
+   
+   
+  
+    
+   // Create Opening Customer DN with Base Currency
+   @Test(priority=18)
+   public void Create_OpeningCustomerDN_withBaseCurrency()throws InterruptedException, AWTException, IOException{
+ 	   //Call to Customer Report 
+ 	  CustomerMasterForOpening CMO = new CustomerMasterForOpening();
+ 	  CMO.verify_Customer(CustomerID, driver);
+ 	  Thread.sleep(2000);
+ 	  
+ 	  // Now Call for Opening Customer DN document
+ 	 OpeningCustomerDNCreation OPCDN = new OpeningCustomerDNCreation();
+ 	 OPCDN.Create_OPCustomerDN_With_BaseCurrency(documentid, driver);
+   }
+  
+   
+ //Create Opening Customer DN with Foreign Currency
+   @Test(priority=19)
+   public void Create_OpeningCustomerDN_With_ForeignCurrency() throws InterruptedException, AWTException, IOException{
+	   OpeningCustomerDNCreation OPCDN = new OpeningCustomerDNCreation();
+	   OPCDN.Create_OPCustomerDN_With_ForeignCurrency(documentid, driver);
+ 	  
+   }
+   
+   // Edit Opening Customer DN with Base and Foreign Currency
+   @Test(priority=20)
+   public void Edit_OpeningCustomerDN() throws InterruptedException, AWTException, IOException{
+	   OpeningCustomerDNCreation OPCDN = new OpeningCustomerDNCreation();
+	   OPCDN.Edit_OPCustomerDN_With_BaseCurrency(documentid, driver);
+ 	  Thread.sleep(1000);
+ 	  
+ 	  OPCDN.Edit_OPCustomerDN_With_ForeignCurrency(documentid, driver);
+   }
+   
+   // Delete both Opening Customer DN document 
+   @Test(priority=21)
+   public void Delete_OpeningCustomerDN() throws InterruptedException, AWTException, IOException{
+	   OpeningCustomerDNCreation OPCDN = new OpeningCustomerDNCreation();
+	   OPCDN.Delete_OPCustomerDN_With_BaseandForeignCurrency(documentid, driver);
+   }
+   
+   //Again create opening Customer DN with base and foreign currency
+    @Test(priority=22)
+    public void Create_OpeningCustomerDN_WithBaseandForeign_currency() throws InterruptedException, AWTException, IOException{
+    	 OpeningCustomerDNCreation OPCDN = new OpeningCustomerDNCreation();
+    	 OPCDN.Create_OPCustomerDN_With_BaseCurrency1(documentid, driver);
+    	 OPCDN.Create_OPCustomerDN_With_ForeignCurrency1(documentid, driver);
+ 	     Utilities.refresh();
+ 	   
+ 	     Thread.sleep(2000);
+ 	     OPCDN.OpeningCustomerDNDocument_Verifcation(driver, CustomerID); // Verifying Opening Customer Debit Note document through Debit Note report
+		 Utilities.refresh();
+	
+ 	
+    }    
+  
+  //---------------------------------------------------------------- Function calling for Vendor Side Transaction(PI, MP , DN, CN)-----------------------------------------------------------
+  
+ // Create Vendor
+  @Test(priority=23)
+  public void Create_Vendor()throws InterruptedException, AWTException, IOException{
+	  VendorMasterForOpening VMO = new VendorMasterForOpening();
+	  VMO.Create_Vendor(VendorID, driver);
+	  Thread.sleep(1000);
+	  VMO.Verify_Vendor(VendorID, driver);
+  }
+  
+  
+  // Create Opening PI with Base Currency
+   @Test(priority=24)
+  public void Create_OpeningPurchaseInvoice_WithBaseCurrency() throws InterruptedException, AWTException, IOException{
+	  OpeningPICreation OPI= new OpeningPICreation();
+	  OPI.Create_OPPI_With_BaseCurrency(documentid, driver);
+  }
+  
+  ///Create Opening PI with Foreign Currency
+  @Test(priority=25)
+  public void Create_OpeningPurchaseInvoice_With_ForeignCurrency() throws InterruptedException, AWTException, IOException{
+	  OpeningPICreation OPI= new OpeningPICreation();
+	  OPI.Create_OPPI_With_ForeignCurrency(documentid, driver);
+	  
+  }
+  
+  // Edit Opening PI with Base and Foreign Currency
+  @Test(priority=26)
+  public void Edit_OpeningPurchaseInvoice() throws InterruptedException, AWTException, IOException{
+	  OpeningPICreation OPI= new OpeningPICreation();
+	  OPI.Edit_OPPI_With_BaseCurrency(documentid, driver);
+	  Thread.sleep(1000);
+	  
+	  OPI.Edit_OPPI_With_ForeignCurrency(documentid, driver);
+  }
+  
+  // Delete both Opening PI document 
+  @Test(priority=27)
+  public void Delete_OpeningPurchaseInvoice() throws InterruptedException, AWTException, IOException{
+	  OpeningPICreation OPI= new OpeningPICreation();
+	  OPI.Delete_OPPI_With_BasendForeignCurrency(documentid, driver);
+  }
+  
+  //Again create opening PI with base and foreign currency
+   @Test(priority=28)
+   public void Create_OpeningPI_WithBaseandForeign_currency() throws InterruptedException, AWTException, IOException{
+	   OpeningPICreation OPI= new OpeningPICreation();
+	    OPI.Create_OPPI_With_BaseCurrency1(documentid, driver);
+	    OPI.Create_OPPI_With_ForeignCurrency1(documentid, driver);
+	    Utilities.refresh();
+	    Thread.sleep(2000);
+	    OPI.OpeningPIDocument_Verifcation(driver, VendorID); // Verifying Opening PI document through PI main report
+		Utilities.refresh();
+	
+   }
+   
+   
+  
+    // Create Opening Make Payment with Base Currency
+   @Test(priority=29)
+   public void Create_OpeningMP_withBaseCurrency()throws InterruptedException, AWTException, IOException{
+	   
+	   //Call to Vendor Report 
+	   VendorMasterForOpening VMO = new VendorMasterForOpening();
+	   VMO.Verify_Vendor(VendorID, driver);
+ 	  Thread.sleep(2000);
+ 	  
+ 	  // Now Call for Opening MP document
+ 	  OpeningMPCreation OMP = new OpeningMPCreation();
+ 	  OMP.Create_OPMP_With_BaseCurrency(documentid, driver);
+   }
+  
+   
+ //Create Opening MP with Foreign Currency
+   @Test(priority=30)
+   public void Create_OpeningMakePayment_With_ForeignCurrency() throws InterruptedException, AWTException, IOException{
+	   OpeningMPCreation OMP = new OpeningMPCreation();
+	   OMP.Create_OPMP_With_ForeignCurrency(documentid, driver);
+ 	  
+   }
+   
+   // Edit Opening MP with Base and Foreign Currency
+   @Test(priority=31)
+   public void Edit_OpeningMakePayment() throws InterruptedException, AWTException, IOException{
+	   OpeningMPCreation OMP = new OpeningMPCreation();
+	   OMP.Edit_OPMP_With_BaseCurrency(documentid, driver);
+ 	   Thread.sleep(1000);
+ 	  
+ 	   OMP.Edit_OPMP_With_ForeignCurrency(documentid, driver);
+   }
+   
+   // Delete both Opening MP document 
+   @Test(priority=32)
+   public void Delete_OpeningMakePayment() throws InterruptedException, AWTException, IOException{
+	   OpeningMPCreation OMP = new OpeningMPCreation();
+	   OMP.Delete_OPMP_With_BaseandForeignCurrency(documentid, driver);
+   }
+   
+   //Again create opening MP with base and foreign currency
+    @Test(priority=33)
+    public void Create_OpeningMP_WithBaseandForeign_currency() throws InterruptedException, AWTException, IOException{
+    	  OpeningMPCreation OMP = new OpeningMPCreation();
+    	  OMP.Create_OPMP_With_BaseCurrency1(documentid, driver);
+    	  OMP.Create_OPMP_With_ForeignCurrency1(documentid, driver);
+ 		  Utilities.refresh();
+ 		  
+ 	     Thread.sleep(2000);
+ 	     OMP.OpeningMPDocument_Verifcation(driver, VendorID); // Verifying Opening MP document through Payment Made report
+ 	   	 Utilities.refresh();
+ 	
+    }
+    
+  
+    
+  // Create Opening Vendor CN with Base Currency
+  @Test(priority=34)
+  public void Create_OpeningVendorCN_withBaseCurrency()throws InterruptedException, AWTException, IOException{
+	  
+	   //Call to Vendor Report 
+	   VendorMasterForOpening VMO = new VendorMasterForOpening();
+	   VMO.Verify_Vendor(VendorID, driver);
+	  Thread.sleep(2000);
+	  
+	  // Now Call for Opening Vendor CN document
+	  OpeningVendorCNCreation OPVCN = new OpeningVendorCNCreation();
+	  OPVCN.Create_OPVendorCN_With_BaseCurrency(documentid, driver);
+  }
+ 
+  
+//Create Opening Vendor CN with Foreign Currency
+  @Test(priority=35)
+  public void Create_OpeningVendorCN_With_ForeignCurrency() throws InterruptedException, AWTException, IOException{
+	  OpeningVendorCNCreation OPVCN = new OpeningVendorCNCreation();
+	  OPVCN.Create_OPVendorCN_With_ForeignCurrency(documentid, driver);
+	  
+  }
+  
+  // Edit Opening Vendor CN with Base and Foreign Currency
+  @Test(priority=36)
+  public void Edit_OpeningVendorCN() throws InterruptedException, AWTException, IOException{
+	  OpeningVendorCNCreation OPVCN = new OpeningVendorCNCreation();
+	  OPVCN.Edit_OPVendorCN_With_BaseCurrency(documentid, driver);
+	  Thread.sleep(1000);
+	  
+	  OPVCN.Edit_OPVendorCN_With_ForeignCurrency(documentid, driver);
+  }
+  
+  // Delete both Opening Vendor CN document 
+  @Test(priority=37)
+  public void Delete_OpeningVendorCN() throws InterruptedException, AWTException, IOException{
+	  OpeningVendorCNCreation OPVCN = new OpeningVendorCNCreation();
+	  OPVCN.Delete_OPVendorCN_With_BaseandForeignCurrency(documentid, driver);
+  }
+  
+  //Again create opening Vendor CN with base and foreign currency
+   @Test(priority=38)
+   public void Create_OpeningVendorCN_WithBaseandForeign_currency() throws InterruptedException, AWTException, IOException{
+	   OpeningVendorCNCreation OPVCN = new OpeningVendorCNCreation();
+	   OPVCN.Create_OPVendorCN_With_BaseCurrency1(documentid, driver);
+	   OPVCN.Create_OPVendorCN_With_ForeignCurrency1(documentid, driver);
+	   Utilities.refresh();
+	     
+	     Thread.sleep(2000);
+	     OPVCN.OpeningVendorCNDocument_Verifcation(driver, VendorID); // Verifying Opening Vendor CN document through Credit Note report
+	   	 Utilities.refresh();
+	
+   }
+   
+    
+   
+   // Create Opening Vendor DN with Base Currency
+   @Test(priority=39)
+   public void Create_OpeningVendorDN_withBaseCurrency()throws InterruptedException, AWTException, IOException{
+	   
+ 	   //Call to Vendor Report 
+ 	  VendorMasterForOpening VMO = new VendorMasterForOpening();
+	  VMO.Verify_Vendor(VendorID, driver);
+ 	  Thread.sleep(2000);
+ 	  
+ 	  // Now Call for Opening Vendor DN document
+ 	 OpeningVendorDNCreation OPVDN = new OpeningVendorDNCreation();
+ 	 OPVDN.Create_OPVendorDN_With_BaseCurrency(documentid, driver);
+   }
+  
+   
+ //Create Opening Vendor DN with Foreign Currency
+   @Test(priority=40)
+   public void Create_OpeningVendorDN_With_ForeignCurrency() throws InterruptedException, AWTException, IOException{
+	   OpeningVendorDNCreation OPVDN = new OpeningVendorDNCreation();
+	   OPVDN.Create_OPVendorDN_With_ForeignCurrency(documentid, driver);
+ 	  
+   }
+   
+   // Edit Opening Vendor DN with Base and Foreign Currency
+   @Test(priority=41)
+   public void Edit_OpeningVendorDN() throws InterruptedException, AWTException, IOException{
+	   OpeningVendorDNCreation OPVDN = new OpeningVendorDNCreation();
+	   OPVDN.Edit_OPVendorDN_With_BaseCurrency(documentid, driver);
+ 	   Thread.sleep(1000);
+ 	  
+ 	   OPVDN.Edit_OPVendorDN_With_ForeignCurrency(documentid, driver);
+   } 
+   
+   // Delete both Opening Vendor DN document 
+   @Test(priority=42)
+   public void Delete_OpeningVendorDN() throws InterruptedException, AWTException, IOException{
+	   OpeningVendorDNCreation OPVDN = new OpeningVendorDNCreation();
+	   OPVDN.Delete_OPVendorDN_With_BaseandForeignCurrency(documentid, driver);
+   }
+   
+   //Again create opening Vendor DN with base and foreign currency
+    @Test(priority=43)
+    public void Create_OpeningVendorDN_WithBaseandForeign_currency() throws InterruptedException, AWTException, IOException{
+    	OpeningVendorDNCreation OPVDN = new OpeningVendorDNCreation();
+    	OPVDN.Create_OPVendorDN_With_BaseCurrency1(documentid, driver);
+    	OPVDN.Create_OPVendorDN_With_ForeignCurrency1(documentid, driver);
+ 	    Utilities.refresh();
+ 	   
+ 	     Thread.sleep(2000);
+ 	     OPVDN.OpeningVendorDNDocument_Verifcation(driver, VendorID); // Verifying Opening Vendor DN document through Debit Note report
+	   	 Utilities.refresh();
+ 	
+ 	
+    }    
+}

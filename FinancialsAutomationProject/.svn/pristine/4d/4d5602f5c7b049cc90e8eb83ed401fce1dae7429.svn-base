@@ -1,0 +1,9 @@
+***********************************setCycleCountFrequencies********************************************
+InventoryExpander=.//*[@id='inventory']/div/div
+EntryExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/div/img
+CycleCountCalendarLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/ul/li[6]/div/a
+CycleCountMonthInput=.//*[@id='CycleCountCalendarTabId']/div/div/div/div/div[1]/div/table/tbody/tr/td[2]/div/input
+saveCycleCountCalendarFrequencyBtn=//button[@class='x-btn-text pwnd save' and text()='Save Calendar Frequencies']
+CycleCountCloseBtn=//li[contains(@id,'as__CycleCountCalendarTabId')]/a[1]
+freqCancel=//*[@id='ccfrequency']/following::span[1]/img[1]
+freqSelect=//*[@id='ccfrequency']/following::span[1]/img[2]

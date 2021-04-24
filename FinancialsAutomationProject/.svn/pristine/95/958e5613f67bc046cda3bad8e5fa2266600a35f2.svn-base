@@ -1,0 +1,59 @@
+PurchaseReturnIcon=//map[@name='AlienAreas1']/area[10]
+SelectPurchaseReturnDebit=.//*[text()='Create Purchase Return with Debit Note:']//following-sibling::div[1]/div/input
+ClickSubmit=//button[text()='Submit']
+EnterVendorId=.//*[@id='customer11purchasereturn']
+SequenceFormat=.//*[@id='sequenceFormatCombobox11purchasereturn']
+PurchaseReturnNo.=.//*[@id='invoiceNo11purchasereturn']
+DebitSequenceFormat=.//*[@id='CnDnSequenceFormatCombobox11purchasereturn']
+DebitNoteNo.=.//*[@id='cndnNumber11purchasereturn']
+AddProduct=.//*[@class='pwnd add-gridrow']
+SearchProductId=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+SelectProduct=//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+ClickOnAdd=.//button[text()='Add']
+ActualQuantity=.//*[@id='purchasereturnbillingproductdetailsgrid']/div/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[12]
+Memo=.//*[@id='memo11purchasereturn']
+ReturnQuantity=.//*[@id='purchasereturnbillingproductdetailsgrid']/div/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[13]
+EnterReason=.//*[@id='purchasereturnbillingproductdetailsgrid']/div/div/div/div/div[2]/div[1]/div/table/tbody/tr/td[31]/div
+ClickOnSave=//button[text()='Save']
+ClickOnYes=//button[text()='Yes']
+ClickOnOk=//button[text()='OK']
+CloseForm=.//li[@id='as__purchasereturn']/a[1]
+
+PurchaseReturnOnlyReport=//map[@name='AlienAreas3']/area[16]
+QuickSearch=.//input[@id='quickSearch54']
+ClosePurchaseReturnOnlyTab=//li[@id='as__PurchaseReturnListEntry']/a[1]
+FirstRow=//div[@id='gridmsg54PurchaseReturnListEntry']/div/div/div/div/div[2]/div/div[1]/table/tbody/tr[1]/td[1]/div/div
+*********************************copyeditdeletecode******************************************
+DocumentCheckBox=.//div[@id='gridmsg54PurchaseReturnListEntry']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div
+copyPurchaseReturnWDNButton=//button[@class='x-btn-text accountingbase copy' and text()='Copy']
+copyPurchaseReturnWDNId=//*[contains(@id,'invoiceNo11PurchaseReturnCopy')]/input
+copyPurchaseReturnWDNNo=//*[contains(@id,'cndnNumber11PurchaseReturnCopy')]/input
+saveCopiedPurchaseReturnWDNId=//button[@class='x-btn-text pwnd save' and text()='Save']
+CopyPurchaseReturnWDNClose=//li[contains(@id,'as__PurchaseReturnCopy')]/a[1]
+EditPurchaseReturnWDNClose=//li[contains(@id,'as__PurchaseReturnEdit')]/a[1]
+EditPurchaseReturnWDNButton=//button[@class='x-btn-text accountingbase edit' and text()='Edit']
+PurchaseReturnWDNMemo=//textarea[contains(@id,'memo11PurchaseReturnEdit')]
+PurchaseReturnWDNEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+deletePurchaseReturnWDNButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deletePurchaseReturnWDNPermButton=//*[contains(text(), 'Delete Purchase Return Permanently')]/img
+copyMemo= //textarea[contains(@id,'memo11PurchaseReturn')]
+copyActualQuantity= //div[@class='x-grid3-viewport']/div[2]/div/div[@class='x-grid3-row   x-grid3-dirty-row']/table/tbody/tr/td[12] 
+copyReturnQuantity= //div[@class='x-grid3-viewport']/div[2]/div/div[@class='x-grid3-row   x-grid3-dirty-row']/table/tbody/tr/td[13]
+
+*******************************WithPI******************
+linkBtn=//input[@name='prdiscount']/following-sibling::input
+fromLink=//input[@name='fromLinkCombo']
+
+SelectProductS=//*[contains(@id,'ProductSelectionWindow')]//*[contains(text(),'Product ID')]/ancestor::tr//*[@class='x-grid3-hd-checker']
+TotalFindProducts=//*[text()='Product Category: (None)']/parent::div/following-sibling::div//table/tbody/tr/td[1]/div/div
+addProducts=//*[contains(@id,'ProductSelectionWindow')]//*[@class='x-btn-text' and text()='Add']
+HeaderNames=//div[@id='purchasereturnbillingproductdetailsgrid']/div/div/div/div/div[1]/div[1]/div/table/thead/tr/td/div
+tax=//*[@id='includetax11purchasereturn']
+taxName=//*[@id='tax11purchasereturn']
+
+
+
+
+
+
+

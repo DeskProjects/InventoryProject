@@ -1,0 +1,34 @@
+CreditNoteIcon=//map[@name='AlienAreas2']/area[7]
+SelectVendorNote=.//label[text()='Credit Note against Vendor:']//following-sibling::div[1]/div/input
+ClickSubmit=//button[text()='Submit']
+SequenceFormat=.//input[@id='sequenceformatundefinedcreditnotepanel']
+DocumentNo=.//*[@id='cndnNumberundefinedcreditnotepanel']
+EnterVendorId=.//*[@id='selectCustomerundefinedcreditnotepanel']
+EnterAccount=.//*[@id='centerpancreditnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[1]/div
+Memo=.//*[@id='memoundefinedcreditnotepanel']
+EnterAmount=.//*[@id='centerpancreditnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[3]/div
+EnterReason=.//*[@id='centerpancreditnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[9]/div
+ClickOnSave=//button[text()='Save']
+ClickOnYes=//button[text()='Yes']
+ClickOnOk=//button[text()='OK']
+CloseForm=.//li[@id='as__creditnotepanel']/a[1]
+
+CreditNoteReport=//map[@name='AlienAreas3']/area[13]
+QuickSearch=.//input[@id='quickSearch19']
+*********************************copyeditdeletecode******************************************
+CNTypeDD=.//*[@id='view19CreditNoteDetails']
+DocumentCheckBox=.//div[@id='gridmsg19CreditNoteDetails']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div
+copyCNAgainstVendorButton=//button[@class='x-btn-text accountingbase copy' and text()='Copy']
+copyCNAgainstVendorId=//*[contains(@id,'cndnNumber12CopyCreditNote')]/input
+saveCopiedCNAgainstVendorId=//button[@class='x-btn-text pwnd save' and text()='Save']
+CopyCNAgainstVendorClose=//li[contains(@id,'as__CopyCreditNote')]/a[1]
+EditCNAgainstVendorClose=//li[contains(@id,'as__EditCreditNote')]/a[1]
+EditCNAgainstVendorButton=//button[@class='x-btn-text accountingbase edit' and text()='Edit']
+CNAgainstVendorMemo=//textarea[contains(@id,'memo12EditCreditNote')]
+CNAgainstVendorEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+deleteCNAgainstVendorButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deleteCNAgainstVendorPermButton=//*[contains(@style,'visible')]//*[contains(text(), 'Delete Credit Note Permanently')]/img
+
+
+********************************SumitXpath**************************
+Dashboard=//span[text()='Dashboard']

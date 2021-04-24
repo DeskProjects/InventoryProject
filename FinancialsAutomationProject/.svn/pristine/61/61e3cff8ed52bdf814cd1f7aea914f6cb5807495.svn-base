@@ -1,0 +1,7 @@
+InventoryExpander=.//*[@id='inventory']/div/div
+ReportsExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/div/img
+StockLedgerReportLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/ul/li[4]/div/a
+QuickSearch=.//*[@id='quickSearchundefined']
+StockLedgerReportResultCount=//div[@id='stockledger']/div/div/div/div/div/div[2]/div/div[3]/div/table/following-sibling::div
+StockLedgerReportFetchBtn=//button[@class='x-btn-text accountingbase fetch' and text()='Fetch']
+StockLedgerReportCloseBtn=//li[contains(@id,'as__stockledger')]/a[1]

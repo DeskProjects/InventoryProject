@@ -1,0 +1,57 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+import krawler.erp.CustomDimensionFields.Adv_Srch_PurchaseRequisition;
+import krawler.erp.CustomDimensionFields.CreationCustomDimensionFields;
+import krawler.erp.modules.VisualAspectCashPurchase;
+import krawler.erp.page.Login;
+
+public class Testing_CusDim {
+
+	public static WebDriver driver;	 
+	
+	public static String customerid="Tango"; 
+	public static String documentid="Doc1";
+	public static String vendorid= "Victor";
+	public static String productid="Mobile 1";
+	
+	 @BeforeSuite(alwaysRun = true)
+     public void OpenBrowser() throws InterruptedException, IOException, AWTException
+     {
+//    	driver= Login.loginERP("http://192.168.0.21:8080/stagingaccounting/a5/automation1/", "admin", "1234", 2); 
+		driver= Login.loginERP("http://192.168.0.208:8080/dotcomsmoketesting/a/automation208/", "admin", "1234", 2);
+    	
+     }
+	    
+	  @Test(priority=1)
+	    public void create_create_CustDim() throws InterruptedException, IOException, AWTException
+	    {
+		  // CreationCustomDimensionFields.create_CustDim(driver);
+		}
+	 
+	  @Test(priority=2)
+	    public void create_Adv_Srch_PurReq() throws InterruptedException, IOException, AWTException
+	    {
+		 
+		  String Docs1[]={"PRDoc1","PRDoc2","PRDoc3"};
+	//	  Adv_Srch_PurchaseRequisition.PurReqAdvSrch("PRDoc1", "A", "1", "None", productid, driver);
+	//	  Adv_Srch_PurchaseRequisition.PurReqAdvSrch("PRDoc2", "A", "2", "X", productid, driver);
+	//	  Adv_Srch_PurchaseRequisition.PurReqAdvSrch("PRDoc3", "A", "3", "X", productid, driver);
+	//	  Adv_Srch_PurchaseRequisition.EnterPR_Report(driver, "PRDoc2", "A", "2", "None");
+	//	  Adv_Srch_PurchaseRequisition.EnterPR_Report(driver, "PRDoc1", "A", "1", "None");
+	//      Adv_Srch_PurchaseRequisition.EnterPR_Report1(driver, "PRDoc1", "D", "1", "None");
+	//	  Adv_Srch_PurchaseRequisition.EnterPR_Report1(driver, "PRDoc2", "D", "2", "None");
+	//	  Adv_Srch_PurchaseRequisition.EnterPR_Report2(driver, Docs1, "A", "", "X");
+	//	  Adv_Srch_PurchaseRequisition.EnterPR_Report3(driver, Docs1, "", "2", "X");
+		  Adv_Srch_PurchaseRequisition.EnterPR_Report4(driver, Docs1, "B", "", "X");
+		  
+		
+		  }
+	  
+	 }

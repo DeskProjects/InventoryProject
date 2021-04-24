@@ -1,0 +1,31 @@
+ClickOnAAI=//*[text()='Create Asset Acquired Invoice']
+Vendor=//input[@id='customer15fixedassetgoodsreceipt']
+SequenceFormat=//input[@id='sequenceFormatCombobox15fixedassetgoodsreceipt']
+AAINo=//input[@name='number']
+Memo=//textarea[@name='memo']
+AssetGroup1=//div[@id='fixedassetgoodsreceipteditproductdetailsgrid']/div/div/div/div[1]/div[1]/div[1]/div/following::div[3]/div/table/tbody/tr/td[5]
+UnitPrice1=//*[text()='Unit Price']//following::div[43]/ancestor::td
+Quantity1=//*[text()='Quantity']//following::div[42]/ancestor::td
+AssetID=//div[text()='Asset Id']//following::div[26]
+SaveDetail=//span[text()='Asset Details']/ancestor::div[4]/following::div[1]/div[2]/div/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+AssetGroup2=//div[@id='fixedassetgoodsreceipteditproductdetailsgrid']/div/div/div/div[1]/div[2]/div[1]/div[2]/table/tbody/tr/td[5]
+UnitPrice2=//div[@id='fixedassetgoodsreceipteditproductdetailsgrid']/div/div/div/div[1]/div[1]/div[2]/following::div[77]
+Quantity2=//div[@id='fixedassetgoodsreceipteditproductdetailsgrid']/div/div/div/div[1]/div[1]/div[2]/following::div[69]
+Save=//button[text()='Save']
+Yes=//button[text()='Yes']
+Ok=//button[text()='OK']
+ClickOnRAAI=//*[text()='Asset Acquired Invoice List']
+Fetch=//button[text()='Fetch']
+QuickSearch=//input[@id='quickSearch92FixedAssetGRListEntry']
+CheckBox=//div[@id='gridmsg92FixedAssetGRListEntry']/div/div/div/div[1]/div[1]/div[2]/following::div[1]/div/div/table/tbody/tr[1]/td[1]/div/div
+Edit=//button[text()='Edit']
+AssetGroup3=//*[text()='Asset Group']/following::div[144]/ancestor::td
+UnitPrice3=//*[text()='Unit Price']//following::div[146]/ancestor::td
+Quantity3=//*[text()='Quantity']//following::div[146]/ancestor::td
+Delete=//button[text()='Delete']
+DeleteP=//a[@class='x-menu-focus']/following::a[2]
+Yes=//button[text()='Yes']
+TotalAmount=//*[@id='gridmsg92FixedAssetGRListEntry']//*[text()='Total Amount']/following::div[68]
+TotalAmountInBase=//*[@id='gridmsg92FixedAssetGRListEntry']//*[text()='Total Amount']/following::div[70]
+GrossTotalAmount=//*[@id='gridmsg92FixedAssetGRListEntry']//*[text()='Total Amount']/following::div[93]
+ClosePurchaseRequisitionReportTab=//li[@id='as__FixedAssetGRListEntry']/a[1]

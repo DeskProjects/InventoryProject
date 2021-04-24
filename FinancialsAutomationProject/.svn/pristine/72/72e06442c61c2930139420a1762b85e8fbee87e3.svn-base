@@ -1,0 +1,6 @@
+InventoryExpander=.//*[@id='inventory']/div/div
+ReportsExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/div/img
+StockAdjustmentRegisterLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/ul/li[18]/div/a
+QuickSearch=//input[@id='QuickmarkoutListmarkoutListDetailCmp']
+StockAdjustmentRegisterResultCount= //div[@class='x-paging-info']
+StockAdjustmentRegisterCloseTab= //li[@id='as__markoutListMainCmp']/a[1]

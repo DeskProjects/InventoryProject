@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-skipped">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>C:\Users\krawler\Desktop\DeskeraProject\Inventory-master\InventorySuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">44 methods,  44 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="Create_ERP_NormalProduct">Create_ERP_NormalProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="Create_INV_NormalProduct">Create_INV_NormalProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="Create_StockIn_withQA">Create_StockIn_withQA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="DO_QARepair_ApproveandReject">DO_QARepair_ApproveandReject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="DO_QAapproveANDreject">DO_QAapproveANDreject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="GRN_QA_Repair">GRN_QA_Repair</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="GRN_QAapproveANDreject">GRN_QAapproveANDreject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="QA_ApprovalApproveReject">QA_ApprovalApproveReject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="StockIN_without_QA">StockIN_without_QA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="StockOUT_without_QA">StockOUT_without_QA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="StockRepair_ApproveReject">StockRepair_ApproveReject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="StockRequest_IssueandCollect">StockRequest_IssueandCollect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="StockSales_without_QA">StockSales_without_QA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="acceptANDreturn_InterStoreStockTransfer">acceptANDreturn_InterStoreStockTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="createANDverify_JobWorkOut_GR">createANDverify_JobWorkOut_GR</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="createANDverify_JobWorkOut_PI">createANDverify_JobWorkOut_PI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="createANDverify_JobWorkOut_StockTransfer">createANDverify_JobWorkOut_StockTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="create_AssemblyProduct">create_AssemblyProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="create_AutoBuildCS">create_AutoBuildCS</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="create_AutoBuildDO">create_AutoBuildDO</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="create_AutoBuildSI">create_AutoBuildSI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="create_DeleiveryOrder_withQA">create_DeleiveryOrder_withQA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="create_DeleiveryOrder_woQA">create_DeleiveryOrder_woQA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="create_GRNwithQA">create_GRNwithQA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="create_GRNwithoutQA">create_GRNwithoutQA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="create_InterLocationStockTransfer">create_InterLocationStockTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="create_InterStoreStockTransfer">create_InterStoreStockTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="create_JobWorkOut_Order">create_JobWorkOut_Order</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="create_PurchaseReturn">create_PurchaseReturn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="create_StockIssue">create_StockIssue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="create_StockRequest">create_StockRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="create_UNbuildAssemble">create_UNbuildAssemble</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="create_Vendor">create_Vendor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="create_abProduct">create_abProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="create_buildAssemble">create_buildAssemble</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="customerMaster">customerMaster</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="testCycleCountCalendar">testCycleCountCalendar</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="testCycleCountForm">testCycleCountForm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.ERPModule" hash-for-method="validate_GRN">validate_GRN</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="validate_InterLocationStockTransfer">validate_InterLocationStockTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="validate_InterStoreStockTransfer">validate_InterStoreStockTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="validate_StockIssue">validate_StockIssue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.InventoryModule" hash-for-method="validate_StockRequest">validate_StockRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="krawler.erp.testCases.Inventory.BuildAssembly" hash-for-method="verify_JobWorkOut_Order">verify_JobWorkOut_Order</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">krawler.erp.testCases.Inventory.InventoryModule</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Create_ERP_NormalProduct">
+                  </a> <!-- Create_ERP_NormalProduct -->
+                  <span class="method-name">Create_ERP_NormalProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Create_INV_NormalProduct">
+                  </a> <!-- Create_INV_NormalProduct -->
+                  <span class="method-name">Create_INV_NormalProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Create_StockIn_withQA">
+                  </a> <!-- Create_StockIn_withQA -->
+                  <span class="method-name">Create_StockIn_withQA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="QA_ApprovalApproveReject">
+                  </a> <!-- QA_ApprovalApproveReject -->
+                  <span class="method-name">QA_ApprovalApproveReject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="StockIN_without_QA">
+                  </a> <!-- StockIN_without_QA -->
+                  <span class="method-name">StockIN_without_QA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="StockOUT_without_QA">
+                  </a> <!-- StockOUT_without_QA -->
+                  <span class="method-name">StockOUT_without_QA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="StockRepair_ApproveReject">
+                  </a> <!-- StockRepair_ApproveReject -->
+                  <span class="method-name">StockRepair_ApproveReject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="StockRequest_IssueandCollect">
+                  </a> <!-- StockRequest_IssueandCollect -->
+                  <span class="method-name">StockRequest_IssueandCollect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="StockSales_without_QA">
+                  </a> <!-- StockSales_without_QA -->
+                  <span class="method-name">StockSales_without_QA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="acceptANDreturn_InterStoreStockTransfer">
+                  </a> <!-- acceptANDreturn_InterStoreStockTransfer -->
+                  <span class="method-name">acceptANDreturn_InterStoreStockTransfer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_AssemblyProduct">
+                  </a> <!-- create_AssemblyProduct -->
+                  <span class="method-name">create_AssemblyProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_InterLocationStockTransfer">
+                  </a> <!-- create_InterLocationStockTransfer -->
+                  <span class="method-name">create_InterLocationStockTransfer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_InterStoreStockTransfer">
+                  </a> <!-- create_InterStoreStockTransfer -->
+                  <span class="method-name">create_InterStoreStockTransfer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_StockIssue">
+                  </a> <!-- create_StockIssue -->
+                  <span class="method-name">create_StockIssue</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_StockRequest">
+                  </a> <!-- create_StockRequest -->
+                  <span class="method-name">create_StockRequest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_Vendor">
+                  </a> <!-- create_Vendor -->
+                  <span class="method-name">create_Vendor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_abProduct">
+                  </a> <!-- create_abProduct -->
+                  <span class="method-name">create_abProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="customerMaster">
+                  </a> <!-- customerMaster -->
+                  <span class="method-name">customerMaster</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCycleCountCalendar">
+                  </a> <!-- testCycleCountCalendar -->
+                  <span class="method-name">testCycleCountCalendar</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCycleCountForm">
+                  </a> <!-- testCycleCountForm -->
+                  <span class="method-name">testCycleCountForm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validate_InterLocationStockTransfer">
+                  </a> <!-- validate_InterLocationStockTransfer -->
+                  <span class="method-name">validate_InterLocationStockTransfer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validate_InterStoreStockTransfer">
+                  </a> <!-- validate_InterStoreStockTransfer -->
+                  <span class="method-name">validate_InterStoreStockTransfer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validate_StockIssue">
+                  </a> <!-- validate_StockIssue -->
+                  <span class="method-name">validate_StockIssue</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validate_StockRequest">
+                  </a> <!-- validate_StockRequest -->
+                  <span class="method-name">validate_StockRequest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">krawler.erp.testCases.Inventory.ERPModule</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DO_QARepair_ApproveandReject">
+                  </a> <!-- DO_QARepair_ApproveandReject -->
+                  <span class="method-name">DO_QARepair_ApproveandReject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DO_QAapproveANDreject">
+                  </a> <!-- DO_QAapproveANDreject -->
+                  <span class="method-name">DO_QAapproveANDreject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GRN_QA_Repair">
+                  </a> <!-- GRN_QA_Repair -->
+                  <span class="method-name">GRN_QA_Repair</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GRN_QAapproveANDreject">
+                  </a> <!-- GRN_QAapproveANDreject -->
+                  <span class="method-name">GRN_QAapproveANDreject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_DeleiveryOrder_withQA">
+                  </a> <!-- create_DeleiveryOrder_withQA -->
+                  <span class="method-name">create_DeleiveryOrder_withQA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_DeleiveryOrder_woQA">
+                  </a> <!-- create_DeleiveryOrder_woQA -->
+                  <span class="method-name">create_DeleiveryOrder_woQA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_GRNwithQA">
+                  </a> <!-- create_GRNwithQA -->
+                  <span class="method-name">create_GRNwithQA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_GRNwithoutQA">
+                  </a> <!-- create_GRNwithoutQA -->
+                  <span class="method-name">create_GRNwithoutQA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_PurchaseReturn">
+                  </a> <!-- create_PurchaseReturn -->
+                  <span class="method-name">create_PurchaseReturn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validate_GRN">
+                  </a> <!-- validate_GRN -->
+                  <span class="method-name">validate_GRN</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">krawler.erp.testCases.Inventory.BuildAssembly</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createANDverify_JobWorkOut_GR">
+                  </a> <!-- createANDverify_JobWorkOut_GR -->
+                  <span class="method-name">createANDverify_JobWorkOut_GR</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createANDverify_JobWorkOut_PI">
+                  </a> <!-- createANDverify_JobWorkOut_PI -->
+                  <span class="method-name">createANDverify_JobWorkOut_PI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createANDverify_JobWorkOut_StockTransfer">
+                  </a> <!-- createANDverify_JobWorkOut_StockTransfer -->
+                  <span class="method-name">createANDverify_JobWorkOut_StockTransfer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_AutoBuildCS">
+                  </a> <!-- create_AutoBuildCS -->
+                  <span class="method-name">create_AutoBuildCS</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_AutoBuildDO">
+                  </a> <!-- create_AutoBuildDO -->
+                  <span class="method-name">create_AutoBuildDO</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_AutoBuildSI">
+                  </a> <!-- create_AutoBuildSI -->
+                  <span class="method-name">create_AutoBuildSI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_JobWorkOut_Order">
+                  </a> <!-- create_JobWorkOut_Order -->
+                  <span class="method-name">create_JobWorkOut_Order</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_UNbuildAssemble">
+                  </a> <!-- create_UNbuildAssemble -->
+                  <span class="method-name">create_UNbuildAssemble</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_buildAssemble">
+                  </a> <!-- create_buildAssemble -->
+                  <span class="method-name">create_buildAssemble</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_JobWorkOut_Order">
+                  </a> <!-- verify_JobWorkOut_Order -->
+                  <span class="method-name">verify_JobWorkOut_Order</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\krawler\Desktop\DeskeraProject\Inventory-master\InventorySuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;SmokeTestInventory&quot;&gt;
+    &lt;parameter name=&quot;server&quot; value=&quot;http://192.168.1.72:8080/dotcomsmoketesting/a/mydebugtest1/&quot;/&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;server1&quot; value=&quot;https://in5.accounting.deskera.com/a/sg12/&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;admin&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;krawler.erp.testCases.Inventory.BaseSetUp&quot;/&gt;
+      &lt;class name=&quot;krawler.erp.testCases.Inventory.InventoryModule&quot;/&gt;
+      &lt;class name=&quot;krawler.erp.testCases.Inventory.ERPModule&quot;/&gt;
+      &lt;class name=&quot;krawler.erp.testCases.Inventory.BuildAssembly&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SmokeTestInventory --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">SmokeTestInventory (4 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(44);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'createANDverify_JobWorkOut_GR')
+data.setCell(0, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(0, 3, 24);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'create_GRNwithoutQA')
+data.setCell(1, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(1, 3, 9);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'create_StockRequest')
+data.setCell(2, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(2, 3, 4);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'StockOUT_without_QA')
+data.setCell(3, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(3, 3, 3);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'create_Vendor')
+data.setCell(4, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(4, 3, 2);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'create_buildAssemble')
+data.setCell(5, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(5, 3, 2);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'QA_ApprovalApproveReject')
+data.setCell(6, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(6, 3, 2);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'create_DeleiveryOrder_withQA')
+data.setCell(7, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(7, 3, 2);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'create_GRNwithQA')
+data.setCell(8, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(8, 3, 2);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'create_UNbuildAssemble')
+data.setCell(9, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(9, 3, 2);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'StockRequest_IssueandCollect')
+data.setCell(10, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(10, 3, 1);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'DO_QARepair_ApproveandReject')
+data.setCell(11, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(11, 3, 1);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'Create_INV_NormalProduct')
+data.setCell(12, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(12, 3, 1);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'validate_StockRequest')
+data.setCell(13, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(13, 3, 1);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'create_DeleiveryOrder_woQA')
+data.setCell(14, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(14, 3, 1);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'create_JobWorkOut_Order')
+data.setCell(15, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(15, 3, 1);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'create_AutoBuildCS')
+data.setCell(16, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(16, 3, 1);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'acceptANDreturn_InterStoreStockTransfer')
+data.setCell(17, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(17, 3, 1);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'create_InterLocationStockTransfer')
+data.setCell(18, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(18, 3, 1);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'createANDverify_JobWorkOut_PI')
+data.setCell(19, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(19, 3, 1);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'StockRepair_ApproveReject')
+data.setCell(20, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(20, 3, 1);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'create_PurchaseReturn')
+data.setCell(21, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(21, 3, 1);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'create_abProduct')
+data.setCell(22, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(22, 3, 1);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'StockSales_without_QA')
+data.setCell(23, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(23, 3, 1);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'GRN_QA_Repair')
+data.setCell(24, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(24, 3, 1);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'StockIN_without_QA')
+data.setCell(25, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(25, 3, 1);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testCycleCountForm')
+data.setCell(26, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(26, 3, 1);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'validate_StockIssue')
+data.setCell(27, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(27, 3, 1);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'Create_ERP_NormalProduct')
+data.setCell(28, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(28, 3, 1);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'customerMaster')
+data.setCell(29, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(29, 3, 1);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'create_StockIssue')
+data.setCell(30, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(30, 3, 1);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testCycleCountCalendar')
+data.setCell(31, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(31, 3, 1);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'Create_StockIn_withQA')
+data.setCell(32, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(32, 3, 1);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'create_AssemblyProduct')
+data.setCell(33, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(33, 3, 1);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'validate_InterLocationStockTransfer')
+data.setCell(34, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(34, 3, 0);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'create_InterStoreStockTransfer')
+data.setCell(35, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(35, 3, 0);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'create_AutoBuildDO')
+data.setCell(36, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(36, 3, 0);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'verify_JobWorkOut_Order')
+data.setCell(37, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(37, 3, 0);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'validate_GRN')
+data.setCell(38, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(38, 3, 0);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'DO_QAapproveANDreject')
+data.setCell(39, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(39, 3, 0);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'GRN_QAapproveANDreject')
+data.setCell(40, 2, 'krawler.erp.testCases.Inventory.ERPModule')
+data.setCell(40, 3, 0);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'createANDverify_JobWorkOut_StockTransfer')
+data.setCell(41, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(41, 3, 0);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'validate_InterStoreStockTransfer')
+data.setCell(42, 2, 'krawler.erp.testCases.Inventory.InventoryModule')
+data.setCell(42, 3, 0);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'create_AutoBuildSI')
+data.setCell(43, 2, 'krawler.erp.testCases.Inventory.BuildAssembly')
+data.setCell(43, 3, 0);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 76 ms</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">23 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">krawler.erp.testCases.Inventory.InventoryModule</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyReports_StockAdjWithOutQA</span>
+                <br/>
+                <span class="ignored-method-name">verifyReports_StockAdjustmentQA</span>
+                <br/>
+                <span class="ignored-method-name">verifyReports_StockRequest</span>
+                <br/>
+                <span class="ignored-method-name">Report_ProductMaster1</span>
+                <br/>
+                <span class="ignored-method-name">beforeTestLogin</span>
+                <br/>
+                <span class="ignored-method-name">verifyProducts</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyReports_StockIssue</span>
+                <br/>
+                <span class="ignored-method-name">verifyReports_FullInventoryRun</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">krawler.erp.testCases.Inventory.ERPModule</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTestLogin</span>
+                <br/>
+                <span class="ignored-method-name">CopyEditDelete_DO</span>
+                <br/>
+                <span class="ignored-method-name">verifyReports_GRNQA</span>
+                <br/>
+                <span class="ignored-method-name">verifyReports_DO</span>
+                <br/>
+                <span class="ignored-method-name">verifyReports_PR</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyReports_GRN</span>
+                <br/>
+                <span class="ignored-method-name">setNegative_off</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">krawler.erp.testCases.Inventory.BuildAssembly</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Report_StockAvailabilityByWarehouse</span>
+                <br/>
+                <span class="ignored-method-name">beforeTestLogin</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">Report_StockLedger</span>
+                <br/>
+                <span class="ignored-method-name">Final_BuildAssemblyReport</span>
+                <br/>
+                <span class="ignored-method-name">Report_ProductMaster</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">krawler.erp.testCases.Inventory.BaseSetUp</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeTestLogin(https://in5.accounting.deskera.com/a/sg12/, admin, 1234)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">krawler.erp.testCases.Inventory.InventoryModule</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">create_Vendor</span>
+                <span class="method-start">3145 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">customerMaster</span>
+                <span class="method-start">3159 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Create_INV_NormalProduct</span>
+                <span class="method-start">3167 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_abProduct</span>
+                <span class="method-start">3171 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_AssemblyProduct</span>
+                <span class="method-start">3176 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Create_ERP_NormalProduct</span>
+                <span class="method-start">3186 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">StockIN_without_QA</span>
+                <span class="method-start">3190 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">StockOUT_without_QA</span>
+                <span class="method-start">3194 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">StockSales_without_QA</span>
+                <span class="method-start">3201 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Create_StockIn_withQA</span>
+                <span class="method-start">3209 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">QA_ApprovalApproveReject</span>
+                <span class="method-start">3215 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">StockRepair_ApproveReject</span>
+                <span class="method-start">3222 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_StockRequest</span>
+                <span class="method-start">3225 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">StockRequest_IssueandCollect</span>
+                <span class="method-start">3263 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validate_StockRequest</span>
+                <span class="method-start">3269 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_StockIssue</span>
+                <span class="method-start">3274 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validate_StockIssue</span>
+                <span class="method-start">3280 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_InterStoreStockTransfer</span>
+                <span class="method-start">3300 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">acceptANDreturn_InterStoreStockTransfer</span>
+                <span class="method-start">3306 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validate_InterStoreStockTransfer</span>
+                <span class="method-start">3310 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_InterLocationStockTransfer</span>
+                <span class="method-start">3318 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validate_InterLocationStockTransfer</span>
+                <span class="method-start">3323 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCycleCountCalendar</span>
+                <span class="method-start">3325 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCycleCountForm</span>
+                <span class="method-start">3330 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">krawler.erp.testCases.Inventory.ERPModule</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">create_GRNwithoutQA</span>
+                <span class="method-start">3421 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_GRNwithQA</span>
+                <span class="method-start">3441 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GRN_QAapproveANDreject</span>
+                <span class="method-start">3451 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GRN_QA_Repair</span>
+                <span class="method-start">3456 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validate_GRN</span>
+                <span class="method-start">3460 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_DeleiveryOrder_woQA</span>
+                <span class="method-start">3490 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_DeleiveryOrder_withQA</span>
+                <span class="method-start">3498 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DO_QAapproveANDreject</span>
+                <span class="method-start">3504 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DO_QARepair_ApproveandReject</span>
+                <span class="method-start">3508 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_PurchaseReturn</span>
+                <span class="method-start">3512 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">krawler.erp.testCases.Inventory.BuildAssembly</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">create_AutoBuildDO</span>
+                <span class="method-start">3516 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_AutoBuildCS</span>
+                <span class="method-start">3518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_AutoBuildSI</span>
+                <span class="method-start">3520 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_JobWorkOut_Order</span>
+                <span class="method-start">3522 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createANDverify_JobWorkOut_StockTransfer</span>
+                <span class="method-start">3524 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verify_JobWorkOut_Order</span>
+                <span class="method-start">3526 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createANDverify_JobWorkOut_GR</span>
+                <span class="method-start">3543 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createANDverify_JobWorkOut_PI</span>
+                <span class="method-start">3573 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_buildAssemble</span>
+                <span class="method-start">3581 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">create_UNbuildAssemble</span>
+                <span class="method-start">3588 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

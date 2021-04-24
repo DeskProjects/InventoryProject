@@ -1,0 +1,355 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+
+
+import krawler.erp.LeaseManagementWithInventoryFlow.CustomerManagement;
+import krawler.erp.LeaseManagementWithInventoryFlow.ProductManagement;
+import krawler.erp.RegressionLeaseManagementWithInventory.CustomerManagement1;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseContract;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseDeliveryOrder;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseInvoice;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseManagement;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseOrder;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseQuotation;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseSalesReturn;
+import krawler.erp.RegressionLeaseManagementWithInventory.OpenProductMaintenance;
+import krawler.erp.RegressionLeaseManagementWithInventory.OpenProductReplacement;
+import krawler.erp.RegressionLeaseManagementWithInventory.ProductManagement1;
+import krawler.erp.page.CustomerMaster;
+import krawler.erp.page.Login;
+import krawler.erp.page.ProductMaster;
+import krawler.erp.page.Utilities;
+
+public class RegressionLeaseManagementwithInventoryTC {
+	public static WebDriver driver;
+    public static String customerid="LeaseCustomer"; 
+    public static String documentid="Lease5"; 
+    public static String productid="LeaseTestProduct";
+    public static String purchasePrice="100";
+    
+   
+    // Login into ERP Application
+   @Parameters({"server1","username","password"})
+      @Test(priority=1)
+      public void beforeTestLogin(String server1, String username, String password) throws InterruptedException, IOException, AWTException
+      {
+         Login ln = new Login();
+          WebDriver driver = Login.loginERP(server1,username,password,10);
+          	          this.driver = driver;
+      }
+    
+      // Create Customer
+      @Test(priority=2)
+	  public void CreateCustomer() throws InterruptedException, IOException, AWTException
+	  {
+    	    CustomerManagement1 CM = new CustomerManagement1();
+			CM.create_Customer(customerid, driver);
+			Thread.sleep(1000);
+	  }
+	  // Sync Customer into CRM application
+      @Test(priority=3)
+	 public void SyncCustomer() throws InterruptedException, IOException, AWTException		
+	 {
+	        CustomerManagement1 CM = new CustomerManagement1();
+			CM.Sync_Customer(customerid, driver);
+			Thread.sleep(1000);
+	  }
+      
+      // Create Product
+      @Test(priority=4)
+      public void CreateProduct() throws InterruptedException, IOException, AWTException
+      {
+    	  ProductManagement1 PM = new ProductManagement1();
+     	  PM.create_Product(productid,"4",driver);
+    	  Thread.sleep(1000);
+      }
+      
+      //Update Product Price and then Sync it into CRM application
+      @Test(priority=5)
+      public void UpdatePriceandSyncProduct() throws InterruptedException, AWTException, IOException
+      {
+    	  ProductManagement1 PM = new ProductManagement1();
+    	  PM.debug_setProductPurchasePrice(productid, purchasePrice,driver);
+    	  Thread.sleep(1000);
+    
+      }
+      
+      
+// Create Lease Quotation
+	 @Test(priority=10, alwaysRun=true)
+	  public void LMQuatationCreate() throws InterruptedException, IOException, AWTException {
+		LeaseManagement lm = new LeaseManagement();
+	         lm.leaseManagementExpander(driver);
+			LeaseQuotation LMQ= new LeaseQuotation();
+          	LMQ.LM_CreateQuotation(documentid, productid, customerid, driver);
+			Thread.sleep(2000);
+			lm.leaseManagementExpander(driver);
+			LMQ.LM_CreateQuotation("Ex"+documentid, productid, customerid, driver);
+			
+	  }
+	
+	 // Verify Lease Quotation
+	@Test(priority=11,dependsOnMethods="LMQuatationCreate")
+	  public void LMQuatationVerification() throws InterruptedException, IOException, AWTException {
+		
+		
+		LeaseManagement lm = new LeaseManagement();
+		lm.leaseManagementExpander(driver);
+			LeaseQuotation LMQ= new LeaseQuotation();
+			LMQ.VerifyLM_Quotation(documentid, productid, customerid, driver);
+			
+	  }
+	
+	// Edit and Delete Lease Quotation
+	@Test(priority=12)
+	  public void LMQuatationEditDelete() throws InterruptedException, IOException, AWTException {
+		
+		
+		LeaseManagement lm = new LeaseManagement();
+		lm.leaseManagementExpander(driver);
+			LeaseQuotation LMQ = new LeaseQuotation();
+			LMQ.EditDelete_CustomerQuotation("Ex"+documentid, productid, customerid, driver);
+			
+	  }
+	
+      // Create Lease Order
+    @Test(priority=20 ) 
+    
+	 public void  LMOrderCreate() throws InterruptedException, IOException, AWTException {
+				LeaseManagement lm = new LeaseManagement();
+				lm.leaseManagementExpander(driver);
+				
+					LeaseOrder LMO= new LeaseOrder();
+					LMO.LM_CreateOrder(documentid, productid, customerid, driver);
+					Utilities.refresh();
+					
+	  }
+    
+    // Verify Lease Order
+    @Test(priority=21)
+	  public void LMOrderVerification() throws InterruptedException, IOException, AWTException {
+		
+		
+		LeaseManagement lm = new LeaseManagement();
+		lm.leaseManagementExpander(driver);
+			LeaseOrder LMO= new LeaseOrder();
+			LMO.VerifyLM_Order(documentid, productid, customerid, driver);		
+			
+	  }
+  
+    //Edit and Delete Lease Order
+    @Test(priority=22)
+	  public void LMOrderDelete() throws InterruptedException, IOException, AWTException {
+		
+		
+		LeaseManagement lm = new LeaseManagement();
+	    lm.leaseManagementExpander(driver);
+		LeaseOrder LMO= new LeaseOrder();
+	    LMO.Delete_LeaseOrder(documentid, productid, customerid, driver);
+			
+			lm.leaseManagementExpander(driver);
+			LMO.LM_CreateOrder(documentid, productid, customerid, driver);
+	  }
+	
+    
+ 
+      // Create Lease Contract
+      @Test(priority=30 )
+	 public void  LContractCreate() throws InterruptedException, IOException, AWTException {
+				LeaseManagement lm = new LeaseManagement();
+				lm.leaseManagementExpander(driver);
+				
+					LeaseContract LCon= new LeaseContract();
+					LCon.LM_CreateContract(documentid, productid, customerid, driver);
+					Utilities.refresh();
+					
+	  }
+  
+      // Verify Lease Contract
+  @Test(priority=31)
+	  public void LMContractVerification() throws InterruptedException, IOException, AWTException {
+		
+		
+		LeaseManagement lm = new LeaseManagement();
+		lm.leaseManagementExpander(driver);
+		LeaseContract LCon= new LeaseContract();
+	    LCon.VerifyLM_Contract(documentid, productid, customerid, driver);		
+			
+	  }
+
+  // Delete Lease Contract
+  @Test(priority=32)
+	  public void LMContractDelete() throws InterruptedException, IOException, AWTException {
+		
+		
+		LeaseManagement lm = new LeaseManagement();
+		lm.leaseManagementExpander(driver);
+		LeaseContract LCon= new LeaseContract();
+		LCon.Delete_LeaseContract(documentid, productid, customerid, driver);
+			
+			lm.leaseManagementExpander(driver);
+			LCon.LM_CreateContract(documentid, productid, customerid,  driver);
+	  }
+	
+  // Create Lease Delivery Order
+    @Test(priority=40 )
+ 	 public void  LMDeliveryOrderCreate() throws InterruptedException, IOException, AWTException {
+ 				LeaseManagement lm = new LeaseManagement();
+ 				lm.leaseManagementExpander(driver);
+ 				
+ 					LeaseDeliveryOrder LDO= new LeaseDeliveryOrder();
+ 					LDO.LM_CreateDeliveryOrder(documentid, productid, customerid, driver);
+ 					Utilities.refresh();
+ 					
+ 	  }
+   
+    // Verify Lease Delivery Order
+   @Test(priority=41)
+ 	  public void LMDeliceryVerification() throws InterruptedException, IOException, AWTException {
+ 		
+ 		
+ 		LeaseManagement lm = new LeaseManagement();
+ 		lm.leaseManagementExpander(driver);
+ 		LeaseDeliveryOrder LDO= new LeaseDeliveryOrder();
+ 	    LDO.VerifyLM_DeliveryOrder(documentid, productid, customerid, driver);		
+ 			
+ 	  }
+
+  //Edit and Delete Lease Delivery Order
+   @Test(priority=42)
+ 	  public void LMDeliveryDelete() throws InterruptedException, IOException, AWTException {
+ 		
+ 		
+ 		LeaseManagement lm = new LeaseManagement();
+ 		lm.leaseManagementExpander(driver);
+ 		LeaseDeliveryOrder LDO= new LeaseDeliveryOrder();
+ 		LDO.Delete_LeaseDelivery(documentid, productid, customerid, driver);
+ 			
+ 			lm.leaseManagementExpander(driver);
+ 			LDO.LM_CreateDeliveryOrder(documentid, productid, customerid, driver);
+ 			
+ 	  }
+  	  
+  
+      // Create Lease Sales Return
+      @Test(priority=50 )
+  	 public void  LMRetunCreate() throws InterruptedException, IOException, AWTException {
+  				LeaseManagement lm = new LeaseManagement();
+  				lm.leaseManagementExpander(driver);
+  				
+  				LeaseSalesReturn LSR= new LeaseSalesReturn();
+ 				LSR.LM_CreateSalesReturn(documentid, productid, customerid, driver);					
+  					
+  	  }
+    
+      // Verify Lease Sales Return
+    @Test(priority=51)
+  	  public void LMRetunVerification() throws InterruptedException, IOException, AWTException {
+  		
+  		
+  		LeaseManagement lm = new LeaseManagement();
+  		lm.leaseManagementExpander(driver);
+  		LeaseSalesReturn LSR= new LeaseSalesReturn();
+  	    LSR.VerifyLM_SalesReturn(documentid, productid, customerid, driver);		
+  			
+  	  }  
+
+    // Delete Lease Sales Return
+    @Test(priority=52)
+  	  public void LMReturnDelete() throws InterruptedException, IOException, AWTException {
+  		
+  		
+  		LeaseManagement lm = new LeaseManagement();
+  		lm.leaseManagementExpander(driver);
+  		LeaseSalesReturn LSR= new LeaseSalesReturn();
+  		LSR.Delete_LeaseReturn(documentid, productid, customerid, driver);
+  			
+  			//lm.leaseManagementEntryExpander(driver);
+  			//LSR.LM_CreateSalesReturn(documentid, productid, customerid, driver);
+  			
+  	  }
+	
+      
+      
+      // Create Lease Sales Invoice
+      @Test(priority=60 )
+   	  public void LMInvoiceCreate() throws InterruptedException, IOException, AWTException {
+  				LeaseManagement lm = new LeaseManagement();
+  				lm.leaseManagementExpander(driver);
+  				
+  				LeaseInvoice LSI= new LeaseInvoice();
+ 				LSI.LM_CreateInvoice(documentid, productid, customerid, driver);					
+  					
+  	  }
+    
+      // Verify Lease Sales Invoice
+      @Test(priority=61)
+  	  public void LMInvoiceVerification() throws InterruptedException, IOException, AWTException {
+  		
+  		
+  		LeaseManagement lm = new LeaseManagement();
+  		lm.leaseManagementExpander(driver);
+  		LeaseInvoice LSI= new LeaseInvoice();
+  	    LSI.VerifyLM_Invoice(documentid, productid, customerid, driver);		
+  			
+  	  }
+  	
+
+   
+   // Edit Lease Sales Invoice
+      @Test(priority=62)
+	  public void LMInvoiceEdit() throws InterruptedException, IOException, AWTException {
+		
+		
+		LeaseManagement lm = new LeaseManagement();
+		lm.leaseManagementExpander(driver);
+		LeaseInvoice LSI= new LeaseInvoice();
+		LSI.LM_Edit_LeaseInvoice(documentid, productid, customerid, driver);
+  		
+  			
+  	  }
+      
+      // Verify Product Replacement Report
+      @Test(priority=70)
+ 	  public void LM_ProductReplacementVerification() throws InterruptedException, IOException, AWTException {
+ 		
+ 		
+ 		LeaseManagement lm = new LeaseManagement();
+ 		lm.leaseManagementExpander(driver);
+ 		OpenProductReplacement LPR= new OpenProductReplacement();
+ 		String expectedText="Product Replacement Report";
+ 	    LPR.LM_VerifyProductReplcaement(expectedText, driver);		
+ 			
+ 	  }
+      
+      // Verify Product Maintenance Report
+     @Test(priority=80)
+ 	  public void LM_ProductMaintenanceVerification() throws InterruptedException, IOException, AWTException {
+ 		
+ 		
+ 		LeaseManagement lm = new LeaseManagement();
+ 		lm.leaseManagementExpander(driver);
+ 		OpenProductMaintenance LPM= new OpenProductMaintenance();
+ 		String expectedText1="Product Maintenance Report";
+ 	    LPM.LM_VerifyProductMaintenance(expectedText1, driver);		
+ 			
+ 	  }
+      
+    
+	@AfterClass
+	 public void Close() throws InterruptedException, IOException {
+	Thread.sleep(10000);
+		driver.close();
+	}
+	
+}

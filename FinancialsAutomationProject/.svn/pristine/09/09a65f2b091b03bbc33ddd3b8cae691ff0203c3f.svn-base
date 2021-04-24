@@ -1,0 +1,57 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import krawler.erp.FixedAsset.AssetFixLogin;
+import krawler.erp.FixedAsset.AssetMenu;
+import krawler.erp.FixedAsset.UnpostAssetDepreciation;
+import krawler.erp.page.Login;
+
+public class UnpostDepreciation {
+	public static WebDriver driver =null;
+	public static String url ="http://192.168.0.208:8080/dotcomsmoketestingv21/a/208asset/";
+	public static String user= "admin";
+	public static String pwd= "1234";
+	public static String documentid="Doc07Feb"; 
+	public static String vendorid= "Ved07Feb";
+	public static String customerid="Cus07Feb"; 
+	public static String Group="Grp07Feb";
+	public static String Assetid="Aid07Feb";
+	
+	// Login into ERP Application
+	
+     @Test
+	public void beforeTestLogin() throws InterruptedException, IOException, AWTException
+     {
+       Login  ln = new Login();
+         WebDriver driver = AssetFixLogin.loginERP(url, user,pwd);
+         	          this.driver = driver;
+         	         Thread.sleep(1000);      
+         	        
+      }
+     
+  // Click on Asset Menu Button
+     @Test(priority=2)
+        public void Asset_Menu() throws IOException, InterruptedException{
+    	  AssetMenu Am= new AssetMenu();
+    	     Am.FixedAssetExpander(driver);
+    	     Thread.sleep(1000);
+     }
+   
+        
+ // Unpost Asset Depreciation
+     
+     @Test(priority=3)
+     public void UnpostAsset_Depreciation() throws IOException, InterruptedException, AWTException
+     {
+    	  UnpostAssetDepreciation  UAD= new UnpostAssetDepreciation();
+    	     UAD.Unpost_AssetDepreciation(documentid,driver);
+    	     Thread.sleep(1000);
+    	   
+    	 
+     } 
+}

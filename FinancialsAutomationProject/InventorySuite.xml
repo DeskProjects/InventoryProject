@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<test name="SmokeTestInventory">
+	<parameter name="server"
+			value="https://sg33.accounting.deskera.com/a/testanshul/"></parameter>
+
+		<parameter name="server"
+			value="https://in5.accounting.deskera.com/accountingtestv38/a/mydebugtest1/"></parameter>
+		
+		<parameter name="server"
+			value="https://us2.accounting.deskera.com/a/us2productiontestinginv/"></parameter>
+		
+		<parameter name="server1"
+		value="https://in5.accounting.deskera.com/a/sg12/"></parameter>
+		
+		<parameter name="server"
+			value="https://us1.accounting.deskera.com/a/testanshul/"></parameter>
+
+		<parameter name="server"
+			value="http://192.168.1.73:8080/stagingaccounting/a/erp60/"></parameter>
+			
+		<parameter name="server"
+			value="https://sg5.accounting.deskera.com/a/testanshul/#"></parameter>
+			
+			
+		
+		<parameter name="server"
+			value="http://192.168.1.72:8080/dotcomsmoketesting/a/testsmoke/"></parameter>
+
+		<parameter name="server"
+			value="http://192.168.1.72:8080/dotcomsmoketesting/a/mydebugtest1/"></parameter>
+
+		<parameter name="username" value="admin"></parameter>
+		<parameter name="password" value="1234"></parameter>
+
+		<classes>
+			<class name="krawler.erp.testCases.Inventory.BaseSetUp" />
+			<class name="krawler.erp.testCases.Inventory.InventoryModule" /> 
+			<class name="krawler.erp.testCases.Inventory.ERPModule" /> 
+			<class name="krawler.erp.testCases.Inventory.BuildAssembly" /> 
+		</classes>
+
+	</test>
+</suite> <!-- Suite -->
+

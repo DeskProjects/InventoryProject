@@ -1,0 +1,38 @@
+********************create**************************
+iconCAO= //map[@name='AlienAreas5']/area[2]
+addNewAcc= //button[text()='Add New Account']
+accCode= //input[@name='acccode']
+accName= //input[@name='accname']
+groupID= //input[@name='groupid']/following-sibling::input
+saveBtn= //button[text()='Save']
+okBtn= //button[text()='OK']
+coaClsBtn= //li[@id='as__coa']/a[1]
+MasterType=//input[@id='bankcoaWindow']
+*******************verification****************************
+QuickSearch =//div[@id='coaReport']/div/div/div/div/div/div[2]/div/div/div/table/tbody/tr/td/input
+FirstCoaAccount=//*[text()='Account Code']/ancestor::div[3]/following::div[1]/div/div[1]//*[@class='x-grid3-row-checker']
+**********************edi-delete*************************
+EditAccount =//button[text()='Edit Account']
+accDescr= //textarea[@name='accdesc']
+deleteBtn= //div[@id='coaReport']/div/div/div/div/div/div[2]/div/div/div/table/tbody/tr/td[5]//button
+permDelBtn= //*[contains(text(), 'Delete Account Permanently')]/img
+*******************IMPORT************************************************
+ImportCSVFile=//div[@class='x-layer x-menu' and contains(@style,'visible;') ]//a[text()='Import CSV File']
+ImportXLFile=//div[@class='x-layer x-menu' and contains(@style,'visible;') ]//a[text()='Import XLS/XLSX File']
+browseBtn=//input[@id='browseBttn']
+dteFormat=//input[@id='dateFormat']/following-sibling::input
+NextBtn=//button[contains(text(),'Next')]
+NextBtn2=//table[@id='nextButtonimportxls']//button[contains(text(),'Next')]
+checkImportReady=//span/b[contains(text(),'Invalid Records')]/parent::*
+importLogMessage=//div[@id='importFilesLog']/div/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div[1]/table/tbody/tr/td[10]/div/div
+totalAddedCOA=//div[text()='Row No.']/ancestor::div[@class='x-grid3-header']/following-sibling::div/div/div/table/tbody/tr/td[1]/div
+
+//*************EXPORT********************************
+AllDocumentCheckBox=//div[text()='Account Code']/ancestor::tr[1]/td[1]/div/div
+ExportToCSV=//*[contains(@style,'visible')]//span[text()='Export to CSV File']
+WindowExportBtn=//div[@class='x-window-bl']//button[text()='Export ']
+ExportToExcel=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to Excel File']
+ExportToPDF=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to PDF File']
+pdfTemplate=//div[@id='templateName']//div[@class='x-grid3-scroller']/div/div[1]/table/tbody/tr[1]/td[2]/div
+
+

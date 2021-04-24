@@ -1,0 +1,68 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import krawler.erp.FixedAsset.AssetFixLogin;
+import krawler.erp.FixedAsset.AssetMenu;
+import krawler.erp.FixedAsset.AssetOpening;
+import krawler.erp.page.Login;
+
+public class AssetOpeningFlow {
+	
+	public static WebDriver driver =null;
+	public static String url ="http://192.168.0.208:8080/dotcomsmoketestingv21/a/208asset/";
+	public static String user= "admin";
+	public static String pwd= "1234";
+	public static String documentid="Doc30Jan"; 
+	public static String vendorid= "Ved30Jan";
+	public static String customerid="Cus30Jan"; 
+	public static String Group="Grp30Jan";
+	public static String Assetid="Aid30Jan";
+	
+	// Login into ERP Application
+	
+     @Test
+	public void beforeTestLogin() throws InterruptedException, IOException, AWTException
+     {
+       Login  ln = new Login();
+         WebDriver driver = AssetFixLogin.loginERP(url, user,pwd);
+         	          this.driver = driver;
+         	         Thread.sleep(1000);      
+         	        
+      }
+     
+  // Click on Asset Menu Button
+     @Test(priority=2)
+        public void Asset_Menu() throws IOException, InterruptedException{
+    	  AssetMenu Am= new AssetMenu();
+    	     Am.FixedAssetExpander(driver);
+    	     Thread.sleep(1000);
+     }
+   
+     
+    // Create  Asset Group
+     @Test(priority=3)
+     public void Asset_Group() throws IOException, InterruptedException, AWTException
+     {
+    	 AssetOpening  AGO= new AssetOpening ();
+    	     AGO. Create_AssetGroup(Group,driver);
+    	     Thread.sleep(3000);
+    	   
+    	    AGO.Create_OpeningDoument(Group, driver);
+    	    Thread.sleep(3000);
+    	    
+    	    AGO.Verification_AssetOpening(Group, "2.0000", driver);
+    	    Thread.sleep(3000);
+            
+    //	    AGO.Edit_OpeningDoument(Group, driver);
+    	    Thread.sleep(3000);
+    	    
+    //	    AGO.Delete_OpeningDoument(Group, driver);
+    	    Thread.sleep(3000);
+     } 
+     
+}

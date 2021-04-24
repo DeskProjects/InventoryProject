@@ -1,0 +1,68 @@
+ReturnOnly=//map[@name='AlienAreas2']/area[8]
+Salereturnonly=//label[text()='Create Sales Return Only:']
+clickOnSubmit=//button[text()='Submit']
+customerName=//*[@id='customer']/following::input[1]
+sequenceFormat=.//*[@id='sequenceFormatCombobox11salesreturn']
+salesReturnNo=.//*[@id='invoiceNo11salesreturn']
+addButton=//*[@id='salesreturnbillingproductdetailsgrid']//*[@class='pwnd add-gridrow']
+productID=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+checkBox=//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+addProduct=.//button[text()='Add']
+actualQuantity=.//*[@id='salesreturnbillingproductdetailsgrid']/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[12]/div
+memo=.//*[@id='memo11salesreturn']
+returnQuantity=.//*[@id='salesreturnbillingproductdetailsgrid']/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[13]/div
+batchSerialWindow="//*[@id='salesreturnbillingproductdetailsgrid']/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td/div/div[@class='pwnd serialNo-gridrow']"
+submitButton=//button[text()='Submit']
+saveButton=//button[text()='Save']
+yesButton=//button[text()='Yes']
+okButton=//button[text()='OK']
+clickOnOk=.//li[@id='as__salesreturn']/a[1]
+clickOnDocumentSC=//map[@name='AlienAreas2']/area[8]
+salesReturnCreditNote=.//*[text()='Create Sales Return with Credit Note:']//following-sibling::div[1]/div/input
+CustomerNameSC=.//*[@id='customer11salesreturn']
+sequenceFormatSC=.//*[@id='sequenceFormatCombobox11salesreturn']
+salesReturnNoSC=//*[@id='invoiceNo11salesreturn']
+creditNotSequence=.//*[@id='CnDnSequenceFormatCombobox11salesreturn']
+creditNoteNo=.//*[@id='cndnNumber11salesreturn']
+addbuttonSC=.//*[@class='pwnd add-gridrow']
+productIDSC=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+checkbox=//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+
+
+SalesReturnReport=//map[@name='AlienAreas3']/area[17]
+QuickSearch=.//input[@id='quickSearch53']
+CloseReport=//li[@id='as__SalesReturnListEntry']/a[1]
+FirstRow=//div[@id='gridmsg53SalesReturnListEntry']/div/div/div/div/div[2]/div/div[1]/table/tbody/tr[1]/td[1]/div/div
+*********************************copyeditdeletecode******************************************
+DocumentCheckBox=.//div[@id='gridmsg53SalesReturnListEntry']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div
+copySalesReturnOnlyButton=//button[@class='x-btn-text accountingbase copy' and text()='Copy']
+copySalesReturnOnlyId=//*[contains(@id,'invoiceNo11SalesReturnCopy')]/input
+saveCopiedSalesReturnOnlyId=//button[@class='x-btn-text pwnd save' and text()='Save']
+CopySalesReturnOnlyClose=//li[contains(@id,'as__SalesReturnCopy')]/a[1]
+EditSalesReturnOnlyClose=//li[contains(@id,'as__SalesReturnEdit')]/a[1]
+EditSalesReturnOnlyButton=//button[@class='x-btn-text accountingbase edit' and text()='Edit']
+SalesReturnOnlyMemo=//textarea[contains(@id,'memo11SalesReturnEdit')]
+SalesReturnOnlyEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+deleteSalesReturnOnlyButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deleteSalesReturnOnlyPermButton=//*[contains(@style,'visible')]//*[contains(text(), 'Delete Sales Return Permanently')]/img
+**************************linkSi***************************
+fromLink=//input[@name='fromLinkCombo']
+linkBtn=//input[@id='linkToOrder11salesreturn']
+*************************SalesReturnRefund************************
+cashSaleRefund=//label[text()='Cash Sales Refund:']/following::div[1]/div/input
+seqNArefund=//input[@id='sequenceFormatCombobox11salesreturn']
+seqNAforMP=//input[@id='paymentSequenceFormatCombobox11salesreturn']
+MpPaymentNo=//input[@name='paymentNumber']
+******************************************************************
+tax=//*[@id='includetax11salesreturn']
+taxName=//*[@id='tax11salesreturn']
+SelectProductS=//*[contains(@id,'ProductSelectionWindow')]//*[contains(text(),'Product ID')]/ancestor::tr//*[@class='x-grid3-hd-checker']
+TotalFindProducts=//*[text()='Product Category: (None)']/parent::div/following-sibling::div//table/tbody/tr/td[1]/div/div
+addProducts=//*[contains(@id,'ProductSelectionWindow')]//*[@class='x-btn-text' and text()='Add']
+HeaderNames=//div[@id='salesreturnbillingproductdetailsgrid']/div/div/div/div/div[1]/div[1]/div/table/thead/tr/td/div
+
+
+
+
+
+

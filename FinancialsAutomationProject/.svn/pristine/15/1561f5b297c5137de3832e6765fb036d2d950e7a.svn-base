@@ -1,0 +1,27 @@
+LeaseSRIcon= //span[text()='Create Lease Returns ']
+CustomerId=.//*[@id='customer11leasesalesreturn']
+Link=.//*[@id='linkToOrder11leasesalesreturn']
+linkTo=.//*[@id='fromLinkComboId11leasesalesreturn']
+Opendropdown=//input[@id='poNumberID11leasesalesreturn']/following-sibling::span/img[2]
+senddocid=//input[@id='poNumberID11leasesalesreturn']
+sellistprod=//div[@class='x-layer x-combo-list ']/following-sibling::div[4]/div/div/table/tbody/tr/td
+Example= //div[@class='x-layer x-combo-list ' and contains(@style,'visible')]//td
+okarrow=//input[@id='ordernumber']/following-sibling::span/img[2]
+meomo=//textarea[@id='memo11leasesalesreturn']
+sequenceFormat=.//input[@id='sequenceFormatCombobox11leasesalesreturn']
+LeaseSalesReturnNumber=.//input[@id='invoiceNo11leasesalesreturn']
+saveButton=.//button[text()='Save' and @class='x-btn-text pwnd save']
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LeaseReturnReport=//span[text()='Lease Returns List']
+QuickSearch=//input[@id='quickSearch53' and @name='quickSearch53']
+reportCheckBox=//div[contains(@id,'gridmsg')]/div/div/div/div/div[2]/div/div/table/tbody/tr[1]/td[1]
+EditLSRbutton=//button[text()='Edit']
+EditMemo=//textarea[@name='memo']
+buttonSave=//button[text()='Save']
+closeEditWin=//li[@id='as__LeaseSalesReturnListEntry']/following-sibling::li/a[1]
+DeleteButton=//button[text()='Delete']
+PermanantDelete=//div[@class='x-layer x-menu' and contains(@style, 'visible')]//a[text()='Delete Lease Sales Return Permanently']
+Title=//div[@id='gridmsg53LeaseSalesReturnListEntry']/div/div[2]/div/div[1]/div[2]/div/div/div/a
+YesButton=//button[text()='Yes']

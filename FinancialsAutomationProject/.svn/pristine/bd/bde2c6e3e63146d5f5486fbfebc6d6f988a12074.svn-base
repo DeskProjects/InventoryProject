@@ -1,0 +1,15 @@
+*********ImportCustomer***********
+vendorReportIcon=//map[@name='AlienAreas4']/area[2]
+HoverImportVendor=//a[text()='Import Vendor']
+ImportCSVFile=//div[@class='x-layer x-menu' and contains(@style,'visible;') ]//a[text()='Import CSV File']
+ImportXLFile=//div[@class='x-layer x-menu' and contains(@style,'visible;') ]//a[text()='Import XLS/XLSX File']
+browseBtn=//input[@id='browseBttn']
+dteFormat=//input[@id='dateFormat']/following-sibling::input
+NextBtn=//button[contains(text(),'Next')]
+NextBtn2=//table[@id='nextButtonimportxls']//button[contains(text(),'Next')]
+checkImportReady=//span/b[contains(text(),'Invalid Records')]/parent::*
+importLogMessage=//div[@id='importFilesLog']/div/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div[1]/table/tbody/tr/td[10]/div/div
+totalAddedCust=//div[text()='Row No.']/ancestor::div[@class='x-grid3-header']/following-sibling::div/div/div/table/tbody/tr/td[1]/div
+
+
+

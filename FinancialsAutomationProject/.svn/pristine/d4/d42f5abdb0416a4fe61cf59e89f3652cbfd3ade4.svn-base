@@ -1,0 +1,46 @@
+CustomerQuotationIcon=//map[@name='AlienAreas2']/area[11]
+includingGST=//*[@name='includingGST']
+CustomerId=.//*[@id='customer34quotationundefined']
+sequenceFormat=.//*[@id='sequenceFormatCombobox34quotationundefined']
+CreditTerm=.//*[@id='creditTerm34quotationundefined']
+CustomerQuotationNo=.//*[@id='invoiceNo34quotationundefined']
+ButtonAdd=.//*[@class='pwnd add-gridrow']
+SearchProductId=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+ClickCheckBox=//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+SelectProductS=//*[contains(@id,'ProductSelectionWindow')]//*[contains(text(),'Product ID')]/ancestor::tr//*[@class='x-grid3-hd-checker']
+TotalFindProducts=//*[text()='Product Category: (None)']/parent::div/following-sibling::div//table/tbody/tr/td[1]/div/div
+addProducts=//*[contains(@id,'ProductSelectionWindow')]//*[@class='x-btn-text' and text()='Add']
+HeaderNames=//div[@id='quotationundefinededitproductdetailsgrid']/div/div/div/div/div[1]/div[1]/div/table/thead/tr/td/div
+buttonAdd=.//button[text()='Add']
+Quantity=.//*[@id='quotationundefinededitproductdetailsgrid']/div/div/div/div[1]/div[2]/div[1]/div[1]/table/tbody/tr/td[18]/div
+memo=.//*[@id='memo34quotationundefined']
+buttonSave=//button[text()='Save']
+buttonYes=//button[text()='Yes']
+buttonOk=//button[text()='OK']
+CloseQuotation=.//li[@id='as__quotationundefined']/a[1]
+
+*****************************verifiaction*****************************
+
+CustomerQuotationReport=//map[@name='AlienAreas3']/area[25]
+QuickSearch=//input[@id='quickSearch35QuotationListEntry']
+copyButton=//button[@class='x-btn-text accountingbase copy' and text()='Copy']
+DocumentCheckBox=//div[@id='gridmsg35QuotationListEntry']/div/div/div/div[1]/div[2]/div/div[1]/table/tbody/tr[1]/td[1]/div
+DocumentIDCopyQuotation=//input[@name='invoiceNo']
+CloseCopyQuotation=//li[contains(@id,'as__quotationCopy')]/a[1]
+EditCQButton=.//button[@class='x-btn-text accountingbase edit' and text()='Edit']
+EditMemo=.//textarea[contains(@id,'memo61quotationEdit')]
+CloseEditQuotation=//li[contains(@id,'as__quotationEdit')]/a[1]
+DeleteButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+PermanantDelete=//*[contains(@style,'visible')]//a[text()='Delete Customer Quotation Permanently']/img
+CloseReport=//li[@id='as__QuotationListEntry']/a[1]
+FirstRow=//div[@id='gridmsg35QuotationListEntry']/div/div/div/div/div[2]/div/div[1]/table/tbody/tr[1]/td[1]/div/div
+
+**************************************************************************************************
+includeGlobalTax=//*[@id='includetax']/following::input[1]
+GlobalTaxValue=//*[@id='tax']/following::input[1]
+
+
+
+
+
+

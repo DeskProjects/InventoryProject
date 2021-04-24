@@ -1,0 +1,28 @@
+*********************BalanceSheetCompare**************************
+balSheetIcon=//area[@onclick='periodViewBalanceSheet()']
+sheetCheckBox=//div[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[1]/div/div
+OpeningAmountXpath=//div[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div/div/div/div[3]/div/table/tbody/tr/td[3]/div/div/div
+PeriodAmountXpath=//div[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div/div/div/div[3]/div/table/tbody/tr/td[4]/div/div/div
+AmountXpath=//div[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div/div/div/div[3]/div/table/tbody/tr/td[5]/div/div/div
+*************sheet2*******************
+OpeningAmountXpath2=//div[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div/div/div/div[3]/div/table/tbody/tr/td[3]/div/div/div
+PeriodAmountXpath2=//div[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div/div/div/div[3]/div/table/tbody/tr/td[4]/div/div/div
+AmountXpath2=//div[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div/div/div/div[3]/div/table/tbody/tr/td[5]/div/div/div
+CloseBtn=//li[@id='as__finalStmnt']/a[1]
+NoRecord=//*[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]//div[@class='grid-link-text']
+FirstAccount=//div[@id='periodviewnewbsheet']/div/div[2]/div/div/div[2]/div[3]//div[@class='x-grid3-body']/div[1]//div[@class='x-grid3-row-expanderacc']/div[1]
+******EXPORT****************************
+SplitView=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Export (Split View)']
+StandardView=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Export (Standard)']
+TreeView=//div[@class='x-layer x-menu' and contains(@style,'visible')]//a[text()='Export (Tree View)']
+
+ExportToExcel=//div[@class='x-layer x-menu' and contains(@style,'visible')]//span[text()='Export to Excel File']
+fromDate=//*[@name='stdate']/following::img[1]
+toDate=//*[@name='enddate']/following::img[1]
+
+selectToday=//*[contains(@style,'visible')]//*[text()='Today']
+ExpandBtn=//button[text()='Expand']
+xpathNeedToExpand=//*[@id='groupDetailReport']//*[text()='Particulars']/ancestor::div[3]/following::div[1]/div/div[1]//*[@class='x-grid3-row-expanderacc']
+xpathThatExpanded=//*[@id='groupDetailReport']//*[text()='Particulars']/ancestor::div[3]/following::div[1]/div/div[1]//*[@class='x-grid3-row-expanderacc']/ancestor::div[3]/div[contains(@class,'row-expandedacc')]
+BalSheetTab=//*[@id='finalStmnt__periodviewnewbsheet']/a[2]//span[1]
+

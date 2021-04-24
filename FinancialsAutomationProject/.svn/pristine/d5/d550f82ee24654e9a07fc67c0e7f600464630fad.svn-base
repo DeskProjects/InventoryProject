@@ -1,0 +1,90 @@
+***********************************Advance********************************************
+ReceivePaymentIcon=.//map[@name='AlienAreas2']/area[10]
+ReceivePaymentAgainstCustomerCheck=//*[text()='Receive Payment from Customer:']//following-sibling::div[1]/div/input
+SubmitButton1=//button[text()='Submit']
+SequenceFormat=.//*[@id='sequenceformat9receiptwindow']
+DocumentNo=.//*[@id='receiptNo9receiptwindow']
+customerID=.//*[@id='customer9receiptwindow']
+PaymentMethod=//div[@id='x-form-el-paymentMethod9receiptwindow']/div/input[2]
+DocumentCurrency=//input[@id='currency9receiptwindow']
+DocumentCurrencyIMg=//input[@id='currency9receiptwindow']/parent::div/img
+ChequeNo=//input[@id='chequenumberundefinedreceiptwindowsouthform']
+CheBankName=//input[@id='paymentthroughundefinedreceiptwindowsouthform']
+CheBankNameD=//div[@id='x-form-el-paymentthroughundefinedreceiptwindowsouthform']/div/img[1]
+Memo=.//*[@id='memo9receiptwindow']
+SaveButton=//button[text()='Save']
+YesButton=//button[text()='Yes']
+OKButton=//button[text()='OK']
+CloseMakePayment=.//li[@id='as__receiptwindow']/a[1]
+***********************************Invoice********************************************
+QuickSearchInvoice=.//*[@id='quickSearchinvoiceinfowindow']
+SelectInvoice=.//*[@id='centerpaninvoiceinfowindow']/div/div[2]/div/div/div/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[1]/div/div
+SelectInvoice2=.//*[@id='centerpaninvoiceinfowindow']/div/div[2]/div/div/div/div/div[1]/div[2]/div/div[2]/table/tbody/tr/td[1]/div/div
+***********************************Debit Note********************************************
+QuickSearchDebitNote=.//*[@id='quickSearchnoteinfowindow']
+SelectDebitNote=//div[@id='centerpannoteinfowindow']/div/div[2]/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[1]/div
+SelectDebitNote2=//div[@id='centerpannoteinfowindow']/div/div[2]/div/div/div/div/div/div[2]/div/div[2]/table/tbody/tr/td[1]/div
+
+***********************************Verification********************************************
+ReceivePaymentReport=//map[@name='AlienAreas3']/area[14]
+QuickSearch=.//input[@id='quickSearch20']
+ClosePaymentMadeReport=.//li[@id='as__receiptReport']/a[1]
+*********************************copyeditdeletecode******************************************
+DocumentCheckBox=.//div[@id='gridmsg20receiptReport']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div
+copyReceivePaymentAgainstCustomerAdvanceButton=//button[@class='x-btn-text accountingbase copy' and text()='Copy']
+copyReceivePaymentAgainstCustomerAdvanceId=//*[contains(@id,'receiptNo58CopyReceivePayment')]/input
+saveCopiedReceivePaymentAgainstCustomerAdvanceId=//button[@class='x-btn-text pwnd save' and text()='Save']
+CopyReceivePaymentAgainstCustomerAdvanceClose=//li[contains(@id,'as__CopyReceivePayment')]/a[1]
+EditReceivePaymentAgainstCustomerAdvanceClose=//li[contains(@id,'as__EditReceivePayment')]/a[1]
+EditReceivePaymentAgainstCustomerAdvanceButton=//button[@class='x-btn-text accountingbase edit' and text()='Edit']
+ReceivePaymentAgainstCustomerAdvanceMemo=//textarea[contains(@id,'memo58EditReceivePayment')]
+ReceivePaymentAgainstCustomerAdvanceEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+deleteReceivePaymentAgainstCustomerAdvanceButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deleteReceivePaymentAgainstCustomerAdvancePermButton=//*[contains(@style,'visible')]//*[contains(text(), 'Delete Receipt Permanently')]/img
+Dashboard=//span[text()='Dashboard']
+--------------------------------------------OpeningRPDocument------------------------------------------------------------------
+
+CustomerChkbox=//div[@id='CustomerDetails']/div/div/div/div/div/div[2]/div/div[2]/div/div/div/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[1]
+RPTab=//span[text()='Receive Payment']
+CreatenewforOpen=//div[@id='openBalWinId' and contains(@style,'visible')]/div[2]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div/div[2]//button[text()='Create New']
+OpeningBalBtn=//button[text()='Opening Balance']
+TransactioNo=//input[@name='number']
+AmountforOpening=//input[@name='transactionAmount']
+Save=//button[text()='Save']
+Editbtn=//div[@id='openBalWinId' and contains(@style,'visible')]/div[2]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div/div[2]//button[text()='Edit']
+DeleteBtn=//div[@id='openBalWinId' and contains(@style,'visible')]/div[2]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div/div[2]//button[text()='Delete']
+CurrencyforOpening=//input[@id='currencycreateTransactionFormId']
+CurrencySelector=//div[@class='x-layer x-combo-list ' and contains(@style,'visible')]
+OpeningMemo=//textarea[@name='memo']
+Firstrowchckbox=//span[text()='Opening Balances']/ancestor::div[2]/following::div[126]
+Secondrowchckbox=//span[text()='Opening Balances']/ancestor::div[2]/following::div[136]
+Massrow=//span[text()='Opening Balances']/ancestor::div[2]/following::div[116]
+RPReport=//map[@name='AlienAreas3']/area[14]
+QuickSearch1=.//input[@id='quickSearch20']
+Viewdropdown=//div[@id='receiptReport']/div/div/div/div/div/div[2]/div/div[1]/div/table/tbody/tr/td[12]/div/img
+Opendocusel1=//div[text()='Opening Balance Records']
+Bottomselct=//div[@id='receiptReport']/div/div/div/div/div/div[2]/div/div[3]/div/table/following::div[1]
+
+
+---------------------------------RPAmountDueVerification--------------------------------------
+CloseViewRP=//span[text()="View Receive Pay..."]//ancestor::em/ancestor::li/a[1]
+ExchangeRate=//div[@id='EditReceivePayment']/div/div[1]/div/div/div/div[4]/div/div/div[1]/div/div/div[4]/div/div/div[2]
+LinkTransactionButton=//div[@id="LinkAdvanceReceipt"]//button[text()='Link Transaction']
+CloseLinkingTab=//li[@id="as__LinkAdvanceReceipt"]/a[1]
+PaymentAmount=//input[@id='amount9receiptwindow']
+
+---------------------------------RPAdvanceWriteOff--------------------------------------
+Dashboard=//span[text()='Dashboard']
+AccountReceivablelink=//div[@id='AccountsReceivableSalesNavigationPanelID']/div[1]/div
+Entrylink=//div[@id='navigationsalestreepanel']/div[1]/div/ul/div/li[1]/div/img[1]
+WriteOfflink=//*[text()='Write Off']/ancestor::li[1]/div/img[1]
+RPwriteofflink=//span[text()='Write-off Advance Payment as Adjustment']
+writeoffquicksearch=//*[@id='quickSearchwriteOffReceiptWindow']
+RPCheckbox=//*[@id='centerpanwriteOffReceiptWindow']/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[1]
+writeofmemo=//label[text()='Add Memo:']/parent::div/div[1]/textarea
+CloseWriteofftab=//*[@id="writeOffReceiptWindow"]/div[1]/div/div/div/div
+RPreportTab=//span[text()='Payment Received...']
+Writeoffreport=//div[@id="navigationsalestreepanel"]/div/div/ul/div/li[2]/div/img[1]
+RPWriteoffreport=//span[text()='Written Off Receipt Report']
+ReportquickSearch=//input[@id='quickSearchwriteOffReceiptReport']
+doccheckbox=//*[@id='writeOffReceiptReport']/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[1]

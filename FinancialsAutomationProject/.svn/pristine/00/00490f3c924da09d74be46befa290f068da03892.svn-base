@@ -1,0 +1,922 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import krawler.erp.GSTFORM5Verification.Cash_Purchase;
+import krawler.erp.GSTFORM5Verification.Cash_Sale;
+import krawler.erp.GSTFORM5Verification.CreditNote_Otherwise;
+import krawler.erp.GSTFORM5Verification.CustomerCreation;
+import krawler.erp.GSTFORM5Verification.DebitNote_OtherWise;
+import krawler.erp.GSTFORM5Verification.GSTReportForPurchase;
+import krawler.erp.GSTFORM5Verification.GSTReportForSales;
+import krawler.erp.GSTFORM5Verification.MakePaymentAgainstGL1;
+import krawler.erp.GSTFORM5Verification.MakePaymentAginstVendorgst;
+import krawler.erp.GSTFORM5Verification.PreRequisite;
+import krawler.erp.GSTFORM5Verification.ProductCreation;
+import krawler.erp.GSTFORM5Verification.ReceivePaymentAgainstGL1;
+import krawler.erp.GSTFORM5Verification.Sales_Invoice;
+import krawler.erp.GSTFORM5Verification.VendorCreation;
+import krawler.erp.GSTFORM5Verification.Vendor_Invoice;
+import krawler.erp.page.Login;
+import krawler.erp.page.MakePaymentAginstVendor;
+import krawler.erp.page.ReceivePaymentAgainstGL;
+import krawler.erp.page.Utilities;
+
+public class GSTForm5_TC {
+	public static WebDriver driver;
+	
+	// Please provide document ids here.
+	public static String purchasePrice = "100";
+    public static String customerid="MyCustomer2"; 
+    public static String vendorid="MyVendor2";
+    public static String productid ="MyProduct2";
+    public static String CPdocumentid="MyCPDoc3";
+    public static String PIdocumentid="MyPIDoc3";
+    public static String CSdocumentid="MyCSDoc3";
+    public static String SIdocumentid="MySIDoc3";
+    public static String MPdocumentid="MyMPDoc4";
+    public static String RPdocumentid="MyRPDoc5";
+    public static String DNOtherdocumentid= "MyDNODoc4";
+    public static String CNOtherdocumentid= "MyCNODoc4";
+    public static String MPforexID = "MyMPPI4"; 
+    
+    // Object Creation for CP / PI
+     public static  Cash_Purchase CP = new Cash_Purchase();
+     public static Vendor_Invoice VI = new Vendor_Invoice();
+    
+    // Object Creation for MP
+     public static  MakePaymentAgainstGL1 MPGL1= new MakePaymentAgainstGL1();
+    
+     // Object Creation for DN
+     public static DebitNote_OtherWise DNO = new DebitNote_OtherWise();
+    
+    // Object Creation for CS / SI
+     Cash_Sale CS = new Cash_Sale();
+     Sales_Invoice SI = new Sales_Invoice();
+
+    // Object Creation for RP
+    public static ReceivePaymentAgainstGL1 RPGL = new ReceivePaymentAgainstGL1();
+    
+    // Object Creation for CN
+    public static CreditNote_Otherwise CNO = new CreditNote_Otherwise();
+    
+ // Object Creation for GSTforPucchase group and Sales group
+    public static GSTReportForPurchase GSTforPurchase = new GSTReportForPurchase();
+    public static GSTReportForSales GSTforSales = new GSTReportForSales();
+    
+    
+    //GST Box initialization initial as zero
+    public static double box1=0;
+    public static double box2=0;
+    public static double box3=0;
+    public static double box4=0;
+    public static double box5=0;
+    public static double box6=0;
+    public static double box7=0;
+    public static double box8=0;
+    public static double box9=0;
+    public static double box13=0;
+
+ 
+    // Login into ERP Application
+    @Test(priority=1)
+    public void beforeTestLogin() throws InterruptedException, IOException, AWTException
+    {
+        Login ln = new Login();
+        WebDriver driver = Login.loginERP("http://192.168.0.208:8080/dotcomsmoketesting/a/at1/#", "admin", "1234", 3);
+        	          this.driver = driver;
+        	            	              
+     }
+    // --------------------------------True Control account(sales) from System Control.------------------------------------------------------------
+    /*@Test(priority=2)
+    public void PreRequisite_Setting() throws InterruptedException, AWTException, IOException
+    {
+    	PreRequisite preq= new PreRequisite();
+    	preq.ERP_MandotoryChecks(driver);
+    }
+    
+    
+  //----------------------------------------------- Create Vendor---------------------------------------------------------------------------
+     @Test(priority=10)
+	  public void VendorCreationForGST() throws InterruptedException, IOException, AWTException
+	  {
+  	  VendorCreation VC = new VendorCreation();
+  	  VC.Create_Vendor(vendorid, driver);		
+  }
+ 
+     //------------------------------------------------Create Customer---------------------------------------------------------------------------
+      @Test(priority=20)
+	  public void CustomerCreationForGST() throws InterruptedException, IOException, AWTException
+	  {
+    	  CustomerCreation CC = new CustomerCreation();
+		  CC.create_Customer(customerid, driver);
+	  }
+	 
+      //---------------------------------------------------------Create Product----------------------------------------------------------------------------
+      @Test(priority=30)
+	  public void ProductCreationForGST() throws InterruptedException, IOException, AWTException
+	  {
+    	  ProductCreation PC = new ProductCreation();
+		  PC.create_Product(productid, driver);
+		  Thread.sleep(1000);
+		  PC.debug_setProductPurchasePrice(productid, purchasePrice, driver);
+		  Utilities.refresh();
+	  }*/
+  //------------------------------------------------------------ To print Box Data ----------------------------------------------------------------  
+  @Test(priority=40)
+	  public void getForm5_allData() throws InterruptedException, IOException, AWTException
+	  {
+    	GSTReportForPurchase.getDataGSTReport(driver);
+    	System.out.println("Currently Box1 has " + box1  +" amount");
+    	System.out.println("Currently Box2 has " + box2  +" amount");
+    	System.out.println("Currently Box3 has "+  box3  +" amount");
+        System.out.println("Currently Box4 has "+  box4  +" amount");
+    	System.out.println("Currently Box5 has "+  box5  +" amount");  // Don't keep this group of code in comment mode. Because each iteration , get current value of all boxes from here.
+    	System.out.println("Currently Box6 has "+  box6  +" amount");
+    	System.out.println("Currently Box7 has "+  box7  +" amount");
+    	System.out.println("Currently Box8 has "+  box8  +" amount");
+    	System.out.println("Currently Box9 has "+  box9  +" amount");
+    	System.out.println("Currently Box13 has "+ box13  +" amount");
+    	System.out.println("\n");
+    	Utilities.refresh();
+	  }
+    
+    
+  
+       //--------------------------------------------------------------Create Cash Purchase --------------------------------------------------------------
+    @Test(priority=50)
+     // Set1
+     // Note:- There will be no boxes impacted in GST form 5 by these below tax entries.
+	  public void CreateCash_Purchase_Set1() throws InterruptedException, IOException, AWTException
+	  {
+    	  CP.Create_CashPurchase("GST(BL)@7.00%", CPdocumentid+"BL",productid , vendorid, driver);   
+    	  Thread.sleep(1000);
+    	  CP.Create_CashPurchase("GST(EP)@0.00%", CPdocumentid+"EP", productid, vendorid, driver);   
+    	  Thread.sleep(1000);
+    	  CP.Create_CashPurchase("GST(NR)@0.00%", CPdocumentid+"NR", productid , vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  CP.Create_CashPurchase("GST(OP)@0.00%", CPdocumentid+"OP", productid, vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  CP.Create_CashPurchase("GST(IGDS)@7.00%", CPdocumentid+"IGDS", productid, vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  System.out.println("\n");
+	  }
+      
+       @Test(priority=51)
+	  public void GSTForm5VerificationCP_Set1() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set1";
+		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+    	
+         @Test(priority=52)
+      // Set2
+	  // Note:- Box 5 , Box 7, Box 8 will get  impacted by these below tax entries. 
+	  public void CreateCash_Purchase_Set2() throws InterruptedException, IOException, AWTException
+	    {
+    	  CP.Create_CashPurchase("GST(IM)@7.00%", CPdocumentid+"IM", productid, vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  CP.Create_CashPurchase("GST(TX-E33)@7.00%", CPdocumentid+"GSTTX-E33", productid, vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  CP.Create_CashPurchase("GST(TX-N33)@7.00%", CPdocumentid+"TX-N33", productid, vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  CP.Create_CashPurchase("GST(TX-RE)@7.00%", CPdocumentid+"TX-RE", productid, vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  CP.Create_CashPurchase("GST(TX7)@7.00%", CPdocumentid+"TX7", productid, vendorid, driver);  
+    	  Thread.sleep(1000);  
+    	  System.out.println("\n");
+	  }
+      
+      @Test(priority=53)
+	  public void GSTForm5VerificationCP_Set2() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set2";
+		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+      
+      @Test(priority=54)
+       // Set3
+     // Note:- Only Box 5  will get impacted by below tax entry. 
+	  public void CreateCash_Purchase_Set3() throws InterruptedException, IOException, AWTException
+	  {  
+     
+    	  CP.Create_CashPurchase("GST(ZP)@0.00%", CPdocumentid+"ZP", productid, vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  System.out.println("\n");
+	  }  
+      @Test(priority=55)
+	  public void GSTForm5VerificationCP_Set3() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set3";
+		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+    	 
+
+      @Test(priority=56)
+      //Set4
+    // Note:- Box 5, Box 7 and Box 9 will get impacted by below tax entry. 
+	  public void CreateCash_Purchase_Set4() throws InterruptedException, IOException, AWTException
+	  {    
+    	  
+    	  CP.Create_CashPurchase("GST(ME)@0.00%", CPdocumentid+"ME", productid, vendorid, driver);  
+    	  Thread.sleep(1000);
+    	  System.out.println("\n");
+	  }
+      @Test(priority=57)
+	  public void GSTForm5VerificationCP_Set4() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set4";
+		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+     
+    
+      
+     
+    //---------------------------------------------------------Create Purchase Invoice -----------------------------------------------------------------------
+   @Test(priority=60)
+  // Set1
+ // Note:- There will be no boxes impacted in GST form 5 by these below tax entries.
+      public void CretaePurchase_Invoice_Set1() throws InterruptedException, AWTException, IOException
+      {
+       	  VI.createPurchaseInvoice("GST(BL)@7.00%", PIdocumentid+"BL",productid, vendorid, driver); 
+       	  Thread.sleep(1000);
+       	  VI.createPurchaseInvoice("GST(EP)@0.00%", PIdocumentid+"EP", productid, vendorid, driver);   
+       	  Thread.sleep(1000);
+       	  VI.createPurchaseInvoice("GST(NR)@0.00%", PIdocumentid+"NR", productid , vendorid, driver);  
+          Thread.sleep(1000);
+       	  VI.createPurchaseInvoice("GST(OP)@0.00%", PIdocumentid+"OP", productid, vendorid, driver);  
+       	  Thread.sleep(1000);
+          VI.createPurchaseInvoice("GST(IGDS)@7.00%", PIdocumentid+"IGDS", productid, vendorid, driver);  
+       	  Thread.sleep(1000);
+          System.out.println("\n");
+   	  }
+         
+         @Test(priority=61)
+   	  public void GSTForm5VerificationPI_Set1() throws InterruptedException, IOException, AWTException
+   	  {
+   		  String set="set1";
+   		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+   		  Utilities.refresh();
+   		  Thread.sleep(2000);
+   		  System.out.println("\n");
+   	  }
+       	  
+       	
+         @Test(priority=62)
+    // Set2
+   	// Note:- Box 5 , Box 7, Box 8 will get  impacted by these below tax entries. 
+   	  public void CreatePurchaseInvoice_Set2() throws InterruptedException, IOException, AWTException
+   	  {
+       	  VI.createPurchaseInvoice("GST(IM)@7.00%", PIdocumentid+"IM", productid, vendorid, driver);  
+       	  Thread.sleep(1000);
+       	  VI.createPurchaseInvoice("GST(TX-E33)@7.00%", PIdocumentid+"GSTTX-E33", productid, vendorid, driver);  
+       	  Thread.sleep(1000);
+       	  VI.createPurchaseInvoice("GST(TX-N33)@7.00%", PIdocumentid+"TX-N33", productid, vendorid, driver);  
+       	  Thread.sleep(1000);
+       	  VI.createPurchaseInvoice("GST(TX-RE)@7.00%", PIdocumentid+"TX-RE", productid, vendorid, driver);  
+       	  Thread.sleep(1000);
+       	  VI.createPurchaseInvoice("GST(TX7)@7.00%", PIdocumentid+"TX7", productid, vendorid, driver);  
+       	  Thread.sleep(1000);  
+       	  System.out.println("\n");
+   	  }
+         
+         @Test(priority=63)
+   	  public void GSTForm5VerificationPI_Set2() throws InterruptedException, IOException, AWTException
+   	  {
+   		  String set="set2";
+   		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+   		  Utilities.refresh();
+   		  Thread.sleep(2000);
+   		  System.out.println("\n");
+   	  }
+         
+         @Test(priority=64)
+         // Set3
+         // Note:- Only Box 5  will get impacted by below tax entry. 
+   	  public void CreatePurchaseInvoice_Set3() throws InterruptedException, IOException, AWTException
+   	  {  
+       	  VI.createPurchaseInvoice("GST(ZP)@0.00%", PIdocumentid+"ZP", productid, vendorid, driver);  
+       	  Thread.sleep(1000);
+       	  System.out.println("\n");
+   	  }  
+         @Test(priority=65)
+   	  public void GSTForm5VerificationPI_Set3() throws InterruptedException, IOException, AWTException
+   	  {
+   		  String set="set3";
+   		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+   		  Utilities.refresh();
+   		  Thread.sleep(2000);
+   		  System.out.println("\n");
+   	  }
+       	 
+
+         @Test(priority=66)
+       //Set4
+      // Note:- Box 5, Box 7 and Box 9 will get impacted by below tax entry.
+   	  public void CreatePurchaseInvoice_Set4() throws InterruptedException, IOException, AWTException
+   	  {   
+       	  VI.createPurchaseInvoice("GST(ME)@0.00%", PIdocumentid+"ME", productid, vendorid, driver);  
+       	  Thread.sleep(1000);
+       	  System.out.println("\n");
+   	  }
+         @Test(priority=67)
+   	  public void GSTForm5VerificationPI_Set4() throws InterruptedException, IOException, AWTException
+   	  {
+   		  String set="set4";
+   		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+   		  Utilities.refresh();
+   		  Thread.sleep(2000);
+   		  System.out.println("\n");
+   	  } 
+   	  
+   
+  // ------------------------------------------------------------ Create Make Payment -------------------------------------------------------------------
+    @Test(priority=70)
+ // Set1
+// Note:- There will be no boxes impacted in GST form 5 by these below tax entries.
+     public void Create_MPagainstGL_Set1() throws InterruptedException, AWTException, IOException
+     {
+    	MPGL1.create_makePayment_GL("GST(BL)@7.00%", MPdocumentid+"BL", driver);
+      	Thread.sleep(1000);
+      	MPGL1.create_makePayment_GL("GST(EP)@0.00%", MPdocumentid+"EP",driver);   
+      	Thread.sleep(1000);
+      	MPGL1.create_makePayment_GL("GST(NR)@0.00%", MPdocumentid+"NR",driver);  
+        Thread.sleep(1000);
+        MPGL1.create_makePayment_GL("GST(OP)@0.00%", MPdocumentid+"OP", driver);  
+      	Thread.sleep(1000);
+      	MPGL1.create_makePayment_GL("GST(IGDS)@7.00%", MPdocumentid+"IGDS",  driver);  
+      	Thread.sleep(1000);
+      	System.out.println("\n");
+  	  }
+        
+        @Test(priority=71)
+  	  public void GSTForm5VerificationMP_Set1() throws InterruptedException, IOException, AWTException
+  	  {
+  		  String set="set1";
+  		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+  		  Utilities.refresh();
+  		  Thread.sleep(2000);
+  		  System.out.println("\n");
+  	  }
+      	  
+      	
+        @Test(priority=72)
+   // Set2
+  	// Note:- Box 5 , Box 7, Box 8 will get  impacted by these below tax entries. 
+  	  public void Create_MPagainstGL_Set2() throws InterruptedException, IOException, AWTException
+  	  {
+           MPGL1.create_makePayment_GL("GST(IM)@7.00%", MPdocumentid+"IM",driver);  
+      	   Thread.sleep(2000);
+      	   MPGL1.create_makePayment_GL("GST(TX-E33)@7.00%", MPdocumentid+"GSTTX-E33",driver);  
+      	   Thread.sleep(2000);
+      	   MPGL1.create_makePayment_GL("GST(TX-N33)@7.00%", MPdocumentid+"TX-N33",driver);  
+      	   Thread.sleep(2000);
+      	   MPGL1.create_makePayment_GL("GST(TX-RE)@7.00%", MPdocumentid+"TX-RE",driver);  
+      	   Thread.sleep(2000);
+      	   MPGL1.create_makePayment_GL("GST(TX7)@7.00%", MPdocumentid+"TX7",driver);  
+      	   Thread.sleep(2000);  
+      	   System.out.println("\n");
+  	  }
+        
+        @Test(priority=73)
+  	  public void GSTForm5VerificationMP_Set2() throws InterruptedException, IOException, AWTException
+  	  {
+  		  String set="set2";
+  		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+  		  Utilities.refresh();
+  		  Thread.sleep(2000);
+  		  System.out.println("\n");
+  	  }
+        
+        @Test(priority=74)
+        // Set3
+        // Note:- Only Box 5  will get impacted by below tax entry. 
+  	  public void Create_MPagainstGL_Set3() throws InterruptedException, IOException, AWTException
+  	  {  
+          MPGL1.create_makePayment_GL("GST(ZP)@0.00%", MPdocumentid+"ZP", driver);  
+      	  Thread.sleep(2000);
+          System.out.println("\n");
+  	  }  
+        @Test(priority=75)
+  	  public void GSTForm5VerificationMP_Set3() throws InterruptedException, IOException, AWTException
+  	  {
+  		  String set="set3";
+  		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+  		  Utilities.refresh();
+  		  Thread.sleep(2000);
+  		  System.out.println("\n");
+  	  }
+      	 
+
+        @Test(priority=76)
+      //Set4
+     // Note:- Box 5, Box 7 and Box 9 will get impacted by below tax entry.
+  	  public void Create_MPagainstGL_Set4() throws InterruptedException, IOException, AWTException
+  	  {   
+        	MPGL1.create_makePayment_GL("GST(ME)@0.00%", MPdocumentid+"ME",driver);  
+      	    Thread.sleep(1000);
+      	    System.out.println("\n");
+  	  }
+        @Test(priority=77)
+  	  public void GSTForm5VerificationMP_Set4() throws InterruptedException, IOException, AWTException
+  	  {
+  		  String set="set4";
+  		  GSTforPurchase.GSTReportVerification(box1, box2, box3, box4, box5, box6, box7, box8, box9, box13, driver, set);
+  		  Utilities.refresh();
+  		  Thread.sleep(2000);
+  		  System.out.println("\n");
+  	  } 
+  	
+        
+        
+ // ---------------------------------------------------- Create DN Otherwise---------------------------------------------------------------------------
+      @Test(priority=80)
+    // Set1
+   // Note:- There will be no boxes impacted in GST form 5 by these below tax entries.
+      public void Create_DNOtherWise_Set1() throws InterruptedException, AWTException, IOException
+        {  
+    	    DNO.create_debitNoteOtherwise("GST(BL)@7.00%", DNOtherdocumentid+"BL",vendorid, driver);
+         	Thread.sleep(2000);
+         	DNO.create_debitNoteOtherwise("GST(EP)@0.00%", DNOtherdocumentid+"EP",vendorid,driver);   
+         	Thread.sleep(2000);
+         	DNO.create_debitNoteOtherwise("GST(NR)@0.00%", DNOtherdocumentid+"NR",vendorid, driver);  
+            Thread.sleep(2000);
+            DNO.create_debitNoteOtherwise("GST(OP)@0.00%", DNOtherdocumentid+"OP",vendorid, driver);  
+         	Thread.sleep(2000);
+         	DNO.create_debitNoteOtherwise("GST(IGDS)@7.00%", DNOtherdocumentid+"IGDS",vendorid,  driver);  
+         	Thread.sleep(2000);
+         	System.out.println("\n");
+     	  }
+           
+           @Test(priority=81)
+     	  public void GSTForm5VerificationDN_Set1() throws InterruptedException, IOException, AWTException
+     	  {
+     		  String set="set1";
+     		  GSTforPurchase.GSTReportVerificationforDN(box5, box6, box7, box9, driver, set);
+     		  Utilities.refresh();
+     		  Thread.sleep(2000);
+     		  System.out.println("\n");
+     	  }
+         	  
+         	
+           @Test(priority=82)
+      // Set2
+     	// Note:- Box 5 , Box 7, Box 8 will get  impacted by these below tax entries. 
+     	  public void Create_DNOtherWise_Set2() throws InterruptedException, IOException, AWTException
+     	  {
+        	   DNO.create_debitNoteOtherwise("GST(IM)@7.00%", DNOtherdocumentid+"IM",vendorid,driver);  
+         	   Thread.sleep(2000);
+         	   DNO.create_debitNoteOtherwise("GST(TX-E33)@7.00%", DNOtherdocumentid+"GSTTX-E33",vendorid,driver);  
+         	   Thread.sleep(2000);
+         	   DNO.create_debitNoteOtherwise("GST(TX-N33)@7.00%", DNOtherdocumentid+"TX-N33",vendorid,driver);  
+         	   Thread.sleep(2000);
+         	   DNO.create_debitNoteOtherwise("GST(TX-RE)@7.00%", DNOtherdocumentid+"TX-RE",vendorid,driver);  
+         	   Thread.sleep(2000);
+         	   DNO.create_debitNoteOtherwise("GST(TX7)@7.00%", DNOtherdocumentid+"TX7",vendorid,driver);  
+         	   Thread.sleep(2000);  
+         	  System.out.println("\n");
+     	  }
+           
+           @Test(priority=83)
+     	  public void GSTForm5VerificationDN_Set2() throws InterruptedException, IOException, AWTException
+     	  {
+     		  String set="set2";
+     		  GSTforPurchase.GSTReportVerificationforDN(box5, box6, box7, box9, driver, set);
+     		  Utilities.refresh();
+     		  Thread.sleep(2000);
+     		  System.out.println("\n");
+     	  }
+           
+           @Test(priority=84)
+           // Set3
+           // Note:- Only Box 5  will get impacted by below tax entry. 
+     	  public void Create_DNOtherWise_Set3() throws InterruptedException, IOException, AWTException
+     	  {  
+        	   DNO.create_debitNoteOtherwise("GST(ZP)@0.00%", DNOtherdocumentid+"ZP", vendorid,driver);  
+         	  Thread.sleep(2000);
+         	  System.out.println("\n");
+     	  }  
+           @Test(priority=85)
+     	  public void GSTForm5VerificationDN_Set3() throws InterruptedException, IOException, AWTException
+     	  {
+     		  String set="set3";
+     		  GSTforPurchase.GSTReportVerificationforDN(box5, box6, box7, box9, driver, set);
+     		  Utilities.refresh();
+     		  Thread.sleep(2000);
+     		  System.out.println("\n");
+     	  }
+         	 
+
+           @Test(priority=86)
+         //Set4
+        // Note:- Box 5, Box 7 and Box 9 will get impacted by below tax entry.
+     	  public void Create_DNOtherWise_Set4() throws InterruptedException, IOException, AWTException
+     	  {   
+        	    DNO.create_debitNoteOtherwise("GST(ME)@0.00%", DNOtherdocumentid+"ME",vendorid,driver);  
+         	    Thread.sleep(2000);
+         	    System.out.println("\n");
+     	  }
+           @Test(priority=87)
+     	  public void GSTForm5VerificationDN_Set4() throws InterruptedException, IOException, AWTException
+     	  {
+     		  String set="set4";
+     		  GSTforPurchase.GSTReportVerificationforDN(box5, box6, box7, box9, driver, set);
+     		  Utilities.refresh();
+     		  Thread.sleep(2000);
+     		  System.out.println("\n");
+     	  } 
+     
+   
+ 
+    // ------------------------------------------------------ Create Cash Sales ----------------------------------------------------------------
+  
+     @Test(priority=90)
+    // Set1
+    // Note:- Box 3 , Box 4, Box13 will get  impacted by these below tax entries. 
+	  public void CreateCash_Sales_Set1() throws InterruptedException, IOException, AWTException
+	  {
+    	   CS.create_CashSale("GST(ES33)@0.00%", CSdocumentid+"ES33", productid,  customerid, driver);
+    	   Thread.sleep(2000);	    
+    	   CS.create_CashSale("GST(ESN33)@0.00%", CSdocumentid+"ESN33", productid,customerid, driver);
+      	   Thread.sleep(2000);
+      	   System.out.println("\n");
+	  }
+     
+     @Test(priority=91)
+	  public void GSTForm5VerificationCS_Set1() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set1";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   	  
+   	
+     @Test(priority=92)
+     // Set2
+	  // Note:- Box 1 , Box 4, Box 6 , Box 8 and Box 13 will get  impacted by these below tax entries. 
+	  public void CreateCash_Sales_Set2() throws InterruptedException, IOException, AWTException
+	    {
+    	 CS.create_CashSale("GST(DS)@7.00%", CSdocumentid+"DS", productid, customerid, driver);
+	     Thread.sleep(2000);	  
+	     CS.create_CashSale("GST(SR)@7.00%", CSdocumentid+"SR", productid,customerid, driver);
+	     Thread.sleep(2000);
+	     System.out.println("\n");
+	  }
+     
+     @Test(priority=93)
+	  public void GSTForm5VerificationCS_Set2() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set2";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+     
+     @Test(priority=94)
+      // Set3
+    // Note:- Box 2 , Box 4 and Box 13 will get  impacted by these below tax entries. 
+	  public void CreateCash_Sales_Set3() throws InterruptedException, IOException, AWTException
+	  {  
+    
+
+   	    CS.create_CashSale("GST(ZR)@0.00%", CSdocumentid+"ZR",productid,  customerid, driver);
+ 	    Thread.sleep(2000);
+ 	    System.out.println("\n");
+	  }  
+     @Test(priority=95)
+	  public void GSTForm5VerificationCS_Set3() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set3";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   	 
+
+     @Test(priority=96)
+     //Set4
+   // Note:-  Only Box 13  will get impacted by below tax entry. 
+	  public void CreateCash_Sales_Set4() throws InterruptedException, IOException, AWTException
+	  {    
+   	  
+    	CS.create_CashSale("GST(OS)@0.00%", CSdocumentid+"OS",productid, customerid, driver);
+  	    Thread.sleep(2000);	
+  	    System.out.println("\n");
+	  }
+     @Test(priority=97)
+	  public void GSTForm5VerificationCS_Set4() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set4";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   
+     
+      // -------------------------------------------------------------- Create Sales Invoice ---------------------------------------------------------------------
+ 
+    @Test(priority=100)
+    // Set1
+    // Note:- Box 3 , Box 4, Box13 will get  impacted by these below tax entries. 
+	  public void CreateSalesInvoice_Set1() throws InterruptedException, IOException, AWTException
+	  {
+    	  SI.create_salesInvoice("GST(ES33)@0.00%", SIdocumentid+"ES33",productid,  customerid, driver);
+    	Thread.sleep(1000);	
+    	SI.create_salesInvoice("GST(ESN33)@0.00%", SIdocumentid+"ESN33", productid,customerid, driver);
+    	Thread.sleep(2000);
+    	System.out.println("\n");
+	  }
+     
+     @Test(priority=101)
+	  public void GSTForm5VerificationSI_Set1() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set1";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   	  
+   	
+     @Test(priority=102)
+     // Set2
+	  // Note:- Box 1 , Box 4, Box 6 , Box 8 and Box 13 will get  impacted by these below tax entries. 
+	  public void CreateCashSalesInvoice_Set2() throws InterruptedException, IOException, AWTException
+	    {
+    	 SI.create_salesInvoice("GST(DS)@7.00%", SIdocumentid+"DS",productid,  customerid, driver);
+    	Thread.sleep(1000);  	  
+	     SI.create_salesInvoice("GST(SR)@7.00%", SIdocumentid+"SR", productid, customerid, driver);
+    	Thread.sleep(2000);
+    	System.out.println("\n");
+	  }
+     
+     @Test(priority=103)
+	  public void GSTForm5VerificationSI_Set2() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set2";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+     
+     @Test(priority=104)
+      // Set3
+    // Note:- Box 2 , Box 4 and Box 13 will get  impacted by these below tax entries. 
+	  public void CreateSalesInvoice_Set3() throws InterruptedException, IOException, AWTException
+	  {  
+   	  	SI.create_salesInvoice("GST(ZR)@0.00%", SIdocumentid+"ZR", productid, customerid, driver);
+    	Thread.sleep(2000);
+    	System.out.println("\n");
+	  }  
+     @Test(priority=105)
+	  public void GSTForm5VerificationSI_Set3() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set3";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   	 
+
+     @Test(priority=106)
+     //Set4
+   // Note:-  Only Box 13  will get impacted by below tax entry. 
+	  public void CreateSalesInvoice_Set4() throws InterruptedException, IOException, AWTException
+	  {    
+   	  
+    	SI.create_salesInvoice("GST(OS)@0.00%", SIdocumentid+"OS", productid,customerid, driver);
+    	Thread.sleep(2000);	
+    	System.out.println("\n");
+    	
+	  }
+     @Test(priority=107)
+	  public void GSTForm5VerificationSI_Set4() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set4";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   
+//------------------------------------------------------------Receive Payment------------------------------------------------------ -------------------------
+     
+    @Test(priority=110)
+    // Set1
+    // Note:- Box 3 , Box 4, Box13 will get  impacted by these below tax entries. 
+	  public void Create_RPagainstGL_Set1() throws InterruptedException, IOException, AWTException
+	  {
+    	 RPGL.create_ReceivePayment_AgainstGLMul("GST(ES33)@0.00%", RPdocumentid+"ES33", driver);
+    	 Thread.sleep(2000);
+         RPGL.create_ReceivePayment_AgainstGLMul("GST(ESN33)@0.00%", RPdocumentid+"ESN33", driver);
+         Thread.sleep(2000);
+         System.out.println("\n");
+	  }
+     
+     @Test(priority=111)
+	  public void GSTForm5VerificationRP_Set1() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set1";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   	  
+   	
+     @Test(priority=112)
+     // Set2
+	  // Note:- Box 1 , Box 4, Box 6 , Box 8 and Box 13 will get  impacted by these below tax entries. 
+	  public void Create_RPagainstGL_Set2() throws InterruptedException, IOException, AWTException
+	    {
+    	 RPGL.create_ReceivePayment_AgainstGLMul("GST(DS)@7.00%", RPdocumentid+"DS", driver);
+         Thread.sleep(2000);  	  
+	     RPGL.create_ReceivePayment_AgainstGLMul("GST(SR)@7.00%", RPdocumentid+"SR", driver);
+    	 Thread.sleep(2000);
+    	 System.out.println("\n");
+	  }
+     
+     @Test(priority=113)
+	  public void GSTForm5VerificationRP_Set2() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set2";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+     
+     @Test(priority=114)
+      // Set3
+    // Note:- Box 2 , Box 4 and Box 13 will get  impacted by these below tax entries. 
+	  public void Create_RPagainstGL_Set3() throws InterruptedException, IOException, AWTException
+	  {  
+   	  	RPGL.create_ReceivePayment_AgainstGLMul("GST(ZR)@0.00%", RPdocumentid+"ZR", driver);
+        Thread.sleep(2000);
+        System.out.println("\n");
+	  }  
+     @Test(priority=115)
+	  public void GSTForm5VerificationRP_Set3() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set3";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   	 
+
+     @Test(priority=116)
+     //Set4
+   // Note:-  Only Box 13  will get impacted by below tax entry. 
+	  public void Create_RPagainstGL_Set4() throws InterruptedException, IOException, AWTException
+	  {    
+   	  
+    	RPGL.create_ReceivePayment_AgainstGLMul("GST(OS)@0.00%", RPdocumentid+"OS", driver);
+        Thread.sleep(2000);	
+        System.out.println("\n");
+    	
+	  }
+     @Test(priority=117)
+	  public void GSTForm5VerificationRP_Set4() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set4";
+		  GSTforSales.GSTReportVerificationforsales(box1, box2, box3, box4, box6, box7,box8,box13, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+    	  
+    	      
+   //--------------------------------------------------------------Create CN Otherwise----------------------------------------------------------------------------  
+      
+     
+    @Test(priority=120)
+    // Set1
+    // Note:- Box 3 , Box 4, Box13 will get  impacted by these below tax entries. 
+	  public void Create_CNOtherWise_Set1() throws InterruptedException, IOException, AWTException
+	  {
+	     
+    	 CNO.create_creditNoteotherwise("GST(ES33)@0.00%", CNOtherdocumentid+"ES33",customerid, driver);
+    	 Thread.sleep(1000);	
+    	 CNO.create_creditNoteotherwise("GST(ESN33)@0.00%", CNOtherdocumentid+"ESN33",customerid, driver);
+    	 Thread.sleep(2000);
+    	 System.out.println("\n");
+	  }
+     
+     @Test(priority=121)
+	  public void GSTForm5VerificationCNOtherWise_Set1() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set1";
+		  GSTforSales.GSTReportVerificationforCN(box5, box6, box7, box9, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   	  
+   	
+     @Test(priority=122)
+     // Set2
+	  // Note:- Box 1 , Box 4, Box 6 , Box 8 and Box 13 will get  impacted by these below tax entries. 
+	  public void Create_CNOtherWise_Set2() throws InterruptedException, IOException, AWTException
+	    {
+    	 CNO.create_creditNoteotherwise("GST(DS)@7.00%", CNOtherdocumentid+"DS",customerid, driver);
+    	 Thread.sleep(1000);  	  
+	     CNO.create_creditNoteotherwise("GST(SR)@7.00%", CNOtherdocumentid+"SR",customerid, driver);
+    	 Thread.sleep(2000);
+    	 System.out.println("\n");
+	  }
+     
+     @Test(priority=123)
+	  public void GSTForm5VerificationCNOtherWise_Set2() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set2";
+		  GSTforSales.GSTReportVerificationforCN(box5, box6, box7, box9, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+     
+     @Test(priority=124)
+      // Set3
+    // Note:- Box 2 , Box 4 and Box 13 will get  impacted by these below tax entries. 
+	  public void Create_CNOtherWise_Set3() throws InterruptedException, IOException, AWTException
+	  {  
+   	  	CNO.create_creditNoteotherwise("GST(ZR)@0.00%", CNOtherdocumentid+"ZR",customerid, driver);
+    	Thread.sleep(2000);
+    	System.out.println("\n");
+	  }  
+     @Test(priority=125)
+	  public void GSTForm5VerificationCNOtherWise_Set3() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set3";
+		  GSTforSales.GSTReportVerificationforCN(box5, box6, box7, box9, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+   	 
+
+     @Test(priority=126)
+     //Set4
+   // Note:-  Only Box 13  will get impacted by below tax entry. 
+	  public void Create_CNOtherWise_Set4() throws InterruptedException, IOException, AWTException
+	  {    
+   	  
+    	CNO.create_creditNoteotherwise("GST(OS)@0.00%", CNOtherdocumentid+"OS",customerid, driver);
+    	Thread.sleep(2000);	
+    	System.out.println("\n");
+    	
+	  }
+     @Test(priority=127)
+	  public void GSTForm5VerificationCNOtherWise_Set4() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set4";
+		  GSTforSales.GSTReportVerificationforCN(box5, box6, box7, box9, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+	  }
+  
+	 
+ //------------------------------------------------------------------For Forex Gain / Loss------------------------------------------------------------- --------------------------------
+    
+  // ---------------------------------------------Create  PI with foreign Currency-------------------------------------------------------------------------------------------------
+     @Test(priority=130)
+      public void CretaePurchase_Invoicewithforeigncurency() throws InterruptedException, AWTException, IOException
+      {
+  	   Vendor_Invoice VI = new Vendor_Invoice();
+  	   VI.createPurchaseInvoicewithForeignCurrency(PIdocumentid+"ForeignCurrency", productid, vendorid, driver);
+  	   System.out.println("\n");
+       }
+    
+   //--------------------------------------------  Create MP linked with above PI and changing exchange rate --------------------------------------------------------------------
+      @Test(priority=140)
+      public void MP_LinkwithPI() throws InterruptedException, AWTException, IOException
+      {
+       MakePaymentAginstVendorgst MPAV = new MakePaymentAginstVendorgst();
+       String InvoiceAmt = "97.20";
+       MPAV.create_MakePayment_VendorInvoice(MPforexID, vendorid, InvoiceAmt, PIdocumentid, driver);
+       System.out.println("\n");
+      }
+      
+// --------------------------------------------- To calling GST for 5 report for Forex Gain / Loss functionality--------------------------------------------------------------------------
+      @Test(priority=150)
+   // Note:-  Box 3 , Box 4  will get impacted by above transactions(PI and MP).
+      public void GSTForm5VerificationForexGainLoss_Set1() throws InterruptedException, IOException, AWTException
+	  {
+		  String set="set1";
+		  GSTforPurchase.GSTReportVerificationforforexGainLoss(box1, box2, box3, box4, box5, box6, box7, box9, driver, set);
+		  Utilities.refresh();
+		  System.out.println("\n");
+}
+     
+}
+     
+
+

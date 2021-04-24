@@ -1,0 +1,7 @@
+ProductId,Batch,Serial
+prod18june19S3,Batch,QAIS2
+prod18june19S3,Batch,QAIS1
+prod18june19S3,Batch,QAIS4
+prod18june19BS4,BatchSerial,QAIS4
+prod18june19BS4,BatchSerial,QAIS5
+prod18june19BS4,BatchSerial,QAIS3

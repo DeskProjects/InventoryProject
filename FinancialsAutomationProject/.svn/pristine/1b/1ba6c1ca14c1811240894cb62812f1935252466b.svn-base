@@ -1,0 +1,667 @@
+Administrationbtn=//span[contains(text(), 'Administration \u25BE')]
+Administrationlink=//a[@id='userAdministrationLink']
+Smithradio=//div[@id='usergrid']/div/div/div/div[1]/div[2]/div/div[3]/table/tbody/tr/td[1]/div/div
+assignpermissionbtn=//table[@id='permissionsundefined']/tbody/tr/td[2]/em/button
+AccPrefExpander=//div[@id='AP-col0']/div/div/fieldset[1]/legend/div
+AccPrefViewCB=//input[@id='activityff80808122f9dba90122fa4a54f10032']
+cusexpander=//div[@id='AP-col0']/div/div/fieldset[2]/legend/div
+CusCreateCB=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/input
+cusViewCB=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[4]/input
+ModCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[8]/input
+ChartCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[12]/input
+DelCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[16]/input
+ImpCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[20]/input
+ExpCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[24]/input
+PrintCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[28]/input
+ViewAllCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[32]/input
+openingBalCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[36]/input
+ViewIBGCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[40]/input
+EditIBGCus=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[5]/following::div[44]/input
+
+
+Cuscopy=//div[@id='AP-col0']/div/div/fieldset[2]/legend/following::div[53]/input
+ProExpander=//div[@id='AP-col0']/div/div/fieldset[3]/legend/div
+ProCreate=//div[@id='AP-col0']/div/div/fieldset[3]/legend/following::div[5]/input
+ProView=//div[@id='AP-col0']/div/div/fieldset[3]/legend/following::div[9]/input
+SaleManagementExp=//div[@id='AP-col0']/div/div/fieldset[3]/legend/following::div[87]
+CrCQ=//div[@id='AP-col0']/div/div/fieldset[3]/legend/following::div[92]/input
+ViewCQ=//*[text()='View Customer Quotation Report:']/parent::div/div/div/input
+CrSO=//*[text()='Create  Sales Order:']/parent::div/div/div/input
+ViewSO=//*[text()='View  Sales Order Report:']/parent::div/div/div/input
+CurExchange=//div[@id='AP-col0']/div/div/fieldset[5]/legend/div
+ViewCurExchange=//div[@id='AP-col0']/div/div/fieldset[5]/legend/following::div[5]/input
+ModifyCurExc=//div[@id='AP-col0']/div/div/fieldset[5]/legend/following::div[9]/input
+TaxExpand=//span[text()='Tax']/parent::legend/div
+TaxView=//span[text()='Tax']/parent::legend/following::div[5]/input
+PayTerm=//div[@id='AP-col0']//span[text()='Payment Term']/parent::legend/div
+ViewPayTerm=//div[@id='AP-col0']//span[text()='Payment Term']/parent::legend/following::div[5]/input
+MasterConfig=//div[@id='AP-col0']//span[text()='Master Configuration']/parent::legend/div
+ViewMasterConfig=//span[text()='Master Configuration']/parent::legend/following::div[5]/input
+CusLayout=//div[@id='AP-col0']//span[text()='Master Configuration']/parent::legend/following::div[29]/input
+CusDesign=//label[text()='View Custom Designer:']/parent::div/div/div/input
+ActiveDate=//label[text()='View Active Date Range:']/parent::div/div/div/input
+
+BankReconsile=//div[@id='AP-col0']//span[text()='Bank Reconciliation']/preceding-sibling::div
+ViewReconsile=//div[@id='AP-col0']//span[text()='Bank Reconciliation']/following::div[5]/input
+
+ImportLog=//div[@id='AP-col0']//span[text()='Import Log']/preceding-sibling::div
+ViewImport=//div[@id='AP-col0']/div/div/fieldset[10]/legend/following::div[5]/input
+
+PurchaseReq=//div[@id='AP-col0']/div/div/fieldset[11]/legend/div
+CreatePurReq=//div[@id='AP-col0']/div/div/fieldset[11]/legend/following::div[5]/input
+ViewPurReq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[2]/input
+ModPurReq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[6]/input
+DelPurReq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[10]/input
+exportPurReq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[14]/input
+PrintPurReq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[18]/input
+CopyPurReq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[22]/input
+
+ViewRfq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[26]/input
+InitiateRfq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[30]/input
+DelRfq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[34]/input
+ExpRfq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[38]/input
+PrintRfq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[42]/input
+CpyRfq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[46]/input
+EditRfq=//div[@id='AP-col0']//label[text()='View Purchase Requisition Report:']/following::div[50]/input
+
+ViewRFQRep=//div[@id='AP-col0']//label[text()='View RFQ Report:']/following::div[2]/input
+
+DOExpand=//div[@id='AP-col0']//span[text()='Delivery Order']/preceding-sibling::div
+CreateDo=//div[@id='AP-col0']//span[text()='Delivery Order']/following::div[5]/input
+ViewDO=//div[@id='AP-col0']//span[text()='Delivery Order']/following::div[9]/input
+ExpandPurRet=//span[text()='Purchase Return']/parent::legend/div
+
+CreatePurRet=//label[text()='Create Purchase Return:']/following::div[2]/input
+ViewPuReturn=//label[text()='Create Purchase Return:']/following::div[6]/input
+EditPurRet=//label[text()='Create Purchase Return:']/following::div[10]/input
+DelPurRet=//label[text()='Create Purchase Return:']/following::div[14]/input
+ExpPurRet=//label[text()='Create Purchase Return:']/following::div[18]/input
+PrintPurRet=//label[text()='Create Purchase Return:']/following::div[22]/input
+CopPurRet=//label[text()='Create Purchase Return:']/following::div[26]/input
+UnlinkPurRet=//label[text()='Create Purchase Return:']/following::div[30]/input
+ArExpand=//span[text()='Aged Receivable']/parent::legend/div
+
+ARView=//div[@id='AP-col0']/div/div/fieldset[14]/legend/following::div[5]/input
+ARChart=//div[@id='AP-col0']/div/div/fieldset[14]/legend/following::div[9]/input
+ARExport=//div[@id='AP-col0']/div/div/fieldset[14]/legend/following::div[13]/input
+ARPrint=//div[@id='AP-col0']/div/div/fieldset[14]/legend/following::div[17]/input
+CnExpand=//div[@id='AP-col0']/div/div/fieldset[15]/legend/div
+ImportCn=//div[@id='AP-col0']/div/div/fieldset[15]/legend/following::div[5]/input
+CreateCn=//div[@id='AP-col0']/div/div/fieldset[15]/legend/div/following::div[9]/input
+ViewCn=//div[@id='AP-col0']/div/div/fieldset[15]/legend/div/following::div[13]/input
+EditCn=//div[@id='AP-col0']/div/div/fieldset[15]/legend/div/following::div[17]/input
+DelCn=//div[@id='AP-col0']/div/div/fieldset[15]/legend/div/following::div[21]/input
+ExpCn=//div[@id='AP-col0']/div/div/fieldset[15]/legend/div/following::div[25]/input
+ConsignmentExpand=//div[@id="AP-col0"]/div/div/fieldset[16]/legend/div
+CreateCon=//label[text()="Create Consignment Request:"]/following::div[2]/input
+ViewConsign=//label[text()="Create Consignment Request:"]/following::div[6]/input
+ModifyConsign=//label[text()="Create Consignment Request:"]/following::div[10]/input
+DelConsign=//label[text()="Create Consignment Request:"]/following::div[14]/input
+ExportConsign=//label[text()="Create Consignment Request:"]/following::div[18]/input
+PrintConsign=//label[text()="Create Consignment Request:"]/following::div[22]/input
+CrConsignDO=//label[text()="Create Consignment Delivery Order:"]/following::div[2]/input
+ViewConsignDO=//label[text()="Create Consignment Delivery Order:"]/following::div[6]/input
+ModifyConsignDO=//label[text()="Create Consignment Delivery Order:"]/following::div[10]/input
+delConsignDO=//label[text()="Create Consignment Delivery Order:"]/following::div[14]/input
+ExpoConsignDO=//label[text()="Create Consignment Delivery Order:"]/following::div[18]/input
+PrintConsignDO=//label[text()="Create Consignment Delivery Order:"]/following::div[22]/input
+CrConsignInvoice=//label[text()="Create Consignment Invoice:"]/following::div[2]/input
+ViewConsignInvoice=//label[text()="Create Consignment Invoice:"]/following::div[6]/input
+ModifyConsignInvoice=//label[text()="Create Consignment Invoice:"]/following::div[10]/input
+DelConsignInvoice=//label[text()="Create Consignment Invoice:"]/following::div[14]/input
+ExportConsignInvoice=//label[text()="Create Consignment Invoice:"]/following::div[18]/input
+PrintConsignInvoice=//label[text()="Create Consignment Invoice:"]/following::div[22]/input
+CrConsignmentReturn=//label[text()="Create Consignment Return:"]/following::div[2]/input
+ViewConReturn=//label[text()="Create Consignment Return:"]/following::div[6]/input
+ModifyConReturn=//label[text()="Create Consignment Return:"]/following::div[10]/input
+DelConReturn=//label[text()="Create Consignment Return:"]/following::div[14]/input
+ExpConReturn=//label[text()="Create Consignment Return:"]/following::div[18]/input
+PrintConReturn=//label[text()="Create Consignment Return:"]/following::div[22]/input
+ViewconsignmentLoan=//label[text()="View Consignment Loan Report:"]/following::div[2]/input
+ExpconsignmentLoan=//label[text()="View Consignment Loan Report:"]/following::div[6]/input
+ViewCoonOutstaLoan=//label[text()="View Consignment Outstanding Loan Report:"]/following::div[2]/input
+ExpCoonOutstaLoan=//label[text()="View Consignment Outstanding Loan Report:"]/following::div[6]/input
+StockAvailability=//label[text()="View Stock availability by customer Warehouse:"]/following::div[2]/input
+StockReq=//label[text()="View Stock availability by customer Warehouse:"]/following::div[4]
+CrStockReq=//label[text()="View Stock availability by customer Warehouse:"]/following::div[9]/input
+ViewStockReq=//label[text()="View Stock availability by customer Warehouse:"]/following::div[13]/input
+IssueStock=//label[text()="View Stock availability by customer Warehouse:"]/following::div[17]/input
+CollectStock=//label[text()="View Stock availability by customer Warehouse:"]/following::div[21]/input
+PrintStock=//label[text()="View Stock availability by customer Warehouse:"]/following::div[25]/input
+ExpStock=//label[text()="View Stock availability by customer Warehouse:"]/following::div[29]/input
+StockAdjustment=//label[text()="View Stock availability by customer Warehouse:"]/following::div[31]
+CrStocjAdjust=//label[text()="View Stock availability by customer Warehouse:"]/following::div[36]/input
+ViewStocjAdjust=//label[text()="View Stock availability by customer Warehouse:"]/following::div[40]/input
+ExpStocjAdjust=//label[text()="View Stock availability by customer Warehouse:"]/following::div[44]/input
+InterLoc=//span[text()="Inter Location Stock Transfer"]/parent::legend/div
+CrInterLoc=//span[text()="Inter Location Stock Transfer"]/following::div[5]/input
+InvReport=//span[text()="Inventory Reports"]/parent::legend/div
+StockAvail=//label[text()="Stock Availability By Warehouse:"]/following::div[2]/input
+stocktracking=//label[text()="Batch Wise Stock Tracking:"]/following::div[2]/input
+MatInOutReg=//label[text()="Material In/Out Register:"]/following::div[2]/input
+StockMov=//label[text()="Stock Movement Register:"]/following::div[2]/input
+ProThresh=//label[text()="View product threshold Report:"]/following::div[2]/input
+InvConfig=//label[text()="View Inventory Configuration:"]/following::div[2]/input
+
+ExpandReceivePay=//span[text()="Receive payment"]/parent::legend/div
+ImportReceivePay=//span[text()="Receive payment"]/following::div[5]/input
+CreateReceivePay=//span[text()="Receive payment"]/following::div[9]/input
+ViewReceivePay=//span[text()="Receive payment"]/following::div[13]/input
+ModifyReceivePay=//span[text()="Receive payment"]/following::div[17]/input
+copyReceivePay=//span[text()="Receive payment"]/following::div[21]/input
+DelReceivePay=//span[text()="Receive payment"]/following::div[25]/input
+EmailReceivePay=//span[text()="Receive payment"]/following::div[29]/input
+ExportReceivePay=//span[text()="Receive payment"]/following::div[33]/input
+printReceivePay=//span[text()="Receive payment"]/following::div[37]/input
+
+ExpandAssetSalem=//span[text()="Asset Sales  Management"]/parent::legend/div
+CrAssetDo=//span[text()="Asset Sales  Management"]/following::div[5]/input
+ViewAssetDo=//span[text()="Asset Sales  Management"]/following::div[9]/input
+EditAssetDo=//span[text()="Asset Sales  Management"]/following::div[13]/input
+DelAssetDo=//span[text()="Asset Sales  Management"]/following::div[17]/input
+ExportAssetDo=//span[text()="Asset Sales  Management"]/following::div[21]/input
+PrintAssetDo=//span[text()="Asset Sales  Management"]/following::div[25]/input
+
+CrDispInv=//label[text()="Create Disposal Invoice:"]/following::div[2]/input
+ViewDispInv=//label[text()="Create Disposal Invoice:"]/following::div[6]/input
+EditDispInv=//label[text()="Create Disposal Invoice:"]/following::div[10]/input
+DelDispInv=//label[text()="Create Disposal Invoice:"]/following::div[14]/input
+ExportDispInv=//label[text()="Create Disposal Invoice:"]/following::div[18]/input
+PrintDispInv=//label[text()="Create Disposal Invoice:"]/following::div[22]/input
+
+ExpandLeaseMana=//span[text()="Lease Management"]/parent::legend/div
+CrLQ=//span[text()="Lease Management"]/following::div[5]/input
+ViewLQ=//span[text()="Lease Management"]/following::div[9]/input
+EditLQ=//span[text()="Lease Management"]/following::div[13]/input
+DelLQ=//span[text()="Lease Management"]/following::div[17]/input
+ExportLQ=//span[text()="Lease Management"]/following::div[21]/input
+PrintLQ=//span[text()="Lease Management"]/following::div[25]/input
+
+CrLO=//span[text()="Lease Management"]/following::div[29]/input
+ViewLO=//span[text()="Lease Management"]/following::div[33]/input
+EditLO=//span[text()="Lease Management"]/following::div[37]/input
+DelLO=//span[text()="Lease Management"]/following::div[41]/input
+ExportLO=//span[text()="Lease Management"]/following::div[45]/input
+PrintLO=//span[text()="Lease Management"]/following::div[49]/input
+
+CrLDO=//span[text()="Lease Management"]/following::div[53]/input
+ViewLDO=//span[text()="Lease Management"]/following::div[57]/input
+EditLDO=//span[text()="Lease Management"]/following::div[61]/input
+DelLDO=//span[text()="Lease Management"]/following::div[65]/input
+ExportLDO=//span[text()="Lease Management"]/following::div[69]/input
+PrintLDO=//span[text()="Lease Management"]/following::div[73]/input
+
+CrLeaseInv=//span[text()="Lease Management"]/following::div[77]/input
+ViewLeaseInv=//span[text()="Lease Management"]/following::div[81]/input
+EditLeaseInv=//span[text()="Lease Management"]/following::div[85]/input
+DelLeaseInv=//span[text()="Lease Management"]/following::div[89]/input
+ExportLeaseInv=//span[text()="Lease Management"]/following::div[93]/input
+PrintLeaseInv=//span[text()="Lease Management"]/following::div[97]/input
+
+CrLeaseRet=//span[text()="Lease Management"]/following::div[101]/input
+ViewLeaseRet=//span[text()="Lease Management"]/following::div[105]/input
+EditLeaseRet=//span[text()="Lease Management"]/following::div[109]/input
+DelLeaseRet=//span[text()="Lease Management"]/following::div[113]/input
+ExportLeaseRet=//span[text()="Lease Management"]/following::div[117]/input
+PrintLeaseRet=//span[text()="Lease Management"]/following::div[121]/input
+
+ExpandStkRepair=//span[text()="Stock Repair"]/parent::legend/div
+ViewStkRepair=//span[text()="Stock Repair"]/following::div[5]/input
+ApprovStkRepair=//span[text()="Stock Repair"]/following::div[9]/input
+
+ExpaAssetReq=//span[text()="Asset Purchase Requisition"]/parent::legend/div
+CrAssetReq=//span[text()="Asset Purchase Requisition"]/following::div[5]/input
+ViewAssetReq=//span[text()="Asset Purchase Requisition"]/following::div[9]/input
+EditAssetReq=//span[text()="Asset Purchase Requisition"]/following::div[13]/input
+DelAssetReq=//span[text()="Asset Purchase Requisition"]/following::div[17]/input
+ExportAssetReq=//span[text()="Asset Purchase Requisition"]/following::div[21]/input
+PrintAssetReq=//span[text()="Asset Purchase Requisition"]/following::div[25]/input
+CopyAssetReq=//span[text()="Asset Purchase Requisition"]/following::div[29]/input
+
+Crrfq=//span[text()="Asset Purchase Requisition"]/following::div[33]/input
+Viewrfq=//span[text()="Asset Purchase Requisition"]/following::div[37]/input
+Editrfq=//span[text()="Asset Purchase Requisition"]/following::div[41]/input
+Delrfq=//span[text()="Asset Purchase Requisition"]/following::div[45]/input
+Exportrfq=//span[text()="Asset Purchase Requisition"]/following::div[49]/input
+Printrfq=//span[text()="Asset Purchase Requisition"]/following::div[53]/input
+Copyrfq=//span[text()="Asset Purchase Requisition"]/following::div[57]/input
+
+ExpandDevPlanner=//span[text()="Delivery Planner"]/parent::legend/div
+ViewDevPlanner=//span[text()="Delivery Planner"]/following::div[5]/input
+DelDevPlanner=//span[text()="Delivery Planner"]/following::div[9]/input
+
+ExpandAssSalRet=//span[text()="Asset Sales Return"]/parent::legend/div
+CrAssSalRet=//span[text()="Asset Sales Return"]/following::div[5]/input
+ViewAssSalRet=//span[text()="Asset Sales Return"]/following::div[9]/input
+EditAssSalRet=//span[text()="Asset Sales Return"]/following::div[13]/input
+DelAssSalRet=//span[text()="Asset Sales Return"]/following::div[17]/input
+ExpAssSalRet=//span[text()="Asset Sales Return"]/following::div[21]/input
+PrintAssSalRet=//span[text()="Asset Sales Return"]/following::div[25]/input
+
+ExpandWriteoff=//span[text()="Write Off and Recover Receipts"]/parent::legend/div
+Writeoff=//span[text()="Write Off and Recover Receipts"]/following::div[5]/input
+ViewWriteoff=//span[text()="Write Off and Recover Receipts"]/following::div[9]/input
+RecoverWriteoff=//span[text()="Write Off and Recover Receipts"]/following::div[13]/input
+
+ExpandLabour=//span[text()="Labour Master"]/parent::legend/div
+CrLabour=//span[text()="Labour Master"]/following::div[5]/input
+ViewLabour=//span[text()="Labour Master"]/following::div[9]/input
+ModiLabour=//span[text()="Labour Master"]/following::div[13]/input
+DelLabour=//span[text()="Labour Master"]/following::div[17]/input
+ExpoLabour=//span[text()="Labour Master"]/following::div[21]/input
+
+WorkCentre=//span[text()="Work Centre Master"]/parent::legend/div
+CrWorkCentre=//span[text()="Work Centre Master"]/following::div[5]/input
+ViewCrWorkCentre=//span[text()="Work Centre Master"]/following::div[9]/input
+ModiCrWorkCentre=//span[text()="Work Centre Master"]/following::div[13]/input
+CloneCrWorkCentre=//span[text()="Work Centre Master"]/following::div[17]/input
+DelCrWorkCentre=//span[text()="Work Centre Master"]/following::div[21]/input
+ExpCrWorkCentre=//span[text()="Work Centre Master"]/following::div[25]/input
+
+ExpandContract=//span[text()="Master Contract "]/parent::legend/div
+CrContract=//span[text()="Master Contract "]/following::div[5]/input
+ViewContract=//span[text()="Master Contract "]/following::div[9]/input
+ModiContract=//span[text()="Master Contract "]/following::div[13]/input
+DelContract=//span[text()="Master Contract "]/following::div[17]/input
+ExpContract=//span[text()="Master Contract "]/following::div[21]/input
+
+ExpandDischeque=//span[text()="Dishonoured Cheque "]/parent::legend/div
+ViwDischeque=//span[text()="Dishonoured Cheque "]/following::div[5]/input
+MarkDischeque=//span[text()="Dishonoured Cheque "]/following::div[9]/input
+
+ExpandCustomField=//span[text()="Custom Field/Dimension"]/parent::legend/div
+ItemMenu=//span[text()="Custom Field/Dimension"]/following::div[5]/input
+MasterItem=//span[text()="Custom Field/Dimension"]/following::div[9]/input
+
+ExportLog=//span[text()="Custom Field/Dimension"]/following::div[11]
+ViewExportLog=//span[text()="Custom Field/Dimension"]/following::div[16]/input
+
+ExpandAccManage=//span[text()="Account Management and Journal Entry"]/parent::legend/div
+CrCoa=//span[text()="Account Management and Journal Entry"]/following::div[5]/input
+ViewCoa=//span[text()="Account Management and Journal Entry"]/following::div[9]/input
+ModyCoa=//span[text()="Account Management and Journal Entry"]/following::div[13]/input
+DelCoa=//span[text()="Account Management and Journal Entry"]/following::div[17]/input
+ExpCoa=//span[text()="Account Management and Journal Entry"]/following::div[21]/input
+ImpCoa=//span[text()="Account Management and Journal Entry"]/following::div[25]/input
+PrintCoa=//span[text()="Account Management and Journal Entry"]/following::div[29]/input
+
+CrJournal=//span[text()="Account Management and Journal Entry"]/following::div[33]/input
+ViewJournal=//span[text()="Account Management and Journal Entry"]/following::div[37]/input
+ExportJournal=//span[text()="Account Management and Journal Entry"]/following::div[41]/input
+PrintJournal=//span[text()="Account Management and Journal Entry"]/following::div[45]/input
+DelJournal=//span[text()="Account Management and Journal Entry"]/following::div[49]/input
+CopyJournal=//span[text()="Account Management and Journal Entry"]/following::div[53]/input
+EditJournal=//span[text()="Account Management and Journal Entry"]/following::div[57]/input
+ImportJournal=//span[text()="Account Management and Journal Entry"]/following::div[61]/input
+
+ExpandVen=//span[text()="Vendor"]/parent::legend/div
+CrVen=//span[text()="Vendor"]/following::div[5]/input
+ViewVen=//span[text()="Vendor"]/following::div[9]/input
+ModifyVen=//span[text()="Vendor"]/following::div[13]/input
+DelVen=//span[text()="Vendor"]/following::div[17]/input
+ChartVen=//span[text()="Vendor"]/following::div[21]/input
+ImportVen=//span[text()="Vendor"]/following::div[25]/input
+ExportVen=//span[text()="Vendor"]/following::div[29]/input
+PrintVen=//span[text()="Vendor"]/following::div[33]/input
+ViewAllVen=//span[text()="Vendor"]/following::div[37]/input
+OpengBalVen=//span[text()="Vendor"]/following::div[41]/input
+ViewIBG=//span[text()="Vendor"]/following::div[45]/input
+EditIBG=//span[text()="Vendor"]/following::div[49]/input
+CopyVen=//span[text()="Vendor"]/following::div[53]/input
+
+ExpandFinancial=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/div
+ViewTB=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[5]/input
+ExTB=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[9]/input
+PrintTB=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[13]/input
+
+ViewPnl=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[29]/input
+ExportPnl=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[33]/input
+PrintPnl=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[37]/input
+
+ViewBs=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[41]/input
+ExBs=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[45]/input
+PrintBs=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[49]/input
+
+ViewCashBook=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[53]/input
+ExportCashBook=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[57]/input
+PrintCashBook=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[61]/input
+
+ViewBankBook=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[65]/input
+ExportBankBook=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[69]/input
+PrintBankBook=//div[@id="AP-col1"]/div/div/fieldset[3]/legend/following::div[73]/input
+
+ExpandPurchaseMana=//span[text()="Purchase Management"]/parent::legend/div
+CrVq=//span[text()="Purchase Management"]/following::div[5]/input
+ViewVq=//span[text()="Purchase Management"]/following::div[9]/input
+EditVq=//span[text()="Purchase Management"]/following::div[13]/input
+DelVq=//span[text()="Purchase Management"]/following::div[17]/input
+ExportVq=//span[text()="Purchase Management"]/following::div[21]/input
+PrintVq=//span[text()="Purchase Management"]/following::div[25]/input
+CopyVq=//span[text()="Purchase Management"]/following::div[29]/input
+UnlinkVq=//span[text()="Purchase Management"]/following::div[33]/input
+
+CrPo=//span[text()="Purchase Management"]/following::div[37]/input
+ViewPo=//span[text()="Purchase Management"]/following::div[41]/input
+EditPo=//span[text()="Purchase Management"]/following::div[45]/input
+DelPo=//span[text()="Purchase Management"]/following::div[49]/input
+ExportPo=//span[text()="Purchase Management"]/following::div[53]/input
+PrintPo=//span[text()="Purchase Management"]/following::div[57]/input
+CopyPo=//span[text()="Purchase Management"]/following::div[61]/input
+UnlinkPo=//span[text()="Purchase Management"]/following::div[65]/input
+
+ImportPi=//span[text()="Purchase Management"]/following::div[69]/input
+CrCP=//span[text()="Purchase Management"]/following::div[73]/input
+CrPi=//span[text()="Purchase Management"]/following::div[77]/input
+ViewPi=//span[text()="Purchase Management"]/following::div[81]/input
+EditPi=//span[text()="Purchase Management"]/following::div[85]/input
+CopyPi=//span[text()="Purchase Management"]/following::div[89]/input
+DelPi=//span[text()="Purchase Management"]/following::div[93]/input
+EmailPi=//span[text()="Purchase Management"]/following::div[97]/input
+ExpotPi=//span[text()="Purchase Management"]/following::div[101]/input
+printPi=//span[text()="Purchase Management"]/following::div[105]/input
+
+RecurringPi=//span[text()="Purchase Management"]/following::div[109]/input
+unlinkPi=//span[text()="Purchase Management"]/following::div[113]/input
+
+ExpandAccType=//div[@id="AP-col1"]/div/div/fieldset[5]/legend/div
+CrAccType=//div[@id="AP-col1"]/div/div/fieldset[5]/legend/following::div[5]/input
+ViewAccType=//div[@id="AP-col1"]/div/div/fieldset[5]/legend/following::div[9]/input
+
+ExpandPayMethod=//div[@id="AP-col1"]/div/div/fieldset[6]/legend/div
+ViewPay=//div[@id="AP-col1"]/div/div/fieldset[6]/legend/following::div[5]/input
+ModPay=//div[@id="AP-col1"]/div/div/fieldset[6]/legend/following::div[9]/input
+BankType=//div[@id="AP-col1"]/div/div/fieldset[6]/legend/following::div[13]/input
+Cashtype=//div[@id="AP-col1"]/div/div/fieldset[6]/legend/following::div[17]/input
+
+UserAdmin=//div[@id="AP-col1"]/div/div/fieldset[6]/legend/following::div[19]
+ViewPer=//div[@id="AP-col1"]/div/div/fieldset[6]/legend/following::div[24]/input
+AssignPer=//div[@id="AP-col1"]/div/div/fieldset[6]/legend/following::div[28]/input
+
+ExpandAudit=//div[@id="AP-col1"]/div/div/fieldset[8]/legend/div
+ViewAudit=//div[@id="AP-col1"]/div/div/fieldset[8]/legend/following::div[5]/input
+
+ExpandUOM=//div[@id="AP-col1"]/div/div/fieldset[9]/legend/div
+ViewUOM=//div[@id="AP-col1"]/div/div/fieldset[9]/legend/following::div[5]/input
+ModiUOM=//div[@id="AP-col1"]/div/div/fieldset[9]/legend/following::div[9]/input
+ImportUOM=//div[@id="AP-col1"]/div/div/fieldset[9]/legend/following::div[13]/input
+
+ExApproval=//div[@id="AP-col1"]/div/div/fieldset[10]/legend/div
+ViewApproval=//div[@id="AP-col1"]/div/div/fieldset[10]/legend/following::div[5]/input
+
+ExpandGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/div
+CreateGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/following::div[5]/input
+ViewGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/following::div[9]/input
+ModiGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/following::div[13]/input
+DelGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/following::div[17]/input
+ExportGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/following::div[21]/input
+PrintGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/following::div[25]/input
+CopyGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/following::div[29]/input
+UnlinkGoods=//div[@id="AP-col1"]/div/div/fieldset[11]/legend/following::div[33]/input
+
+ExpAsset=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/div
+ViewAssetGrp=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[5]/input
+CrAssetGrp=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[9]/input
+EdiAssetGrp=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[13]/input
+DelAssetGrp=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[17]/input
+
+AssDep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[21]/input
+PostDep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[25]/input
+ExpDep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[29]/input
+PrintDep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[33]/input
+
+UnpostAssDep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[37]/input
+UnpoDep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[41]/input
+
+ViewAssMaintainance=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[45]/input
+CrAssMaintainance=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[49]/input
+DelAssMaintainance=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[53]/input
+EditAssMaintainance=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[57]/input
+
+ViewAssRep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[61]/input
+ExpAssRep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[65]/input
+PrintAssRep=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[69]/input
+
+ViewMainWO=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[73]/input
+DelMainWO=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[77]/input
+ExpMainWO=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[81]/input
+PrintMainWO=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[85]/input
+
+ViewAssetDepDet=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[89]/input
+ExpAssetDepDet=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[93]/input
+PrintAssetDepDet=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[97]/input
+
+AssetSched=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[101]/input
+UpdateAssetSched=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[105]/input
+
+AssetOpBal=//div[@id="AP-col1"]/div/div/fieldset[12]/legend/following::div[109]/input
+
+ExpandSalesaRet=//span[text()="Sales Return"]/parent::legend/div
+CrSalesaRet=//span[text()="Sales Return"]/parent::legend/following::div[5]/input
+ViewSalesaRet=//span[text()="Sales Return"]/parent::legend/following::div[9]/input
+EditSalesaRet=//span[text()="Sales Return"]/parent::legend/following::div[13]/input
+DelSalesaRet=//span[text()="Sales Return"]/parent::legend/following::div[17]/input
+ExpSalesaRet=//span[text()="Sales Return"]/parent::legend/following::div[21]/input
+PrintSalesaRet=//span[text()="Sales Return"]/parent::legend/following::div[25]/input
+CpySalesaRet=//span[text()="Sales Return"]/parent::legend/following::div[29]/input
+UnlSalesaRet=//span[text()="Sales Return"]/parent::legend/following::div[33]/input
+
+ExpandAp=//span[text()="Aged Payable"]/parent::legend/div
+ViewExpandAp=//span[text()="Aged Payable"]/following::div[5]/input
+ChartExpandAp=//span[text()="Aged Payable"]/following::div[9]/input
+ExpExpandAp=//span[text()="Aged Payable"]/following::div[13]/input
+PrintExpandAp=//span[text()="Aged Payable"]/following::div[17]/input
+
+ExpandDn=//span[text()="Debit Note"]/parent::legend/div
+ImportDn=//span[text()="Debit Note"]/following::div[5]/input
+CrDn=//span[text()="Debit Note"]/following::div[9]/input
+ViewDn=//span[text()="Debit Note"]/following::div[13]/input
+EditDn=//span[text()="Debit Note"]/following::div[17]/input
+DelDn=//span[text()="Debit Note"]/following::div[21]/input
+ExpDn=//span[text()="Debit Note"]/following::div[25]/input
+PrintDn=//span[text()="Debit Note"]/following::div[29]/input
+CpyDn=//span[text()="Debit Note"]/following::div[33]/input
+
+ExpandConsiStk=//span[text()="Consignment Stock - Purchase"]/parent::legend/div
+CrVenReq=//span[text()="Consignment Stock - Purchase"]/following::div[5]/input
+ViewVenReq=//span[text()="Consignment Stock - Purchase"]/following::div[9]/input
+ModVenReq=//span[text()="Consignment Stock - Purchase"]/following::div[13]/input
+DelVenReq=//span[text()="Consignment Stock - Purchase"]/following::div[17]/input
+ExpVenReq=//span[text()="Consignment Stock - Purchase"]/following::div[21]/input
+PrintVenReq=//span[text()="Consignment Stock - Purchase"]/following::div[25]/input
+
+CrConsGr=//label[text()="Create Consignment Goods Receipt Order:"]/following::div[2]/input
+ViewConsGr=//label[text()="Create Consignment Goods Receipt Order:"]/following::div[6]/input
+ModConsGr=//label[text()="Create Consignment Goods Receipt Order:"]/following::div[10]/input
+ExpConsGr=//label[text()="Create Consignment Goods Receipt Order:"]/following::div[14]/input
+PrintConsGr=//label[text()="Create Consignment Goods Receipt Order:"]/following::div[18]/input
+
+CrConsPi=//label[text()="Create Consignment Purchase Invoice:"]/following::div[2]/input
+ViewConsPi=//label[text()="Create Consignment Purchase Invoice:"]/following::div[6]/input
+ModConsPi=//label[text()="Create Consignment Purchase Invoice:"]/following::div[10]/input
+DelConsPi=//label[text()="Create Consignment Purchase Invoice:"]/following::div[14]/input
+ExpConsPi=//label[text()="Create Consignment Purchase Invoice:"]/following::div[18]/input
+PrintConsPi=//label[text()="Create Consignment Purchase Invoice:"]/following::div[22]/input
+
+CrConsPr=//label[text()="Create Consignment Purchase Return:"]/following::div[2]/input
+ViewConsPr=//label[text()="Create Consignment Purchase Return:"]/following::div[6]/input
+ModConsPr=//label[text()="Create Consignment Purchase Return:"]/following::div[10]/input
+DelConsPr=//label[text()="Create Consignment Purchase Return:"]/following::div[14]/input
+ExpConsPr=//label[text()="Create Consignment Purchase Return:"]/following::div[18]/input
+PrintConsPr=//label[text()="Create Consignment Purchase Return:"]/following::div[22]/input
+
+ExpIssNote=//span[text()="Issue Note"]/parent::legend/div
+CrIssNote=//span[text()="Issue Note"]/following::div[5]/input
+
+ExpandIST=//div[@id="AP-col1"]/div/div/fieldset[17]/legend/following::div[7]
+CrIST=//div[@id="AP-col1"]/div/div/fieldset[17]/legend/following::div[12]/input
+ViewIST=//div[@id="AP-col1"]/div/div/fieldset[17]/legend/following::div[16]/input
+AcceptIST=//div[@id="AP-col1"]/div/div/fieldset[17]/legend/following::div[20]/input
+PrintIST=//div[@id="AP-col1"]/div/div/fieldset[17]/legend/following::div[24]/input
+ExpIST=//div[@id="AP-col1"]/div/div/fieldset[17]/legend/following::div[28]/input
+
+ExpandQaApp=//div[@id="AP-col1"]/div/div/fieldset[19]/legend/div
+ViewQaApp=//div[@id="AP-col1"]/div/div/fieldset[19]/legend/following::div[5]/input
+QaApp=//div[@id="AP-col1"]/div/div/fieldset[19]/legend/following::div[9]/input
+
+ExpInvMas=//div[@id="AP-col1"]/div/div/fieldset[20]/legend/div
+StoreMast=//div[@id="AP-col1"]/div/div/fieldset[20]/legend/following::div[5]/input
+LocMas=//div[@id="AP-col1"]/div/div/fieldset[20]/legend/following::div[9]/input
+PackMas=//div[@id="AP-col1"]/div/div/fieldset[20]/legend/following::div[13]/input
+InvSetup=//div[@id="AP-col1"]/div/div/fieldset[20]/legend/following::div[17]/input
+CusWareMas=//div[@id="AP-col1"]/div/div/fieldset[20]/legend/following::div[21]/input
+Budgeting=//div[@id="AP-col1"]/div/div/fieldset[20]/legend/following::div[25]/input
+InspTem=//div[@id="AP-col1"]/div/div/fieldset[20]/legend/following::div[29]/input
+
+MakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/div
+ImportMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[5]/input
+CrMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[9]/input
+ViewMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[13]/input
+ModMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[17]/input
+CpyMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[21]/input
+DelMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[25]/input
+EmaiMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[29]/input
+ExpMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[33]/input
+PrintMakPay=//div[@id="AP-col1"]/div/div/fieldset[21]/legend/following::div[37]/input
+
+ExpandAssPur=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/div
+CrAssetGr=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[5]/input
+ViewAssetGr=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[9]/input
+EditAssetGr=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[13]/input
+DelAssetGr=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[17]/input
+ExpAssetGr=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[21]/input
+PrintAssetGr=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[25]/input
+
+CrAcqInv=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[29]/input
+ViewAcqInv=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[33]/input
+EditAcqInv=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[37]/input
+DelAcqInv=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[41]/input
+ExpAcqInv=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[45]/input
+PrintAcqInv=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[49]/input
+
+CrAssetPo=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[53]/input
+ViewAssetPo=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[57]/input
+EditAssetPo=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[61]/input
+DelAssetPo=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[65]/input
+ExpAssetPo=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[69]/input
+PrintAssetPo=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[73]/input
+
+CrAssetVq=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[77]/input
+ViewAssetVq=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[81]/input
+EditAssetVq=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[85]/input
+DelAssetVq=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[89]/input
+ExpAssetVq=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[93]/input
+PrintAssetVq=//div[@id="AP-col1"]/div/div/fieldset[22]//legend/following::div[97]/input
+
+ExpandContr=//span[text()="Contract"]/parent::legend/div
+CrLeaseContr=//span[text()="Contract"]/following::div[5]/input
+ViewLeaseContr=//span[text()="Contract"]/following::div[9]/input
+EditLeaseContr=//span[text()="Contract"]/following::div[13]/input
+TerminateLeaseContr=//span[text()="Contract"]/following::div[17]/input
+RenewLeaseContr=//span[text()="Contract"]/following::div[21]/input
+ExpLeaseContr=//span[text()="Contract"]/following::div[25]/input
+
+CrSaleContr=//span[text()="Contract"]/following::div[29]/input
+ViewSaleContr=//span[text()="Contract"]/following::div[33]/input
+EditSaleContr=//span[text()="Contract"]/following::div[37]/input
+TermiSaleContr=//span[text()="Contract"]/following::div[41]/input
+RenewSaleContr=//span[text()="Contract"]/following::div[45]/input
+ExpSaleContr=//span[text()="Contract"]/following::div[49]/input
+
+ExpandConsinReq=//span[text()="Consignment Request Approval"]/parent::legend/div
+ViewConsinReq=//span[text()="Consignment Request Approval"]/following::div[5]/input
+AppConsinReq=//span[text()="Consignment Request Approval"]/following::div[9]/input
+
+ExpandMisc=//span[text()="Miscellaneous"]/parent::legend/div
+ViewCusLogo=//span[text()="Miscellaneous"]/following::div[5]/input
+Uploadlogo=//span[text()="Miscellaneous"]/following::div[9]/input
+
+ViewCusTemp=//span[text()="Miscellaneous"]/following::div[13]/input
+ModCusTemp=//span[text()="Miscellaneous"]/following::div[17]/input
+
+ViewSalesCom=//span[text()="Miscellaneous"]/following::div[21]/input
+ModSalesCom=//span[text()="Miscellaneous"]/following::div[25]/input
+
+ViewDocTemp=//span[text()="Miscellaneous"]/following::div[29]/input
+
+ViewAccRev=//span[text()="Miscellaneous"]/following::div[33]/input
+PostAccRev=//span[text()="Miscellaneous"]/following::div[37]/input
+
+ViewIbg=//span[text()="Miscellaneous"]/following::div[41]/input
+ApplyIbg=//span[text()="Miscellaneous"]/following::div[45]/input
+GenIbg=//span[text()="Miscellaneous"]/following::div[49]/input
+
+Chklayout=//span[text()="Miscellaneous"]/following::div[53]/input
+ModChkLayout=//span[text()="Miscellaneous"]/following::div[57]/input
+
+WipAcc=//span[text()="Miscellaneous"]/following::div[61]/input
+ModWipAcc=//span[text()="Miscellaneous"]/following::div[65]/input
+
+ViewSchema=//span[text()="Miscellaneous"]/following::div[69]/input
+CrSchema=//span[text()="Miscellaneous"]/following::div[73]/input
+EditSchema=//span[text()="Miscellaneous"]/following::div[77]/input
+DelSchema=//span[text()="Miscellaneous"]/following::div[81]/input
+ConfgSchema=//span[text()="Miscellaneous"]/following::div[85]/input
+ImpSchema=//span[text()="Miscellaneous"]/following::div[89]/input
+
+ExpandAssetPurret=//span[text()="Asset Purchase Return"]/parent::legend/div
+CrAssetPurret=//span[text()="Asset Purchase Return"]//following::div[5]/input
+ViewAssetPurret=//span[text()="Asset Purchase Return"]//following::div[9]/input
+EditAssetPurret=//span[text()="Asset Purchase Return"]//following::div[13]/input
+DelAssetPurret=//span[text()="Asset Purchase Return"]//following::div[17]/input
+ExpAssetPurret=//span[text()="Asset Purchase Return"]//following::div[21]/input
+PrintAssetPurret=//span[text()="Asset Purchase Return"]//following::div[25]/input
+
+ExpandRecoInv=//span[text()="Write Off and Recover Invoices"]/parent::legend/div
+WriteOff=//span[text()="Write Off and Recover Invoices"]/following::div[5]/input
+ViewWriteOff=//span[text()="Write Off and Recover Invoices"]/following::div[9]/input
+RecWriteOff=//span[text()="Write Off and Recover Invoices"]/following::div[13]/input
+
+
+ExpandLoanDis=//span[text()="Loan Disbursement"]/parent::legend/div
+ElegRule=//span[text()="Loan Disbursement"]/following::div[5]/input
+NewRule=//span[text()="Loan Disbursement"]/following::div[9]/input
+DelRule=//span[text()="Loan Disbursement"]/following::div[13]/input
+SubmitRule=//span[text()="Loan Disbursement"]/following::div[17]/input
+UpdateRule=//span[text()="Loan Disbursement"]/following::div[21]/input
+Disburs=//span[text()="Loan Disbursement"]/following::div[25]/input
+DisAndPay=//span[text()="Loan Disbursement"]/following::div[29]/input
+EditDis=//span[text()="Loan Disbursement"]/following::div[33]/input
+DelDis=//span[text()="Loan Disbursement"]/following::div[37]/input
+RepayDis=//span[text()="Loan Disbursement"]/following::div[41]/input
+
+ExpandMachinemas=//span[text()="Machine Master"]/parent::legend/div
+CrMachine=//span[text()="Machine Master"]/following::div[5]/input
+ViewMachine=//span[text()="Machine Master"]/following::div[9]/input
+ModMachine=//span[text()="Machine Master"]/following::div[13]/input
+DelMachine=//span[text()="Machine Master"]/following::div[17]/input
+Expmachine=//span[text()="Machine Master"]/following::div[21]/input
+
+ExpandRouting=//span[text()="Routing Template"]/parent::legend/div
+CreRouting=//span[text()="Routing Template"]/following::div[5]/input
+ViewRouting=//span[text()="Routing Template"]/following::div[9]/input
+ModRouting=//span[text()="Routing Template"]/following::div[13]/input
+DelRouting=//span[text()="Routing Template"]/following::div[17]/input
+ExpRounting=//span[text()="Routing Template"]/following::div[21]/input
+
+
+ExpandWO=//span[text()="Work Order "]/parent::legend/div
+CrWo=//span[text()="Work Order "]/following::div[5]/input
+ViewWO=//span[text()="Work Order "]/following::div[9]/input
+ModWO=//span[text()="Work Order "]/following::div[13]/input
+StrtWO=//span[text()="Work Order "]/following::div[17]/input
+CloseWO=//span[text()="Work Order "]/following::div[21]/input
+DelWO=//span[text()="Work Order "]/following::div[25]/input
+ExpWO=//span[text()="Work Order "]/following::div[29]/input
+
+ExpandUnitPrice=//span[text()="Unit Price And Amount"]/parent::legend/div
+UnitPur=//span[text()="Unit Price And Amount"]/following::div[5]/input
+UnitSales=//span[text()="Unit Price And Amount"]/following::div[5]/input
+
+ExpandDiscMas=//span[text()="Discount Master"]/parent::legend/div
+Menu=//span[text()="Discount Master"]/following::div[5]/input
+AddDisc=//span[text()="Discount Master"]/following::div[9]/input
+
+
+ApplyButton=//button[text()="Apply"]
+SignOut=//a[@id="signout"]
+

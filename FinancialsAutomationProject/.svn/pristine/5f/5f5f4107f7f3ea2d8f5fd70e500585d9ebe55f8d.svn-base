@@ -1,0 +1,471 @@
+package krawler.erp.testCases;
+
+import static org.testng.Assert.assertEquals;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import krawler.erp.modules.PurchaseInvoice1;
+import krawler.erp.modules.SalesInvoice1;
+import krawler.erp.page.CreditNoteCharged;
+import krawler.erp.page.CreditNoteOtherwise;
+import krawler.erp.page.CreditNoteSalesInvoice;
+import krawler.erp.page.CreditNote_Vendor;
+import krawler.erp.page.CustomerMaster;
+import krawler.erp.page.DebitNoteAgainstCustomer;
+import krawler.erp.page.DebitNoteCharged;
+import krawler.erp.page.DebitNoteOtherWise;
+import krawler.erp.page.DebitNotePurchaseInvoice;
+import krawler.erp.page.Login;
+import krawler.erp.page.SalesInvoice;
+import krawler.erp.page.SamarCnDn;
+import krawler.erp.page.Utilities;
+import krawler.erp.page.VendorMaster;
+
+
+public class DN_Multiple {
+
+	
+	private static final String customer_id = null;
+	public static String url = "http://192.168.0.208:8080/dotcomsmoketesting/a/samartest208/#";
+	public static String id ="admin";
+	public static String pwd="1234";
+		public static WebDriver driver;
+		public static String vendor_ID = "Vendor1";
+		public static String customer_ID = "Customer1";
+		public static String documentid="23Jan";
+		public static String documentid21="23"
+				+ "Jan";
+		public static String productid="Product1";
+	
+		
+		@BeforeTest
+		public static void DN() throws InterruptedException, IOException {
+		
+	     WebDriver d=Login.loginERP(url, id, pwd, 0);
+	     //Utilities.clickExpander(driver);
+	     driver=d;
+	    
+	}
+		/*@BeforeTest
+		public static void refresh() throws InterruptedException, IOException, AWTException {
+		
+	     Utilities.refresh();*/
+	    
+	
+
+		private String Quantity;
+
+		public String documentid2 = "PurInvo"+documentid21 ;  //vendor creation
+		 	 /*	@Test (priority = 1)
+		 
+	 public void vendorMaster() throws InterruptedException, IOException, AWTException
+	    {
+			
+		 		SamarCnDn.create_Vendor(vendor_ID, driver);       
+	    }
+		 	
+		 	@Test (priority = 2)
+		 	  public void customerMaster() throws InterruptedException, IOException, AWTException
+			    {
+					
+		 		 SamarCnDn.create_Customer(customer_ID, driver);       
+			    }
+		 	
+		 	@Test (priority = 3)
+		 	 public void productMaster() throws InterruptedException, IOException, AWTException
+			    {
+					
+		 		 SamarCnDn.create_product(productid, documentid, driver);    
+			    }*/
+
+		//------------------------------------------------------------------DN against PI creation-----------------------------------------------------------------
+		
+		@Test (priority = 120)
+		 public void vendorInvoice1() throws InterruptedException, IOException, AWTException
+		    {
+		  	 
+				PurchaseInvoice1.create_PurchaseInvoice(documentid, productid, vendor_ID, driver);
+		        Utilities.refresh();
+		        Utilities.clickExpander(driver);
+				PurchaseInvoice1.create_PurchaseInvoice("Ex"+documentid, productid, vendor_ID, driver);
+		     }	      
+	     
+	  public void vendorInvoice2() throws InterruptedException, IOException, AWTException
+	    {
+	  	
+			PurchaseInvoice1.create_PurchaseInvoice(documentid21, productid, vendor_ID, driver);
+	        Utilities.refresh();
+	        Utilities.clickExpander(driver);
+			PurchaseInvoice1.create_PurchaseInvoice("Ex"+documentid21, productid, vendor_ID, driver);
+			
+	    }
+
+			
+		
+	  @Test (priority = 130)
+		 public void DebitNotePurchaseInvoice() throws InterruptedException, IOException, AWTException
+		 {
+		  	  //("DebitNote against PI");
+			SamarCnDn.create_debitNoteAgainstpurchaseInvoice2(documentid, documentid21, productid, vendor_ID, driver);
+		  	
+	      }
+
+
+
+			    
+	            
+	            
+		
+		
+		 /*********************************************************************************DN otherwise with multiple accounts at the line level***************************************************************/
+		
+		
+	@Test(priority = 140)
+	    public void debitNoteOtherWise() throws InterruptedException, IOException, AWTException
+	    {
+	  	  //("DebitNote OtherWise");
+			Thread.sleep(2000);
+	  	  DebitNoteOtherWise DNO= new DebitNoteOtherWise();
+	  	  SamarCnDn.create_debitNoteOtherwise2(documentid, productid, vendor_ID, driver);
+	    }
+		
+		
+		//////////////////////////////////////////////////////DN AGAINST CUSTOMER WITH MULTIPLE ACCOUNT/////////////////////////////////////////////////////
+		
+		@Test(priority = 150)
+		
+		public void debitNoteAgainstCustomer() throws InterruptedException, IOException, AWTException
+		  
+		 
+			
+		{		
+		  //	 ("Debit Note - Against Customer");
+		     DebitNoteAgainstCustomer dcn = new DebitNoteAgainstCustomer();
+		     try {
+		    	 SamarCnDn.create_debitNoteAgainstCustomer2(documentid, productid, customer_ID, driver);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (AWTException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	//******************************************************************DN UNDERCHARGE WITH MULTIPLE LINE ITEMS*****************************************************	
+                                                 
+		@Test(priority = 160)
+  public void salesInvoice() throws InterruptedException, IOException, AWTException
+	    {
+	  	  //("Sales Invoice");
+	      SalesInvoice1.create_salesInvoice(documentid, productid, customer_ID+"Name", driver);
+	       SalesInvoice1.create_salesInvoice("Ex"+documentid, productid, customer_ID+"Name", driver);
+	    } 
+		
+	
+		
+	   public void salesInvoice2() throws InterruptedException, IOException, AWTException
+	    {
+	  	  //("Sales Invoice");
+	       SalesInvoice1.create_salesInvoice(documentid21, productid, customer_ID+"Name", driver);
+	       SalesInvoice1.create_salesInvoice("Ex"+documentid21, productid, customer_ID+"Name", driver);
+	    } 
+		
+		@Test(priority = 170)
+		    public void create_DebitnoteUndercharge() throws InterruptedException, IOException, AWTException
+		     {
+			 SamarCnDn.create_debitNoteUnderCharge2(documentid, productid, customer_ID+"Name", "5", driver);
+		     }
+		 
+	
+		
+
+		
+
+
+////////////////////////////////////////////////////DN OVERCHARGE WITH MULTIPLE LINE ITEMS////////////////////////////////////////////////////////////////////////
+
+
+         @Test(priority = 180)
+          public void create_DebitnoteOvercharge() throws InterruptedException, IOException, AWTException
+   {
+        	 SamarCnDn.create_debitNoteOverCharge2(documentid, productid, vendor_ID, "5",driver);
+       }
+
+		
+
+		
+////////////////////////////////////////////////////VERIFICATION OF DN AGAINST PI WITH MULTIPLE LINE ITEMS////////////////////////////////////////////////////////	
+           
+        @Test(priority =190)
+          public void verify_debitNoteAgainstpurchaseInvoice2()throws InterruptedException, IOException, AWTException
+          
+          {
+        	 SamarCnDn.verify_debitNoteAgainstpurchaseInvoice2(documentid,productid, vendor_ID, driver);
+          }
+          
+          
+          
+
+
+///////////////////////////////////////////////////EDIT DELETE DN AGAINST PI MULTIPLE//////////////////////////////////////////////////////////////////////////		
+
+
+          @Test(priority =200)
+        public void EditDelete_debitNoteAgainstpurchaseInvoice2() throws InterruptedException, AWTException, IOException
+
+       {
+        	  SamarCnDn.EditDelete_debitNoteAgainstpurchaseInvoice2(documentid, driver);  
+       }
+
+
+
+///////////////////////////////////////////////////Verification of DN OTHERWISE Multiple/////////////////////////////////////////////////////////////////////////
+
+    @Test(priority = 210)
+         public  void verify_debitNoteOtherwise2() throws InterruptedException, AWTException, IOException
+
+      {
+    	SamarCnDn.verify_debitNoteOtherwise2(documentid, productid, vendor_ID, driver);
+	
+          }
+
+ ////////////////////////////////////////////////////Copy Edit Delete DN Otherwise Multiple/////////////////////////////////////////////////////////////////////     
+    
+  @Test(priority = 220)
+      public static void CopyEditDelete_debitNoteOtherwise2() throws InterruptedException, AWTException, IOException
+      {
+    	  
+	  SamarCnDn.CopyEditDelete_debitNoteOtherwise2(documentid, driver);
+      }
+ //////////////////////////////////////////////////Verification of DN against Customer Multiple//////////////////////////////////////////////////////////////////////     
+      
+		 @Test(priority = 230)
+      public static void verify_debitNoteAgainstCustomer2() throws InterruptedException, AWTException, IOException
+      {
+      
+			 SamarCnDn.verify_debitNoteAgainstCustomer2(documentid, productid, customer_ID, driver);
+    	  
+      }
+      
+ /////////////////////////////////////////////////Copy edit delete DN against Customer Multiple////////////////////////////////////////////////////////////////////     
+      
+	@Test(priority = 240)
+      public static void CopyEditDelete_debitNoteAgainstCustomer2() throws InterruptedException, AWTException, IOException  
+      {
+    	  
+		 SamarCnDn.CopyEditDelete_debitNoteAgainstCustomer2(documentid, driver);
+    	  
+      }
+		 
+//////////////////////////////////////////////////Verification of DN UNDERCHARGE AND OVERCHARGE MULTIPLE//////////////////////////////////////////////////////////
+		
+         
+    @Test(priority = 250)
+         public static void verify_DebitNoteUnderCharged() throws InterruptedException, AWTException, IOException	
+      		 {
+      	 
+    	 SamarCnDn.verify_DebitNoteCharged2(documentid, "Undercharged", customer_ID, vendor_ID, driver);
+      		 }
+         
+         
+             @Test(priority = 260)
+      public static void verify_DebitNoteOverCharged() throws InterruptedException, AWTException, IOException	
+		 {
+	 
+            	 SamarCnDn.verify_DebitNoteCharged3(documentid, "Overcharge", customer_ID, vendor_ID, driver);
+	 
+		 }
+             
+//////////////////////////////////////////////////Edit-Delete DN Undercharge and Overcharge///////////////////////////////////////////////////////////////////////
+             
+             
+             
+             
+             @Test(priority = 270)
+             public static void editdelete_DebitNoteUnderCharged() throws InterruptedException, AWTException, IOException	
+          		 {
+          	 
+            	 SamarCnDn.EditDelete_debitNoteOvercharged(documentid, driver);
+          		 }
+
+            
+            @Test(priority = 280)
+             public static void editdelete_DebitNoteOverCharged() throws InterruptedException, AWTException, IOException	
+          		 {
+          	 
+            	 SamarCnDn.EditDelete_debitNoteUndercharged(documentid, driver);
+          		 }
+             
+             
+             
+             
+            
+/////////////////////////////////////////////////////////////////Samar Code for CN with multiple SI//////////////////////////////////////////////////////////         
+		
+       @Test(priority = 290)
+        public void CreditNoteSalesInvoice() throws InterruptedException, IOException,AWTException
+        {
+        	
+    	   SamarCnDn.create_creditNoteAgainstsalesInvoice2(documentid, documentid21, productid, customer_ID, driver);
+        }
+      
+      
+/////////////////////////////////////////////////////////////////////CN otherwise multiple///////////////////////////////////////////////////////////////////
+       
+ 
+		@Test(priority = 300)
+        public void CreditNoteOtherwise() throws InterruptedException, IOException,AWTException
+        {
+        	
+			 SamarCnDn.create_creditnoteotherwise2(documentid, documentid21, productid, customer_ID, driver);
+		
+        }
+             
+/////////////////////////////////////////////////////////////////////CN against Vendor///////////////////////////////////////////////////////////////////////
+ 		
+ 
+		@Test(priority = 310)
+        public void CreditNoteVendor() throws InterruptedException, IOException,AWTException
+        {
+        	
+			 SamarCnDn.create_creditNoteAgainstvendor2(documentid, productid, vendor_ID, driver);
+        }
+		
+//////////////////////////////////////////////////////////////////////CN UNdercharge Multiple////////////////////////////////////////////////////////////////
+ 		
+ 
+		@Test(priority = 320)
+        public void CreditNoteUndercharge() throws InterruptedException, IOException,AWTException
+
+        {
+			
+			 SamarCnDn.create_CreditNoteUnderCharge2(documentid, productid, vendor_ID, Quantity, driver);
+			
+        }
+//////////////////////////////////////////////////////////////////////CN Overcharge Multiple//////////////////////////////////////////////////////////////////        
+		
+		@Test(priority = 330)
+        public void CreditNoteOvercharge() throws InterruptedException, IOException,AWTException
+        {
+			
+			 SamarCnDn.create_CreditNoteOverCharge2(documentid, productid, customer_ID, vendor_ID, Quantity, driver);
+			
+        }
+        
+/////////////////////////////////////////////////////Verification of CN against SI//////////////////////////////////////////////////////////////////////////////        
+		
+		  @Test(priority = 340)
+          public void verify_creditNoteAgainstsaalesInvoice2()throws InterruptedException, IOException, AWTException
+          
+          {
+			  SamarCnDn.verify_creditNoteAgainstSalesInvoice2(documentid, productid, customer_ID, driver);
+          }
+          
+ ///////////////////////////////////////////////////Edit-delete CN against SI///////////////////////////////////////////////////////////////////////////////////         
+
+		  
+		  @Test(priority = 350)
+	        public void EditDelete_creditNoteAgainstsalesInvoice2() throws InterruptedException, AWTException, IOException
+
+	       {
+			  SamarCnDn.EditDelete_creditNoteAgainstSalesInvoice2(documentid, driver);
+	       }
+
+/////////////////////////////////////////////////////Verification of CN Otherwise////////////////////////////////////////////////////////////////////////////
+		  
+		   @Test(priority = 360)
+	        public  void verify_creditNoteOtherwise2() throws InterruptedException, AWTException, IOException
+
+	      {
+			   SamarCnDn.verify_creditNoteotherwise2(documentid, productid, customer_ID, driver);
+		
+	      
+	      }
+
+///////////////////////////////////////////////////////CopyEditDelete of CN otherwise////////////////////////////////////////////////////////////////////////
+		
+		   	     @Test(priority = 370)
+	      public static void CopyEditDelete_creditNoteOtherwise2() throws InterruptedException, AWTException, IOException
+	      {
+	    	  
+		   	    	SamarCnDn.CopyEditDelete_creditNoteotherwise2(documentid, driver);
+	      }
+	      
+///////////////////////////////////////////////////////Verification of CN against Vendor//////////////////////////////////////////////////////////////////////	      
+	      
+	      
+		  
+		 @Test(priority = 380)
+	      public static void verify_creditNoteAgainstvendor2() throws InterruptedException, AWTException, IOException
+	      {
+	      
+			 SamarCnDn.Verify_creditNoteagainstvendor2(documentid, productid, vendor_ID, driver);
+	    	  
+	      }
+	      
+////////////////////////////////////////////////////////Copyedit-delete of CN against Vendor//////////////////////////////////////////////////////////////////
+	      
+		 
+	  @Test(priority = 390)
+	      public static void CopyEditDelete_creditNoteAgainstCustomer2() throws InterruptedException, AWTException, IOException  
+	      {
+		  SamarCnDn.CopyEditDelete_creditNoteAgainstvendor2(documentid, driver);
+	    	  
+	      }
+		 
+		
+		
+/////////////////////////////////////////////////////Verification of CN Undercharge////////////////////////////////////////////////////////////////////////////
+		 
+	  	  @Test(priority = 400)
+	         public static void verify_creditNoteUnderCharged2() throws InterruptedException, AWTException, IOException	
+	      		 {
+	      	 
+	  		SamarCnDn.verify_CreditNoteCharged2(documentid, "Undercharged", vendor_ID, customer_ID ,driver);
+	      		 } 
+	         
+		  
+	         
+	       @Test(priority = 410)
+	      public static void verify_creditNoteOverCharged2() throws InterruptedException, AWTException, IOException	
+			 {
+		 
+	    	   SamarCnDn.verify_CreditNoteCharged3(documentid, "Overcharged", customer_ID ,driver);
+		 
+			 }  
+///////////////////////////////////////////////////////Edit-Delete CN Overcharge and Undercharge///////////////////////////////////////////////////////////////	
+		
+		@Test(priority = 420)
+        public static void editdelete_CreditNoteOverCharged() throws InterruptedException, AWTException, IOException	
+     		 {
+     	 
+			SamarCnDn.EditDelete_creditNoteOvercharge(documentid, driver);
+     		 }
+		
+        
+        
+       @Test(priority = 430)
+       public static void editdelete_CreditNoteUnderCharged() throws InterruptedException, AWTException, IOException	
+		 {
+	 
+    	   SamarCnDn.EditDelete_creditNoteUndercharge(documentid, driver);
+		 }
+}
+

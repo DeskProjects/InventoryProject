@@ -1,0 +1,59 @@
+***********************************Creation********************************************
+#LeftPaneMenuExpander=//body/div[2]/div/div/div[5]/div
+LeftPaneMenuExpander=.//*[@class='x-tool x-tool-expand-west']
+MastersExpander=.//*[@id='mastersNavigationPanelID']/div/div
+MastersConfigurationLink=.//*[@id='masters']/div/div/div/div/div/ul/div/li[11]/div/a
+QuickSearchInput=.//*[@id='quickSearch31']
+StockAdjReasonSelect=//div[text()='Stock Adjustment Reason']
+AddStockAdjReasonImage=//*[contains(text(), 'Add Master Item')]/img
+StockAdjustmentReasonValue=.//*[@id='masteritemname']
+StockAdjustmentReasonSaveBtn=//button[@class='x-btn-text' and text()='Save']
+MasterConfigurationOKButton=//button[text()='OK']
+MasterConfigurationClose=//li[contains(@id,'as__masterconfiguration')]/a[1]
+MasterMenuItemButton=//button[@class='x-btn-text accountingbase product' and text()='Master Item Menu']
+InventoryExpander=.//*[@id='inventory']/div/div
+EntryExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/div/img
+StockAdjustmentLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/ul/li[1]/div/a
+StockAdjustmentSequenceFormat=.//input[@name='seqFormat']
+StockAdjustmentDocumentId=.//input[@name='documentNo']
+StockAdjustmentMemo=.//*[@id='northForm2markoutallmarkoutTab']/div/div/form/div/div/div/div[1]/div/div/div/div/div/div/div[4]/div/textarea
+StockAdjustmentReason=.//*[@id='stockadjustmentreasoncomboIdglobal']
+StockAdjustmentAddPrdButton=.//*[@class='pwnd add-gridrow']
+StockAdjustmentSearch=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+StockAdjustmentSelectProduct=//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+StockAdjustmentSelectProducts=//*[contains(@id,'ProductSelectionWindow')]/div[2]/div/div/div/div/div/div/div[2]/div/div[1]/div[1]/div/div/table/thead/tr/td[1]
+StockAdjustmentSelectProductsResultCount=//*[contains(@id,'ProductSelectionWindow')]/div[2]/div/div/div/div/div/div/div[3]/div/div
+StockAdjustmentAddButton=.//button[text()='Add' and @class='x-btn-text']
+WareHouseAndLocationLink=.//*[@class='pwnd serialNo-gridrow']
+saveStockInQtyLocationButton=//button[@class='x-btn-text pwnd save' and text()='Submit']
+saveStokcOutQtyLocationButton=//button[@class='x-btn-text' and text()='Save']
+StockAdjustmentSelectAllSerials=.//*[@id='Northform']/div/div/form/div/div/div/div/div[1]/div/div/div/div[2]/div[2]/div/div[1]/div[1]/div[1]/div/table/thead/tr/td[1]
+StockAdjustmentSearchSerial=.//*[@id='avialblesearchserialSelectWindow']
+StockAdjustmentSelectFirstSerial=.//*[@id='Northform']/div/div/form/div/div/div/div/div[1]/div/div/div/div[2]/div[2]/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[1]/div/div
+StockAdjustmentSelectAllSerialsSubmit=.//*[@id='serialSelectWindow']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+StockAdjustmentRightArrowImg=.//*[@id='Northform']/div/div/form/div/div/div/div/div[2]/div/div/div/div/div/div/img[1]
+saveStockAdjustmentBtn=//button[@class='x-btn-text pwnd save' and text()='Save']
+StockAdjustmentQAFlowYesBtn=//button[@class='x-btn-text' and text()='Yes']
+StockAdjustmentQAFlowSaveBtn=//*[@id='approvalserialselectionwindowid']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+StockAdjustmentCloseBtn=//li[contains(@id,'as__allmarkoutTab')]/a[1]
+
+*********************************deletecode******************************************
+ReportsExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/div/img
+StockAdjustmentRegisterLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/ul/li[18]/div/a
+QuickSearch=.//input[@id='QuickmarkoutListmarkoutListDetailCmp']
+DocumentCheckBox=.//*[@id='markoutListmarkoutListDetailCmp']/div/div[2]/div/div[1]/div[1]/div/div/table/thead/tr/td[2]/div
+deleteButton=//button[@class='x-btn-text' and text()='Delete']
+StockAdjustmentRegisterCloseBtn=//li[contains(@id,'as__markoutListMainCmp')]/a[1]
+
+firstProduct=//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+SelectProductS=//*[contains(@id,'ProductSelectionWindow')]//*[contains(text(),'Product ID')]/ancestor::tr//*[@class='x-grid3-hd-checker']
+TotalFindProducts=//*[text()='Product Category: (None)']/parent::div/following-sibling::div//table/tbody/tr/td[1]/div/div
+
+
+
+
+
+
+
+
+

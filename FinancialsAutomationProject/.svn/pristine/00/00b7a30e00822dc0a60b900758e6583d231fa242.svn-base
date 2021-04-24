@@ -1,0 +1,40 @@
+***********************************StockRequestCreation********************************************
+InventoryExpander=.//*[@id='inventory']/div/div
+EntryExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/div/img
+StockRequestLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/ul/li[2]/div/a
+StockRequestSequenceFormat=.//input[@name='seqFormat']
+StockRequestDocumentId=.//input[@name='documentNo']
+StockRequestFromStore=.//*[@id='northForm2order111goodsOrderParentTabb']/div/div/form/div/div/div/div[1]/div/div/div/div[1]/div/div/div[1]/div/div/input[2]
+StockRequestAddPrdButton=.//*[@class='pwnd add-gridrow']
+StockRequestSearch=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+StockRequestSelectProducts=//*[contains(@id,'ProductSelectionWindow')]/div[2]/div/div/div/div/div/div/div[2]/div/div[1]/div[1]/div/div/table/thead/tr/td[1]
+StockRequestSelectProductsResultCount=//*[contains(@id,'ProductSelectionWindow')]/div[2]/div/div/div/div/div/div/div[3]/div/div
+StockRequestAddButton=.//button[text()='Add' and @class='x-btn-text']
+saveStockRequestBtn=//button[@class='x-btn-text pwnd save' and text()='Save']
+StockRequestCloseBtn=//li[contains(@id,'as__goodsOrderParentTabb')]/a
+***********************************StockRequestDeletion********************************************
+StockRequestGoodsPendingOrdersTabLink=.//li[@id='goodstransfertabpanelgoodsOrderParentTabb__goodsPendingOrdersgoodsOrderParentTabb']/a[2]
+StockRequestGoodsPendingOrdersQuickSearch=.//input[@id='QuickgoodsEditorGridPanelgoodsPendingOrdersgoodsOrderParentTabb']
+StockRequestGoodsPendingOrdersQuickSearchResultText=//div[@id='goodsEditorGridPanelgoodsPendingOrdersgoodsOrderParentTabb']/div/div[2]/div/div[1]/div[2]/div/div/div[1]/div
+StockRequestGoodsPendingOrdersSelectAllChkBox=//div[@id='goodsEditorGridPanelgoodsPendingOrdersgoodsOrderParentTabb']/div/div[2]/div/div[1]/div[1]/div[1]/div/table/thead/tr/td[2]
+StockRequestdeleteBtn=//button[@class='x-btn-text accountingbase menu-delete' and text()='Delete']
+StockRequestdeletedSuccessOKBtn=//button[@class='x-btn-text' and text()='OK']
+***********************************StockRequestCollection********************************************
+StockRequestQuickSearchResultCount=//div[@id='goodsEditorGridPanelgoodsPendingOrdersgoodsOrderParentTabb']/div/div[3]/div/table/following-sibling::div
+saveStockRequestQtyLocationButton=//button[@class='x-btn-text' and text()='Save']
+StockRequestRightArrowImg=.//*[@id='Northform']/div/div/form/div/div/div/div/div[2]/div/div/div/div/div/div/img[1]
+StockRequestSelectAllSerialsSubmit=.//*[@id='serialSelectWindow']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+collectStockRequestBtn=//button[@class='x-btn-text accountingbase sync' and text()='Collect']
+LeftPaneMenuExpander=.//*[@id='navigationpanel']/div[1]/div
+*********************************Fullfill***********************************
+StockRequestFulfilledOrdersTabLink= //span[text()='Fulfilled Orders']
+QuickSearch= //input[@id='QuickgoodsEditorGridPanelgoodsapprovedgoodsOrderParentTabb']
+totalResult=//div[@class='x-paging-info']
+
+
+firstProduct=//*[text()='Product Category: (None)']/parent::div/following-sibling::div/div[1]/table/tbody/tr/td[1]/div/div
+SelectProductS=//*[contains(@id,'ProductSelectionWindow')]//*[contains(text(),'Product ID')]/ancestor::tr//*[@class='x-grid3-hd-checker']
+TotalFindProducts=//*[text()='Product Category: (None)']/parent::div/following-sibling::div//table/tbody/tr/td[1]/div/div
+addProducts=//*[contains(@id,'ProductSelectionWindow')]//*[@class='x-btn-text' and text()='Add']
+
+

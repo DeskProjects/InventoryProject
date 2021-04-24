@@ -1,0 +1,99 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import krawler.erp.FixedAsset.AcquiredInvocie_Export;
+import krawler.erp.FixedAsset.AssetDO;
+import krawler.erp.FixedAsset.AssetDisposalInvoice;
+import krawler.erp.FixedAsset.AssetFixLogin;
+import krawler.erp.FixedAsset.AssetGR;
+import krawler.erp.FixedAsset.AssetGroup;
+import krawler.erp.FixedAsset.AssetMenu;
+import krawler.erp.page.Login;
+
+public class AssetsExport {
+	
+	    	public static WebDriver driver =null;
+			public static String url ="http://192.168.0.208:8080/dotcomsmoketestingv21/a/208asset/";
+			public static String user= "admin";
+			public static String pwd= "1234";
+			public static String documentid="Doc08Jan"; 
+			public static String vendorid= "Ved08Jan";
+			public static String customerid="Cus08Jan"; 
+			public static String Group="Grp08Jan";
+			public static String Assetid="Aid08Jan";
+			
+			// Login into ERP Application
+			
+		     @Test(priority=1)
+			public void beforeTestLogin() throws InterruptedException, IOException, AWTException
+		     {
+		       Login  ln = new Login();
+		         WebDriver driver = AssetFixLogin.loginERP(url, user,pwd);
+		         	          this.driver = driver;
+		         	         Thread.sleep(1000);      
+		         	        
+		      }
+		     
+		  // Click on Asset Menu Button
+		     @Test(priority=2)
+		        public void Asset_Menu() throws IOException, InterruptedException{
+		    	  AssetMenu Am= new AssetMenu();
+		    	     Am.FixedAssetExpander(driver);
+		    	     Thread.sleep(1000);
+		     }
+		    
+		     
+		  /* // Export Asset Acquired Invoice
+		     
+		     @Test(priority=3)
+		        public void Asset_Export() throws IOException,InterruptedException,AWTException{
+		        	
+		        	AcquiredInvocie_Export AE = new AcquiredInvocie_Export();
+		        	AE.Export_AssetAI("Export List", driver);
+		        	
+		        }
+		     
+		  // Export Asset Disposal  Invoice
+		     
+		     @Test(priority=4)
+		     public void Asset_DI() throws IOException, InterruptedException, AWTException{
+		    	 AssetDisposalInvoice ADI= new AssetDisposalInvoice();
+		      ADI.Export_AssetDI("Export List", driver);
+		       
+		     }
+		
+		     
+		  // Export Asset Goods Receipt
+	           
+		     @Test(priority=5)
+		     public void Asset_GR() throws IOException, InterruptedException, AWTException{
+		    	 AssetGR AGR= new AssetGR();
+		   AGR.Export_AssetGR ("Export List", driver);
+		   	Thread.sleep(1000);
+		   	}
+		     
+		  
+		   // Export Asset Delivery Order
+		     
+		     @Test(priority=6)
+		     public void Asset_DO() throws IOException, InterruptedException, AWTException{
+		    	 AssetDO ADO= new AssetDO();
+		   
+		     ADO.Export_AssetDO("Export List", driver);
+		     } */
+		 
+		    // Export  Asset Groups
+		     
+		     @Test(priority=7)
+		     
+		     public void Asset_Group() throws IOException, InterruptedException, AWTException{
+		    	  AssetGroup AG= new AssetGroup();
+		    	     AG.Export_AssetGP("Export", driver);
+		    	     Thread.sleep(1000);
+		     }
+}

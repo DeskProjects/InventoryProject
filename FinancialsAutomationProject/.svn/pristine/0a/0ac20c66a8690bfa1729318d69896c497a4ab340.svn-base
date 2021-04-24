@@ -1,0 +1,12 @@
+********************PLCalculation**************************
+PLCalculationIcon=//area[@onclick='NewTradingProfitLoss()']
+NoRecord=//div[@id='newTradingProfitandLoss']//div[@class='grid-link-text']
+CloseReport=//li[@id="as__finalStmnt"]/a[1]
+FirstAccountGroup=//div[@id="newTradingProfitandLoss"]//div[@class="x-grid3-body"]/div[2]/table/tbody/tr/td/div/div/div
+fromDate=//*[@name='stdate']/following::img[1]
+toDate=//*[@name='enddate']/following::img[1]
+selectToday=//*[contains(@style,'visible')]//*[text()='Today']
+xpathNeedToExpand=//*[@id='groupDetailReport']//*[text()='Particulars']/ancestor::div[3]/following::div[1]/div/div[1]//*[@class='x-grid3-row-expanderacc']
+xpathThatExpanded=//*[@id='groupDetailReport']//*[text()='Particulars']/ancestor::div[3]/following::div[1]/div/div[1]//*[@class='x-grid3-row-expanderacc']/ancestor::div[3]/div[contains(@class,'row-expandedacc')]
+TradingProfitTab=//*[@id='finalStmnt__newTradingProfitandLoss']/a[2]//span[1]
+

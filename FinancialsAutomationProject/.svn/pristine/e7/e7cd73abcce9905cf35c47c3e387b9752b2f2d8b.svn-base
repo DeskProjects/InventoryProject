@@ -1,0 +1,8 @@
+ClickOnADR=//*[text()='Asset Depreciation Details Report']
+ClikOnMenu=//div[@id='navigationpanel']/div[1]/div
+Depreciation=//div[text()='Depreciation - Current Dep']/following::div[60]
+Fetch=//button[text()='Fetch']
+CurrentAssetValue=//*[text()='Current Asset Value']//following::div[44]/div
+NetBookValue=//*[text()='Net Book Value']//following::div[45]/div
+Depreciation=//*[text()='Depreciation for the year 2018']//following::div[47]/div
+Month=//*[text()='October 2018']//following::div[48]/div

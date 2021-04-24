@@ -1,0 +1,13 @@
+Serial,Product,Batch
+QAIS1,prod22july19S3, 
+QAIS2,prod22july19S3, 
+QAIS3,prod22july19S3, 
+QAIS4,prod22july19S3, 
+QAIS5,prod22july19S3, 
+QAIS6,prod22july19S3, 
+QAIS1,prod22july19BS4,IB New
+QAIS2,prod22july19BS4,IB New
+QAIS3,prod22july19BS4,IB New
+QAIS4,prod22july19BS4,IB New
+QAIS5,prod22july19BS4,IB New
+QAIS6,prod22july19BS4,IB New

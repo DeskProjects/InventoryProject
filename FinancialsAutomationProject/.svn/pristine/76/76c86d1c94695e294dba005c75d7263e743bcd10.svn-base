@@ -1,0 +1,680 @@
+package krawler.erp.GSTFORM5Verification;
+
+import java.awt.AWTException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import krawler.erp.page.Utilities;
+import krawler.erp.testCases.GSTTC;
+
+//--------------------------------------------------------------- For Cash Purchase , Purchase Invoice and Make Payment Module---------------------------------------------------------------
+
+public class GSTReportForPurchase extends GSTTC{
+	 public static void GSTReportVerification(double box1, double box2, double box3, double box4,double box5, double box6, double box7, double box8, double box9,double box13,WebDriver driver,String set) throws InterruptedException, IOException, AWTException 
+		{		
+		  try
+				{
+			        Properties pro = Utilities.fetchProValue("OR_GSTForm.properties");
+			        Thread.sleep(1000);
+				   
+			    	//Open Statutory Link	
+					new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.xpath(pro.getProperty("Statutory"))));
+				    driver.findElement(By.xpath(pro.getProperty("Statutory"))).click();
+					Thread.sleep(2000);
+					
+					//Click on Report link
+					new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("Reportplus"))));
+			        driver.findElement(By.xpath(pro.getProperty("Reportplus"))).click();
+			        Thread.sleep(1000);
+			        
+			        //Click on GST link
+			        new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("GSTPlus"))));
+			        driver.findElement(By.xpath(pro.getProperty("GSTPlus"))).click();
+			        Thread.sleep(1000);
+			        
+			        //Click on GSTReport link
+			        new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("BreakofGST"))));
+			        driver.findElement(By.xpath(pro.getProperty("BreakofGST"))).click();
+			        Thread.sleep(2000);
+			        
+			        //Click on Fetch button
+			        driver.findElement(By.xpath(pro.getProperty("Fetch"))).click();
+			        Thread.sleep(2000);
+			        
+			        
+			        // Boxes verification in GST form 5
+			        String boxX1=driver.findElement(By.xpath(pro.getProperty("Box1"))).getText(); 
+			        double actBox1= Utilities.getIntegerFrmString(boxX1);
+			        
+			        String boxX2=driver.findElement(By.xpath(pro.getProperty("Box2"))).getText(); 
+			        double actBox2= Utilities.getIntegerFrmString(boxX2);
+			        
+			        String boxX3=driver.findElement(By.xpath(pro.getProperty("Box3"))).getText(); 
+			        double actBox3= Utilities.getIntegerFrmString(boxX3);
+			        
+			        String boxX4=driver.findElement(By.xpath(pro.getProperty("Box4"))).getText(); 
+			        double actBox4= Utilities.getIntegerFrmString(boxX4);
+			  
+			        
+			        String boxX5=driver.findElement(By.xpath(pro.getProperty("Box5"))).getText(); 
+			        double actBox5= Utilities.getIntegerFrmString(boxX5);
+			      
+			        		        
+			        String boxX6=driver.findElement(By.xpath(pro.getProperty("Box6"))).getText();  
+			        double actBox6=Utilities.getIntegerFrmString(boxX6);
+			       
+			        
+			        String boxX7=driver.findElement(By.xpath(pro.getProperty("Box7"))).getText();  
+			        double actBox7=Utilities.getIntegerFrmString(boxX7);
+			        
+
+			        String boxX8=driver.findElement(By.xpath(pro.getProperty("Box8"))).getText(); 
+			        double actBox8= Utilities.getIntegerFrmString(boxX8);
+			        
+			        String boxX9=driver.findElement(By.xpath(pro.getProperty("Box9"))).getText();  
+			        double actBox9=Utilities.getIntegerFrmString(boxX9);
+			        
+			        String boxX13=driver.findElement(By.xpath(pro.getProperty("Box13"))).getText();  
+			        double actBox13=Utilities.getIntegerFrmString(boxX13);
+			        
+			      //ExpBox initialization initial as zero
+			        
+			        double expBox1=0;
+			        double expBox2=0;
+			        double expBox3=0;
+			        double expBox4=0;
+			        double expBox5=0;
+			        double expBox6=0;
+			        double expBox7=0;
+			        double expBox8=0;
+			        double expBox9=0;
+			        double expBox13=0;
+
+			      /*  System.out.println("old Box 1 "+box1);
+			        System.out.println("old Box 2 "+box2);
+			        System.out.println("old Box 3 "+box3);
+			        System.out.println("old Box 4 "+box4);
+			        System.out.println("old Box 5 "+box5);
+			        System.out.println("old Box 6 "+box6); // Please keep it in comment mode always.
+			        System.out.println("old Box 7 "+box7);
+			        System.out.println("old Box 8 "+box8);
+			        System.out.println("old Box 9 "+box9);
+			        System.out.println("old Box 13 "+box13);
+			        */
+			       
+			        // Logic as per the tax standard  
+			        
+			        if(set.equalsIgnoreCase("set1"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0+0;
+			            expBox5=box5+0;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0; // Value of 6 and 7 is 0 from UI and now we are adding box 6 and 7 values 0 + 0 which is updated via transaction.		        	
+			        	expBox9=box9+0; 
+			        	expBox13=box13+0;       	
+			        }
+			        
+			        if(set.equalsIgnoreCase("set2"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0+0;
+			        	expBox5=box5+500;
+			        	expBox6=box6+0;
+			        	expBox7=box7+35;
+			        	expBox8= box6-box7+0-35;
+			        	expBox9=box9+0;
+			        	expBox13=box13+0;
+			        }
+			        
+			        if(set.equalsIgnoreCase("set3"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0+0;
+			        	expBox5=box5+100;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0;
+			        	expBox9=box9+0;
+			        	expBox13=box13+0;
+				    	
+			        }
+			        if(set.equalsIgnoreCase("set4"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0;
+			        	
+			        	expBox5=box5+100;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0;
+			        	expBox9=box9+100;
+			        	expBox13=box13+0;	
+			        }
+
+			    
+			        double ActvalBox4=actBox1+actBox2+actBox3;
+			        double ActvalBox8=actBox6-actBox7;				        
+	
+			        // Define actual and expected boxes in array for compare the data.
+			        String header[]={"Box1","Box2","Box3","Box4","Box5","Box6","Box7","Box8","Box9","Box13"};
+			        double actualUIdata[]={actBox1,actBox2,actBox3,ActvalBox4,actBox5,actBox6,actBox7,ActvalBox8,actBox9,actBox13};
+			        double expecteddata[]={expBox1,expBox2,expBox3,expBox4,expBox5,expBox6,expBox7,expBox8,expBox9,expBox13};
+			        boolean flag=true;
+			        
+			        for(int i=0 ; i<actualUIdata.length ;i++)
+			        {
+			        	if(actualUIdata[i]==expecteddata[i]){
+			        		System.out.println("*** Matched box ["+header[i]+"] as UI amount ["+actualUIdata[i]+"] with expected amount ["+expecteddata[i]+"] !!!");
+					        GSTTC.box1=actBox1;
+					        GSTTC.box2=actBox2;
+					        GSTTC.box3=actBox3;
+					        GSTTC.box4=ActvalBox4;
+					        GSTTC.box5=actBox5;
+					        GSTTC.box6=actBox6;
+					        GSTTC.box7=actBox7;
+					        GSTTC.box8=ActvalBox8;
+					        GSTTC.box9=actBox9;
+					        GSTTC.box13=actBox13;
+			        	}
+			        	else{
+			        		System.out.println("*** FAILED to Match box ["+header[i]+"] as UI amount ["+actualUIdata[i]+"] with expected amount ["+expecteddata[i]+"] !!!");
+			        		flag=false;
+			        	}
+			        }
+			        
+			        if(flag=false){
+			        	System.out.println("Failed to verify Report plz check Log");
+			        }
+			        
+			        // Close the GST form 5 report.
+			        driver.findElement(By.xpath(pro.getProperty("GSTform5cls"))).click();
+			        Thread.sleep(2000);
+			        
+				 }
+		  
+		  catch(Exception EX){
+		  Utilities.handleError(EX, driver);
+		   // EX.printStackTrace();
+		  }
+			  
+		  }
+	 
+	// ----------------------------------------------------------------For Debit Note OtherWise Module----------------------------------------------------------------
+	 
+	
+		 public static void GSTReportVerificationforDN(double box5, double box6, double box7, double box9,WebDriver driver,String set) throws InterruptedException, IOException, AWTException 
+			{		
+	       try
+				{
+			        Properties pro = Utilities.fetchProValue("OR_GSTForm.properties");
+			        Thread.sleep(1000);
+				   
+			    	//Open Statutory Link	
+					new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.xpath(pro.getProperty("Statutory"))));
+				    driver.findElement(By.xpath(pro.getProperty("Statutory"))).click();
+					Thread.sleep(2000);
+					
+					//Click on Report link
+					new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("Reportplus"))));
+			        driver.findElement(By.xpath(pro.getProperty("Reportplus"))).click();
+			        Thread.sleep(1000);
+			        
+			        //Click on GST link
+			        new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("GSTPlus"))));
+			        driver.findElement(By.xpath(pro.getProperty("GSTPlus"))).click();
+			        Thread.sleep(1000);
+			        
+			        //Click on GSTReport link
+			        new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("BreakofGST"))));
+			        driver.findElement(By.xpath(pro.getProperty("BreakofGST"))).click();
+			        Thread.sleep(2000);
+			        
+			        //Click on Fetch button
+			        driver.findElement(By.xpath(pro.getProperty("Fetch"))).click();
+			     //  Thread.sleep(2000);
+			         Utilities.isLoadingDisappear(160, driver);
+			        
+			        // Boxes verification in GST form 5
+			        double actBox1= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox1", "Box1");
+			        
+			        double actBox2= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox2", "Box2");
+			        
+			        double actBox3= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox3", "Box3");
+			        
+			        double actBox4= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox4", "Box4");
+			  
+			        double actBox5= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox5", "Box5");
+			      
+			        double actBox6=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox6", "Box6");
+			       
+			        double actBox7=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox7", "Box7");
+			       
+			        double actBox8= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox8", "Box8");
+			        
+			        double actBox9=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox9", "Box9");
+			        
+			        double actBox13=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox13", "Box13");
+			        
+			        
+				    //ExpBox initialization initial as zero
+			        double expBox1=0;
+			        double expBox2=0;
+			        double expBox3=0;
+			        double expBox4=0;
+			        double expBox5=0;
+			        double expBox6=0;
+			        double expBox7=0;
+			        double expBox8=0;
+			        double expBox9=0;
+			        double expBox13=0;
+
+			        /*System.out.println("old Box 1 "+box1);
+			        System.out.println("old Box 2 "+box2);
+			        System.out.println("old Box 3 "+box3);
+			        System.out.println("old Box 4 "+box4);
+			        System.out.println("old Box 5 "+box5);
+			        System.out.println("old Box 6 "+box6); // Please keep it in comment mode always.
+			        System.out.println("old Box 7 "+box7);
+			        System.out.println("old Box 8 "+box8);
+			        System.out.println("old Box 9 "+box9);
+			        System.out.println("old Box 13 "+box13);*/
+			        
+			        
+			     // Logic as per the tax standard  
+			      
+			        if(set.equalsIgnoreCase("set1"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0+0;
+			            expBox5=box5+0;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0; // Value of 6 and 7 is 0 from UI and now we are adding box 6 and 7 values 0 + 0 which is updated via transaction.		        	
+			        	expBox9=box9+0; 
+			        	expBox13=box13+0;       	
+			        }
+			        
+			        if(set.equalsIgnoreCase("set2"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0+0;
+			        	expBox5=box5-500;
+			        	expBox6=box6+0;
+			        	expBox7=box7-35;
+			        	expBox8= box6-box7+0+35;
+			        	expBox9=box9+0;
+			        	expBox13=box13+0;
+			        }
+			        
+			        if(set.equalsIgnoreCase("set3"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0+0;
+			        	expBox5=box5-100;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0;
+			        	expBox9=box9+0;
+			        	expBox13=box13+0;
+				    	
+			        }
+			        if(set.equalsIgnoreCase("set4"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0;
+			        	
+			        	expBox5=box5-100;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0;
+			        	expBox9=box9-100;
+			        	expBox13=box13+0;	
+			        }
+
+			    
+			        double ActvalBox4=actBox1+actBox2+actBox3;
+			        double ActvalBox8=actBox6-actBox7;				        
+	
+			        
+			        // Define actual and expected boxes in array for compare the data.
+			        String header[]={"Box1","Box2","Box3","Box4","Box5","Box6","Box7","Box8","Box9","Box13"};
+			        double actualUIdata[]={actBox1,actBox2,actBox3,ActvalBox4,actBox5,actBox6,actBox7,ActvalBox8,actBox9,actBox13};
+			        double expecteddata[]={expBox1,expBox2,expBox3,expBox4,expBox5,expBox6,expBox7,expBox8,expBox9,expBox13};
+			        boolean flag=true;
+			        
+			        for(int i=0 ; i<actualUIdata.length ;i++)
+			        {
+			        	if(actualUIdata[i]==expecteddata[i]){
+			        		System.out.println("*** Matched box ["+header[i]+"] as UI amount ["+actualUIdata[i]+"] with expected amount ["+expecteddata[i]+"] !!!");
+					        GSTTC.box1=actBox1;
+					        GSTTC.box2=actBox2;
+					        GSTTC.box3=actBox3;
+					        GSTTC.box4=ActvalBox4;
+					        GSTTC.box5=actBox5;
+					        GSTTC.box6=actBox6;
+					        GSTTC.box7=actBox7;
+					        GSTTC.box8=ActvalBox8;
+					        GSTTC.box9=actBox9;
+					        GSTTC.box13=actBox13;
+			        	}
+			        	else{
+			        		System.out.println("*** FAILED to Match box ["+header[i]+"] as UI amount ["+actualUIdata[i]+"] with expected amount ["+expecteddata[i]+"] !!!");
+			        		flag=false;
+			        	}
+			        }
+			        
+			        if(flag=false){
+			        	System.out.println("Failed to verify Report plz check Log");
+			        }
+			        
+			        // Close the GST Form 5 report.
+			        driver.findElement(By.xpath(pro.getProperty("GSTform5cls"))).click();
+			        Thread.sleep(2000);
+			        
+				 }
+		  
+		  catch(Exception EX){
+		//  Utilities.handleError(EX, driver);
+			  EX.printStackTrace();
+		  }
+			  
+		  } 
+		 
+	 //--------------------------------------------------------------- Forex Gain Loss--------------------------------------------------------------------
+
+		 public static void GSTReportVerificationforforexGainLoss(double box1,double box2,double box3,double box4,double box5, double box6, double box7, double box9,WebDriver driver,String set) throws InterruptedException, IOException, AWTException 
+			{		
+	       try
+				{
+			        Properties pro = Utilities.fetchProValue("OR_GSTForm.properties");
+			        Thread.sleep(1000);
+				   
+			    	//Open Statutory Link	
+					new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.xpath(pro.getProperty("Statutory"))));
+				    driver.findElement(By.xpath(pro.getProperty("Statutory"))).click();
+					Thread.sleep(2000);
+					
+					//Click on Report link
+					new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("Reportplus"))));
+			        driver.findElement(By.xpath(pro.getProperty("Reportplus"))).click();
+			        Thread.sleep(1000);
+			        
+			        //Click on GST link
+			        new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("GSTPlus"))));
+			        driver.findElement(By.xpath(pro.getProperty("GSTPlus"))).click();
+			        Thread.sleep(1000);
+			        
+			        //Click on GSTReport link
+			        new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("BreakofGST"))));
+			        driver.findElement(By.xpath(pro.getProperty("BreakofGST"))).click();
+			        Thread.sleep(2000);
+			        
+			        //Click on Fetch button
+			        driver.findElement(By.xpath(pro.getProperty("Fetch"))).click();
+			     //  Thread.sleep(2000);
+			         Utilities.isLoadingDisappear(160, driver);
+			        
+			        // Boxes verification in GST form 5
+			        double actBox1= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox1", "Box1");
+			        actBox1=actBox1+0;
+			        
+			        double actBox2= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox2", "Box2");
+			        actBox2=actBox2+0;
+
+			        double actBox3= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox3", "Box3");
+			        actBox3=actBox3+0;
+
+			        double actBox4= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox4", "Box4");
+			        actBox4=actBox4+0;
+
+			        double actBox5= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox5", "Box5");
+			      
+			        double actBox6=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox6", "Box6");
+			       
+			        double actBox7=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox7", "Box7");
+			       
+			        double actBox8= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox8", "Box8");
+			        
+			        double actBox9=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox9", "Box9");
+			        
+			        double actBox13=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox13", "Box13");
+			        
+			      //ExpBox initialization initial as zero
+			        double expBox1=0;
+			        double expBox2=0;
+			        double expBox3=0;
+			        double expBox4=0;
+			        double expBox5=0;
+			        double expBox6=0;
+			        double expBox7=0;
+			        double expBox8=0;
+			        double expBox9=0;
+			        double expBox13=0;
+
+			     /*   System.out.println("old Box 1 "+box1);
+			        System.out.println("old Box 2 "+box2);
+			        System.out.println("old Box 3 "+box3);
+			        System.out.println("old Box 4 "+box4);
+			        System.out.println("old Box 5 "+box5);
+			        System.out.println("old Box 6 "+box6); // Please keep it in comment mode always.
+			        System.out.println("old Box 7 "+box7);
+			        System.out.println("old Box 8 "+box8);
+			        System.out.println("old Box 9 "+box9);
+			        System.out.println("old Box 13 "+box13);
+			        */
+			        
+			       
+
+				    // Logic as per the tax standard  
+			        if(set.equalsIgnoreCase("set1"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+2.8; // This Box will keep the value of forex gain loss.
+			        	expBox3=Utilities.round(expBox3, "");// Rounding amount upto 2 decimal point
+
+			        	expBox4=box1+box2+box3+0+2.8;
+			        	expBox4=Utilities.round(expBox4, ""); // Rounding amount upto 2 decimal point
+
+			            expBox5=box5+0;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0; // Value of 6 and 7 is 0 from UI and now we are adding box 6 and 7 values 0 + 0 which is updated via transaction.		        	
+			        	expBox9=box9+0; 
+			        	expBox13=box13+0;       	
+			        }
+			        
+			        if(set.equalsIgnoreCase("set2"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0+0;
+			        	
+			        	expBox5=box5+0;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0;
+			        	expBox9=box9+0;
+			        	expBox13=box13+0;
+			        }
+			        
+			        if(set.equalsIgnoreCase("set3"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0+0;
+			        	expBox5=box5+0;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0;
+			        	expBox9=box9+0;
+			        	expBox13=box13+0;
+				    	
+			        }
+			        if(set.equalsIgnoreCase("set4"))
+			        {
+			        	expBox1=box1+0;
+			        	expBox2=box2+0;
+			        	expBox3=box3+0;
+			        	expBox4=box1+box2+box3+0;
+			        	
+			        	expBox5=box5+0;
+			        	expBox6=box6+0;
+			        	expBox7=box7+0;
+			        	expBox8= box6-box7+0+0;
+			        	expBox9=box9+0;
+			        	expBox13=box13+0;	
+			        }
+
+			    
+			        double ActvalBox4=actBox1+actBox2+actBox3;
+			        double ActvalBox8=actBox6-actBox7;				        
+	
+			     // Define actual and expected boxes in array for compare the data.
+			        String header[]={"Box1","Box2","Box3","Box4","Box5","Box6","Box7","Box8","Box9","Box13"};
+			        double actualUIdata[]={actBox1,actBox2,actBox3,ActvalBox4,actBox5,actBox6,actBox7,ActvalBox8,actBox9,actBox13};
+			        double expecteddata[]={expBox1,expBox2,expBox3,expBox4,expBox5,expBox6,expBox7,expBox8,expBox9,expBox13};
+			        boolean flag=true;
+			        
+			        for(int i=0 ; i<actualUIdata.length ;i++)
+			        {
+			        	if(actualUIdata[i]==expecteddata[i]){
+			        		System.out.println("*** Matched box ["+header[i]+"] as UI amount ["+actualUIdata[i]+"] with expected amount ["+expecteddata[i]+"] !!!");
+					        GSTTC.box1=actBox1;
+					        GSTTC.box2=actBox2;
+					        GSTTC.box3=actBox3;
+					        GSTTC.box4=ActvalBox4;
+					        GSTTC.box5=actBox5;
+					        GSTTC.box6=actBox6;
+					        GSTTC.box7=actBox7;
+					        GSTTC.box8=ActvalBox8;
+					        GSTTC.box9=actBox9;
+					        GSTTC.box13=actBox13;
+			        	}
+			        	else{
+			        		System.out.println("*** FAILED to Match box ["+header[i]+"] as UI amount ["+actualUIdata[i]+"] with expected amount ["+expecteddata[i]+"] !!!");
+			        		flag=false;
+			        	}
+			        }
+			        
+			        if(flag=false){
+			        	System.out.println("Failed to verify Report plz check Log");
+			        }
+			        
+			       // Close GST Form 5 report.
+			        driver.findElement(By.xpath(pro.getProperty("GSTform5cls"))).click();
+			        Thread.sleep(2000);
+			        
+				 }
+		  
+		  catch(Exception EX){
+		//  Utilities.handleError(EX, driver);
+			  EX.printStackTrace();
+		  }
+			  
+		  } 
+		 
+	//--------------------------------------------------------------- To get data from GST form 5 ------------------------------------------------------------
+	 public static void getDataGSTReport(WebDriver driver) throws InterruptedException, IOException, AWTException 
+		{
+		
+		 try
+			{
+		        Properties pro = Utilities.fetchProValue("OR_GSTForm.properties");
+		        Thread.sleep(1000);				   
+		    	//Open Statutory Link	
+				new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.xpath(pro.getProperty("Statutory"))));
+			    driver.findElement(By.xpath(pro.getProperty("Statutory"))).click();
+			    Thread.sleep(2000);
+				
+				//Click on Report link
+				new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("Reportplus"))));
+		        driver.findElement(By.xpath(pro.getProperty("Reportplus"))).click();
+		        Thread.sleep(1000);
+		        
+		        //Click on GST link
+		        new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("GSTPlus"))));
+		        driver.findElement(By.xpath(pro.getProperty("GSTPlus"))).click();
+		        Thread.sleep(1000);
+		        
+		        //Click on GSTReport link
+		        new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath(pro.getProperty("BreakofGST"))));
+		        driver.findElement(By.xpath(pro.getProperty("BreakofGST"))).click();
+		        Thread.sleep(2000);
+		        
+		        //Click on Fetch button
+		        driver.findElement(By.xpath(pro.getProperty("Fetch"))).click();
+		        Thread.sleep(2000);
+		        
+		        
+		        // Boxes verification in GST form 5
+		      
+		        double valBox1= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox1", "Box1");
+		        
+		        double valBox2= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox2", "Box2");
+		        
+		        double valBox3= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox3", "Box3");
+		       
+		        double valBox4= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox4", "Box4");
+		        
+		        double valBox5= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox5", "Box5");
+		        
+		        double valBox6= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox6", "Box6");
+		        
+		        double valBox7= Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox7", "Box7");
+		        
+		        double valBox13=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox13", "Box13");
+		       
+		        double valBox8= valBox6-valBox7;
+		        
+		        double valBox9=Utilities.gstpositivenegative_value(driver, "OR_GSTForm.properties", "NegBox9", "Box9");
+		        
+		     // Assign current value for Boxes
+		        GSTTC.box1=valBox1;
+		        GSTTC.box2=valBox2;
+		        GSTTC.box3=valBox3;
+		        GSTTC.box4=valBox4;
+		        GSTTC.box5=valBox5;
+		        GSTTC.box6=valBox6;
+		        GSTTC.box7=valBox7;
+		        GSTTC.box8=valBox8;
+		        GSTTC.box9=valBox9;
+		        GSTTC.box13=valBox13;
+		       
+		      	
+			}
+	  catch(Exception Ex){
+		  Utilities.handleError(Ex, driver);
+	  }
+	}
+
+}			  
+		  
+	

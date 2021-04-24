@@ -1,0 +1,498 @@
+*******************Vendor_Master******************************
+-------------------------------------------------- Create Vendor ----------------------------------------------------------
+
+VendorMasterModule=//map[@name='AlienAreas1']//area[1]
+Seq_dropdown=//*[@id='x-form-el-sequenceformat42personalDetailVendorTab']/div/img
+Select_Vendor_Seq_Format=//*[@class='x-layer x-combo-list ']/div/div[contains(text(),'VC00000')]
+Vendor_Name=accname42personalDetailVendorTab
+Agent_Unselect=//*[@id='venodorAvailableToAgentCheck42personalDetailVendorTab']
+Debit_term__dropdown=//*[@id='creditTerm42personalDetailVendorTab']/following-sibling::img[1]
+Select_Debit_Term=(//*[@class='x-combo-list-inner']) [2]/div[contains(text(),'NET 0')]
+Credit_Purchase_Limit=//input[@id='limit42personalDetailVendorTab']
+GST_Registration_Type_dropdown=//*[@id='GSTINRegistrationType42personalDetailVendorTab']/following-sibling::img[1]
+Select_GST_Registration_Type=(//*[@class='x-layer x-combo-list ']) [*]/div/div[*]/table/tbody/tr/td[contains(text(),'Registered')]
+Select_GST_Registration_Type_Unregistered=(//*[@class='x-layer x-combo-list ']) [*]/div/div[*]/table/tbody/tr/td[contains(text(),'Unregistered')]
+GSTIN=//*[@name='gstin']
+Vendor_Type_dropdown=//*[@id='CustomerVendorType42personalDetailVendorTab']/following-sibling::img[1]
+Select_Vendor_Type_NA=(//*[@class='x-layer x-combo-list ']) [*]/div[1]/div[*]/table/tbody/tr/td[contains(text(),'NA')]
+Select_Vendor_Type_Import=(//*[@class='x-layer x-combo-list ']) [*]/div[1]/div[*]/table/tbody/tr/td[contains(text(),'Import')]
+Entity_dropdown=//*[@id='Custom_Entity']/following-sibling::img[1]
+Select_Entity=//*[@class='x-layer x-combo-list ']/div[1]/div[*]/table/tbody/tr/td[contains(text(),'Pune')]
+Vendor_Personal_Detail_Save=//*[@id='savepersonalDetailVendorTab']/tbody/tr/td[*]/em/button
+Confirm_Yes=//*[@class='x-panel-btns-ct']/div[*]/table[*]/tbody[*]/tr[*]/td[*]/table[*]/tbody[*]/tr[*]/td[*]/em/button[contains(text(),'Yes')]
+Success_OK=//*[@class='x-panel-btns-ct']/div[*]/table[*]/tbody[*]/tr[*]/td[*]/table[*]/tbody[*]/tr[*]/td[*]/em/button[contains(text(),'OK')]
+Shift_Vendor_Contact_Detail=//*[@id='mainVendorPanel__contactDetailVendorTab']/a[*]/em/span[*]/span[contains(text(),'Vendor Contact Detail')]
+Address=//*[@id='billingAddress43contactDetailVendorTab']
+State=//*[@id='billingStateCombo43contactDetailVendorTab']
+Import_State=//*[@id='x-form-el-billingState43contactDetailVendorTab']/input
+Select_State=//*[@class='x-layer x-combo-list ']/div[*]/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'Maharashtra')]
+Copy_Address=//*[@name='copyadress']
+Vendor_Contact_Detail_Save=(//*[@class='x-panel-bbar x-panel-bbar-noborder']) [2]/div/table/tbody/tr/td/table/tbody/tr/td[*]/em[1]/button[contains(text(),'Save')]
+Information_OK=//*[@class='x-panel-btns-ct']/div[*]/table[*]/tbody[*]/tr[*]/td[*]/table[*]/tbody[*]/tr[*]/td[*]/em[*]/button[contains(text(),'OK')]
+Close_Vendor_Form=//*[@id='as__mainVendorPanel']/a[1]
+
+
+
+---------------------------------------------------- Copy Vendor ------------------------------------------------------------
+
+Vendor_Management=//map[@name='AlienAreas4']/area[2]
+Search_Vendor=//input[@id='quickSearchVendorDetails']
+Refresh_Button=//button[@class='x-btn-text x-tbar-loading']
+Select=//div[@class='x-grid3-cell-inner x-grid3-col-checker']/div[1]
+Manage_Vendor=//button[@class='x-btn-text accountingbase customer']
+Copy_Vendor=(//div[@class='x-layer x-menu']) [*]/ul[1]/li[*]/a[contains(text(),'Copy Vendor')]
+#SEZ_Copy_Vendor=(//div[@class='x-layer x-menu']) [2]/ul[1]/li[*]/a[contains(text(),'Copy Vendor')]
+GSTIN=//*[@name='gstin']
+Copy_Vendor_Personal_Detail_Save=//*[@id='savecopy-personalDetailVendorTab']/tbody/tr/td[*]/em/button
+Confirm_Yes=//*[@class='x-panel-btns-ct']/div[*]/table[*]/tbody[*]/tr[*]/td[*]/table[*]/tbody[*]/tr[*]/td[*]/em/button[contains(text(),'Yes')]
+Success_OK=//*[@class='x-panel-btns-ct']/div[*]/table[*]/tbody[*]/tr[*]/td[*]/table[*]/tbody[*]/tr[*]/td[*]/em/button[contains(text(),'OK')]
+Copy_Shift_Vendor_Contact_Detail=//*[@id='copy-mainVendorPanel__copy-contactDetailVendorTab']/a[*]/em/span[*]/span[contains(text(),'Vendor Contact Detail')]
+Copy_State=//*[@id='billingStateCombo43copy-contactDetailVendorTab']
+Select_State1=//*[@class='x-layer x-combo-list ']/div[*]/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'Goa')]
+Copy_Address=//*[@name='copyadress']
+Copy_Vendor_Contact_Detail_Save=(//*[@class='x-panel-bbar x-panel-bbar-noborder']) [3]/div/table/tbody/tr/td/table/tbody/tr/td[*]/em[1]/button[contains(text(),'Save')]
+Close_Copy_Vendor_Form=//li[@id='as__copy-mainVendorPanel']/a[1]
+Close_Accounts_Payable=//*[@id='as__mainVendorDetails']/a[1]
+
+
+
+
+*******************Customer_Master**************************************
+
+------------------------- Create Customer -------------------------------------------------------------------------------------
+
+CustomerMasterModule=//map[@name='AlienAreas2']//area[1]
+Custo_Seq_dropdown=//*[@id='sequenceformat41personalDetailCustomerTab']/following-sibling::img
+Select_Seq_Format=//*[@class='x-layer x-combo-list ']/div/div[contains(text(),'CC00000')]
+Customer_Agent_Unselect=//*[@id='customervenodoravailabletosalespersonagent41personalDetailCustomerTab']
+Credit_term__dropdown=//*[@id='creditTerm41personalDetailCustomerTab']/following-sibling::img[1]
+Select_Credit_Term=(//div[@class='x-layer x-combo-list ']) [*]/div/div[contains(text(),'NET 0')]
+Credit_Sales_Limit_IntraState=//input[@name='limit']
+Custo_GST_Registration_Type_dropdown=//*[@id='GSTINRegistrationType41personalDetailCustomerTab']/following-sibling::img[1]
+Select_Custo_GST_Registration_Type=(//*[@class='x-layer x-combo-list ']) [*]/div/div[*]/table/tbody/tr/td[contains(text(),'Registered')]
+Custo_GSTIN=//*[@name='gstin']
+Customer_Type_dropdown=//*[@id='CustomerVendorType41personalDetailCustomerTab']/following-sibling::img[1]
+Select_Customer_Type=(//*[@class='x-layer x-combo-list ']) [*]/div[1]/div[*]/table/tbody/tr/td[contains(text(),'NA')]
+Custo_Entity_dropdown=//*[@id='Custom_Entity']/following-sibling::img[1]
+Select_Custo_Entity=//*[@class='x-layer x-combo-list ']/div[1]/div[*]/table/tbody/tr/td[contains(text(),'Pune')]
+Customer_Personal_Detail_Save=//*[@id='savepersonalDetailCustomerTab']/tbody/tr/td[*]/em/button
+Confirm_Yes=//*[@class='x-panel-btns-ct']/div[*]/table[*]/tbody[*]/tr[*]/td[*]/table[*]/tbody[*]/tr[*]/td[*]/em/button[contains(text(),'Yes')]
+Success_OK=//*[@class='x-panel-btns-ct']/div[*]/table[*]/tbody[*]/tr[*]/td[*]/table[*]/tbody[*]/tr[*]/td[*]/em/button[contains(text(),'OK')]
+Shift_Customer_Contact_Detail=//*[@id='mainCustomerPanel__contactDetailCustomerTab']/a[*]/em/span[*]/span[contains(text(),'Customer Contact Detail')]
+Customr_Address=//*[@id='billingAddress40contactDetailCustomerTab']
+Customer_State=//*[@id='billingStateCombo40contactDetailCustomerTab']
+Select_Customer_State=//*[@class='x-layer x-combo-list ']/div[*]/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'Maharashtra')]
+Copy_Customer_Address=//*[@name='copyadress']
+Customer_Contact_Detail_Save=(//*[@class='x-panel-bbar x-panel-bbar-noborder']) [2]/div/table/tbody/tr/td/table/tbody/tr/td[*]/em[1]/button[contains(text(),'Save')]
+Custo_Information_OK=//*[@class='x-panel-btns-ct']/div[*]/table[*]/tbody[*]/tr[*]/td[*]/table[*]/tbody[*]/tr[*]/td[*]/em[*]/button[contains(text(),'OK')]
+Close_Customer_Form=//li[@id='as__mainCustomerPanel']/a[1]
+Select_Custo_GST_Registration_Type_Unreg=(//*[@class='x-layer x-combo-list ']) [3]/div/div[*]/table/tbody/tr/td[contains(text(),'Unregistered')]
+Select_Custo_GST_Registration_Type_Composition=(//*[@class='x-layer x-combo-list ']) [3]/div/div[*]/table/tbody/tr/td[contains(text(),'Composition')]
+
+#Customer_Type_dropdown_SEZ_WAY=//div[@id='x-form-el-CustomerVendorType41personalDetailCustomerTab']/div/input[2]
+Customer_Type_dropdown_SEZ_WAY=//*[@id='CustomerVendorType41personalDetailCustomerTab']/following-sibling::img[1]
+Select_Customer_Type_SEZ_WPAY=(//*[@class='x-layer x-combo-list ']) [*]/div[1]/div[*]/table/tbody/tr/td[contains(text(),'SEZ (WPAY)')]
+Customer_Type_dropdown_Export_WAY=(//*[@class='x-layer x-combo-list ']) [*]/div[1]/div[*]/table/tbody/tr/td[contains(text(),'Export (WPAY)')]
+Customer_Type_dropdown_SEZ_WOAY=//*[@id='CustomerVendorType41copy-personalDetailCustomerTab']/following-sibling::img[1]
+Select_Customer_Type_SEZ_WOPAY=((//*[@class='x-layer x-combo-list ']) [*]/div[1]/div[*]/table/tbody/tr/td[contains(text(),'SEZ (WOPAY)')])
+Customer_State_Export=//*[@id='x-form-el-billingState40contactDetailCustomerTab']/input
+Select_Customer_Type_Export_WOPAY=((//*[@class='x-layer x-combo-list ']) [*]/div[1]/div[*]/table/tbody/tr/td[contains(text(),'Export (WOPAY)')])
+---------------------------------------------------- Copy Customer ------------------------------------------------------------
+
+Customer_Management=//map[@name='AlienAreas4']/area[1]
+#//map[@name='AlienAreas4']/area[2]
+Search_Customer=//input[@id='quickSearchCustomerDetails']
+Customer_Select=//div[@class='x-grid3-cell-inner x-grid3-col-checker']/div[1]
+Manage_Customer=//button[@class='x-btn-text accountingbase customer']
+Copy_Customer=//div[@class='x-layer x-menu']/ul[1]/li[3]
+Copy_Customer_Personal_Detail_Save=//*[@id='savecopy-personalDetailCustomerTab']/tbody/tr/td[*]/em/button
+Copy_Shift_Customer_Contact_Detail=//*[@id='copy-mainCustomerPanel__copy-contactDetailCustomerTab']/a[*]/em/span[*]/span[contains(text(),'Customer Contact Detail')]
+Copy_Customer_State=//*[@id='billingStateCombo40copy-contactDetailCustomerTab']
+Copy_Customer_Contact_Detail_Save=(//*[@class='x-panel-bbar x-panel-bbar-noborder']) [3]/div/table/tbody/tr/td/table/tbody/tr/td[*]/em[1]/button[contains(text(),'Save')]
+Close_Copy_Customer_Form=//li[@id='as__copy-mainCustomerPanel']/a[1]
+Close_Accounts_Receivables=//li[@id='as__mainCustomerDetails']/a[1]
+Uncheck_Sales_Person=//input[@id='customervenodoravailabletosalespersonagent41copy-personalDetailCustomerTab']
+Copy_Custo_GST_Registration_Type_dropdown=//*[@id='GSTINRegistrationType41copy-personalDetailCustomerTab']/following-sibling::img[1]
+*******************Product_Master******************************
+
+
+----------------------------------------------- Create Product -------------------------------------------------------------------
+
+ProductMasterModule=//map[@name='AlienAreas1']//area[2]
+Sequ_dropdown=//*[@id='sequenceformatproductwin']/following-sibling::img[1]
+Select_Sequ_Format=//*[@class='x-layer x-combo-list ']/div/div[contains(text(),'PID00000')]
+Product_Name=//*[@name='productname']
+Product_Entity_dropdown=//*[@id='Custom_Entity']/following-sibling::img[1]
+Select_Product_Entity=//*[@class='x-layer x-combo-list ']/div[1]/div[*]/table/tbody/tr/td[contains(text(),'Pune')]
+Unit_Quantity_Code_dropdown=//*[@name='Custom_Unit Quantity Code']/following-sibling::img
+Select_Unit_Quantity_Code=(//*[@class='x-layer x-combo-list ']) [*]/div/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'BAG-BAGS')]
+Product_Tax_Class_dropdown=//*[@name='Custom_Product Tax Class']/following-sibling::img[1]
+Select_Product_Tax_Class=//*[@class='x-layer x-combo-list ']/div/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'Product @ 12%')]
+Select_NIL_Rated_Product_Tax_Class=//*[@class='x-layer x-combo-list ']/div/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'Product @ 0%')]
+Select_Exempted_Product_Tax_Class=//*[@class='x-layer x-combo-list ']/div/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'Exempted')]  
+Select_NonGST_Product_Tax_Class=//*[@class='x-layer x-combo-list ']/div/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'Non GST Product')]
+HSN_dropdown=//*[@name='Custom_HSN/SAC Code']/following-sibling::img[1]
+Select_HSN=(//*[@class='x-layer x-combo-list ']) [*]/div/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'12345678')]
+Initial_Quantity=//*[@name='initialquantity']
+License_Code=//*[@id='licensecodeproductwin']
+Product_Initial_Warehouse=(//*[@class='x-window' and contains(@style,'visible')]/div[2]/div/div/div/div/div[3]/div/div/div/div/div/div/div/div[2]/div/div/table/tbody/tr[1]/td[2]) [1]
+Product_Initial_Warehouse1=//*[@class= ' x-form-text x-form-field x-form-focus']
+Select_Product_Initial_Warehouse=//*[@class='x-combo-list-inner']/div[contains(text(),'DS - Default Store')]
+Select_Product_Initial_Warehouse_Non_GST=(//*[@class='x-combo-list-inner'] /div[contains(text(),'DS - Default Store')]) [2]
+Product_Initial_Location=(//*[@class='x-window' and contains(@style,'visible')]/div[2]/div/div/div/div/div[3]/div/div/div/div/div/div/div/div[2]/div/div/table/tbody/tr[1]/td[6]) [1]
+Product_Initial_Location11=//*[@class=' x-form-text x-form-field x-form-focus']
+Select_Product_Initial_location=//*[@class='x-combo-list-inner']/div[contains(text(),'Default Location')]
+Select_Product_Initial_location_Non_GST=(//*[@class='x-combo-list-inner']/div[contains(text(),'Default Location')]) [2]
+Warehouse_Save=(//*[@class='x-window' and contains(@style,'visible')]/div/div) [3]/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr[1]/td[2]/em[contains(button,'Submit')]
+Product_Purchase=(//*[@class='x-tab-panel-header x-unselectable']) [2]/div[*]/ul[*]/li[*]/a[*]/em[*]/span/span[contains(text(),'Purchase')]
+Product_Purchase_Account_Dropdown=//*[@id='purchaseaccountidproductwin']/following-sibling::img[1]
+Select_Product_Purchase_Account=//*[@class='x-layer x-combo-list ']/div/div[*]/table[*]/tbody[*]/tr[*]/td[contains(text(),'Purchases')]
+Product_Initial_Purchase_Price=//*[@id='initialpriceproductwin']
+Product_Sales=(//*[@class='x-tab-panel-header x-unselectable']) [2]/div[*]/ul[*]/li[*]/a[*]/em[*]/span/span[contains(text(),'Sales')]
+Product_Sales_Account_Send=//*[@id='salesaccountidproductwin']
+Select_Product_Sales_Account=//div[@class='x-layer x-combo-list ' and contains(@style,'visible')]/div/div/table/tbody/tr/td[2]
+Product_Initial_Sales_Price=//*[@id='initialsalespriceproductwin']
+Product_Inventory_Data=(//*[@class='x-tab-panel-header x-unselectable']) [2]/div[*]/ul[*]/li[*]/a[*]/em[*]/span/span[contains(text(),'Inventory Data')]
+Stock_UOM_Send=//*[@id='uomidproductwin']
+Select_Stock_UOM=//div[@class='x-layer x-combo-list ' and contains(@style,'visible')]/div/div
+Default_Warehouse_Send=//*[@id='warehouseproductwin']
+Select_Default_Warehouse=//div[@class='x-layer x-combo-list ' and contains(@style,'visible')]/div/div
+Default_Location_Send=//*[@id='locationproductwin']
+Select_Default_Location=//div[@class='x-layer x-combo-list ' and contains(@style,'visible')]/div/div
+Product_Save=(//div[@class='x-tab-panel-bbar']/div/table/tbody/tr/td/table/tbody/tr/td[2]/em/button[contains(text(),'Save')]) [1]
+ProductConfirm_Yes=//div[@class='x-panel-btns x-panel-btns-center']/table/tbody/tr/td[2]/table/tbody/tr/td[2]/em/button
+#Product_OK=//div[@class='x-panel-btns x-panel-btns-center']/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+Product_Close=//li[@id='as__productwin']/a[1]
+menu=(//*[@class='x-grid3-header']) [2]/div/div/table/thead/tr/td[4]/div
+SUBMenu=(//tr[@class='x-grid3-hd-row']) [2]/td[*]/div[contains(text(),'Product ID')]/a[1]
+Sort_Descending=//div[@class='x-layer x-menu']/ul/li[*]/a[contains(text(),'Sort Descending')]
+Get_Product_ID=(//div[@class='x-grid3-scroller']) [2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[*]/div[1]/a[contains(text(),'PID')]
+Product_Report_Close=//li[@id='as__mainProductDetails']/a[1]
+RCM_Check=//input[@name='rcmapplicable']
+Initial_quantity_alert=//div[@class='x-window x-window-plain x-window-dlg']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/em/button[contains(text(),'Yes')]
+--------------------Service type product ----------------
+
+Producttype_dropdown=//*[@id='x-form-el-producttypeproductwin']/div/img
+Service_product=//*[@class='x-layer x-combo-list ']/div/div[contains(text(),'Service')]
+
+
+
+******************* Purchase Invoice ******************************
+
+
+----------------------------------------------- Create Purchase Invoice -------------------------------------------------------------------
+
+Module=//map[@name='AlienAreas1']//area[8]
+Vendor=//*[@id='customer15goodsreceipt']
+Product_Add=//*[@class='pwnd add-gridrow']
+SearchProduct=//span[text()='Product Category']/parent::td/preceding-sibling::td[*]/input[@type='text']
+#//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+#//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input[@type='text']
+#SelectProduct=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-checker x-grid3-cell-first ']) [2]
+Product_ADD_in_PI=//div[@id='goodsreceipteditproductdetailsgridProductSelectionWindow']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[*]/em[*]/button[contains(text(),'Add')]
+
+Price_ok=(//*[@class='x-panel-btns x-panel-btns-center']/table/tbody/tr/td/table/tbody/tr/td[2]/em) [1]
+Quantity=(//*[@class='x-grid3-viewport']) [1]/div[2]/div[1]/div[1]/table/tbody/tr/td[17]
+Quantity1=//*[@class='x-layer x-editor x-small-editor x-grid-editor']/input
+Unit_Price_in_SI=(//*[@class='x-grid3-viewport']) [1]/div[2]/div[1]/div[1]/table/tbody/tr/td[29]
+Unit_Price1_in_SI=(//*[@class='x-layer x-editor x-small-editor x-grid-editor']/input) [2]
+Unit_Price=(//*[@class='x-grid3-viewport']) [1]/div[2]/div[1]/div[1]/table/tbody/tr/td[29]
+Unit_Price1_in_PI=(//*[@class='x-layer x-editor x-small-editor x-grid-editor']/input) [2]
+Memo_in_PI=//*[@id='memo15goodsreceipt']
+Save=//button[text()='Save']
+Yes=//button[text()='Yes']
+#Form_Document_No_PI=//*[@class='x-window-body']/div/div[2]/span/b[contains(text(),'PIN')]
+Form_Document_No=//*[@class='x-window-mr']/div/div/div/div[2]/span/b[1]
+OK=//button[text()='OK']
+message=//*[text()='Input SGST Amount ']/ancestor::div[1]/table[1]/tbody/tr["+i+"]/td[1]
+Form_SGST=//*[text()='Input SGST Amount ']/ancestor::div[1]/table[1]/tbody/tr["+i+"]/td[2]
+Form_CGST=//*[text()='Input SGST Amount ']/ancestor::div[1]/table[1]/tbody/tr["+i+"]/td[2]
+Form_CESS=//*[text()='Input SGST Amount ']/ancestor::div[1]/table[1]/tbody/tr["+i+"]/td[2]
+Form_Total_Tax_Amount=(//*[@class='tempbackgroundview-bwrap']) [4]/div/div[2]/div[2]/table[2]/tbody/tr/td[2]/div
+Form_SubTotal_Amount=(//*[@class='tempbackgroundview-bwrap']) [6]/div/div/table[1]/tbody/tr/td[2]/div
+Form_Total_Amount=(//*[@class='tempbackgroundview-bwrap']) [6]/div/div/table[4]/tbody/tr/td[2]/div
+Close=//*[@id='as__goodsreceipt']/a[1]
+View_4_A_1=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [15]/div/img[1]
+View_4_A_2=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [16]/div/img[1]
+View_4_A_3=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [17]/div/img[1]
+View_4_A_5=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [19]/div/img[1]
+View_5_1=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [31]/div/img[1]
+View_5_2=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [32]/div/img[1]
+View_5_3=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [33]/div/img[1]
+View_5_4=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [34]/div/img[1]
+Interstate -->
+
+message1=//*[text()='Input IGST Amount ']/ancestor::div[1]/table[1]/tbody/tr["+i+"]/td[1]
+Form_IGST=//*[text()='Input IGST Amount ']/ancestor::div[1]/table[1]/tbody/tr["+i+"]/td[2]
+Form_CESS1=//*[text()='Input IGST Amount ']/ancestor::div[1]/table[1]/tbody/tr["+i+"]/td[2]
+RCM_In_PI=//input[@name='GTAApplicable']
+
+
+******************* Sales  Invoice ******************************
+
+
+----------------------------------------------- Create Sales Invoice -------------------------------------------------------------------
+Sales_Invoice_Module=//map[@name='AlienAreas2']//area[6]
+Customer=//*[@id='customer2Invoice']
+Product_Add=//*[@class='pwnd add-gridrow']
+Search_Product=//span[text()='Product Category']/parent::td/preceding-sibling::td[2]/input
+SelectPro1=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-checker x-grid3-cell-first ']) [2]
+Quantity=(//*[@class='x-grid3-viewport']) [1]/div[2]/div[1]/div[1]/table/tbody/tr/td[17]
+Quantity1=(//div[@class='x-layer x-editor x-small-editor x-grid-editor'])/input
+
+ADD_in_SI=//div[@id='InvoiceeditproductdetailsgridProductSelectionWindow']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[*]/em/button[contains(text(),'Add')]
+Invoice_Memo=//*[@id='memo2Invoice']
+Save=//button[text()='Save']
+Yes=//button[text()='Yes']
+Credit_Sales_limit_Warning=//div[@class='x-window x-window-plain x-window-dlg']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/em/button
+Form_Document_No1=//*[@class='x-window-body']/div/div[2]/span/b[1]
+OK=//button[text()='OK']
+Form_Total_Tax_Amount=(//*[@class='tempbackgroundview-bwrap']) [4]/div/div[2]/div[2]/table[2]/tbody/tr/td[2]/div
+Form_SubTotal_Amount=(//*[@class='tempbackgroundview-bwrap']) [6]/div/div/table[1]/tbody/tr/td[2]/div
+Form_Total_Amount=(//*[@class='tempbackgroundview-bwrap']) [6]/div/div/table[4]/tbody/tr/td[2]/div
+Customer_Close=//*[@id='as__Invoice']/a[1]
+#Statutory_Add=(//*[@class='x-panel-header x-unselectable x-accordion-hd']) [16]/div
+#Report_Add=(//*[@class='x-tree-node']) [51]/div/img[1]
+#GSTR_Report_Add=(//*[@class='x-tree-node']) [53]/div/img[1]
+#GSTR3B_Report_Click=(//*[@class='x-tree-node']) [59]/div/img[2]
+#From_Date=//*[@class='x-toolbar x-small-editor']/table/tbody/tr/td[2]/div/img
+#From_Today=(//*[@class='x-date-bottom']) [1]/table/tbody/tr/td[2]/em/button
+#To_Date=//*[@class='x-toolbar x-small-editor']/table/tbody/tr/td[5]/div/img
+#To_Today=(//*[@class='x-date-bottom']) [2]/table/tbody/tr/td[2]/em/button
+Fetch_Summery=//button[text()='Fetch'][1]
+View_3_1_A=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [2]/div/img[1]
+View_3_1_B=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [3]/div/img[1]
+View_3_1_C=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [4]/div/img[1]
+View_3_1_D=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [5]/div/img[1]
+View_3_1_E=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [6]/div/img[1]
+View_3_2_A=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [9]/div/img[1]
+View_3_2_B=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [10]/div/img[1]
+Search_ID=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div/div/table/tbody/tr/td[2]/input
+Fetch_Details=(//button[text()='Fetch'][1]) [2]
+#GSTR3B_SGST_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[10]/div/div
+#GSTR3B_CGST_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[9]/div/div
+
+
+*************************** GSTR Reports *************************************
+
+------------------------------------------------ GSTR3B Report ---------------------------------------------------------------------------
+Statutory_Add=(//*[@class='x-panel-header x-unselectable x-accordion-hd']) [16]/div
+Report_Add=//div[@id='StatutoryTreeID']/div/div/ul/div/li/div/img[1]
+GSTR_Report_Add=//div[@id='StatutoryTreeID']/div/div/ul/div/li/ul/li[2]/div/img[1]
+GSTR3B_Report_Click=//div[@id='StatutoryTreeID']/div[1]/div[1]/ul[1]/div[1]/li[1]/ul/li[2]/ul/li[5]/div/a/span[contains(text(),'GSTR3B')]
+From_Date=//*[@class='x-toolbar x-small-editor']/table/tbody/tr/td[2]/div/img
+From_Today=(//*[@class='x-date-bottom']) [1]/table/tbody/tr/td[2]/em/button
+To_Date=//*[@class='x-toolbar x-small-editor']/table/tbody/tr/td[5]/div/img
+To_Today=(//*[@class='x-date-bottom']) [2]/table/tbody/tr/td[2]/em/button
+Fetch_Summery=//button[text()='Fetch'][1]
+View=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-9 x-grid3-cell-last ']) [19]/div/img
+Search_ID=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div/div/table/tbody/tr/td[2]/input
+Fetch_Details=(//button[text()='Fetch'][1]) [2]
+
+GSTR3B_SGST_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[10]/div/div
+GSTR3B_CGST_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[9]/div/div
+GSTR3B_CESS_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[11]/div/div
+GSTR3B_IGST_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[8]/div/div
+GSTR3B_Total_Tax_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[12]/div/div
+GSTR3B_Taxable_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[7]/div/div
+GSTR3B_Total_Amount=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[13]/div/div
+
+GSTR3B_Taxable_Amount_of_DN_otherwise=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[7]/div/div/label
+GSTR3B_Taxable_Amount_of_CN_against_vendor=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[7]/div/div
+GSTR3B_Total_Amount_of_DN_otherwise=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[13]/div/div/label
+GSTR3B_Total_Amount_of_CN_against_vendor=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[13]/div/div
+GSTR3B_Detailed_Report_Close=//li[contains(@id,'as__GSTR3BDetailedReport')]/a[1]
+GSTR3B_Summery_Report_Close=//li[contains(@id,'as__GSTR3BSummaryReportundefined')]/a[1]
+Statutory_Minimise=//*[contains(@id,'StatutoryNavigationPanelID')]/div[1]/div[1]
+GSTR3B_SGST_Amount_of_CN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[10]/div/div/label
+GSTR3B_CGST_Amount_of_CN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[9]/div/div/label
+GSTR3B_CESS_Amount_of_CN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[11]/div/div/label
+GSTR3B_Total_Tax_Amount_of_CN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[12]/div/div/label
+GSTR3B_Taxable_Amount_of_CN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[7]/div/div/label
+GSTR3B_Total_Amount_of_CN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[13]/div/div/label
+GSTR3B_IGST_Amount_of_CN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[8]/div/div/label
+GSTR3B_SGST_Amount_of_DN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[10]/div/div/label
+GSTR3B_CGST_Amount_of_DN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[9]/div/div/label
+GSTR3B_CESS_Amount_of_DN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[11]/div/div/label
+GSTR3B_Total_Tax_Amount_of_DN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[12]/div/div/label
+GSTR3B_Taxable_Amount_of_DN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[7]/div/div/label
+GSTR3B_Total_Amount_of_DN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[13]/div/div/label
+GSTR3B_IGST_Amount_of_DN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[8]/div/div/label
+#GSTR3B_IGST_Amount_of_DN=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[8]/div/div
+GSTR3B_Total_Tax_Amount_of_CN_SEZ_WOPAY=//div[contains(@id,'GSTR3BDetailedReport')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[12]/div/div
+
+
+------------------------------------------------ GSTR1 Report ---------------------------------------------------------------------------
+
+GSTR1_Report_Click=//div[@id='StatutoryTreeID']/div[1]/div[1]/ul[1]/div[1]/li[1]/ul/li[2]/ul/li[1]/div/a/span[contains(text(),'GSTR1-Summary')]
+B2B_Invoices_Section_View=//div[@class='x-grid3-viewport']/div[2]/div/div[1]/table/tbody/tr/td[11]/div/img
+B2C_Large_Invoices_View=//div[@class='x-grid3-viewport']/div[2]/div/div[2]/table/tbody/tr/td[11]/div/img
+B2C_Small_Invoices_View=//div[@class='x-grid3-viewport']/div[2]/div/div[3]/table/tbody/tr/td[11]/div/img
+Credit_Debit_Note_Registered_9B_View=//div[@class='x-grid3-viewport']/div[2]/div/div[4]/table/tbody/tr/td[11]/div/img
+Credit_Debit_Note_UnRegistered_9B_View=//div[@class='x-grid3-viewport']/div[2]/div/div[5]/table/tbody/tr/td[11]/div/img
+Export_Invoices_6A_View=//div[@class='x-grid3-viewport']/div[2]/div/div[6]/table/tbody/tr/td[11]/div/img
+Advanced_Received_GSTR1_View=//div[@class='x-grid3-viewport']/div[2]/div/div[7]/table/tbody/tr/td[11]/div/img
+Nil_Rated_Invoices_8A_8B_8C_8D_View=//div[@class='x-grid3-viewport']/div[2]/div/div[9]/table/tbody/tr/td[11]/div/img
+GSTR1_SGST_Amount=//div[starts-with(@id,'GSTR1SummaryDetails')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/table/tbody/tr/td[12]/div/div
+GSTR1_CGST_Amount=//div[starts-with(@id,'GSTR1SummaryDetails')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/table/tbody/tr/td[11]/div/div
+GSTR1_CESS_Amount=//div[starts-with(@id,'GSTR1SummaryDetails')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/table/tbody/tr/td[13]/div/div
+GSTR1_IGST_Amount=//div[starts-with(@id,'GSTR1SummaryDetails')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/table/tbody/tr/td[10]/div/div
+GSTR1_Taxable_Amount=//div[starts-with(@id,'GSTR1SummaryDetails')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/table/tbody/tr/td[9]/div/div
+GSTR1_Total_Tax_Amount=//div[starts-with(@id,'GSTR1SummaryDetails')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/table/tbody/tr/td[14]/div/div
+GSTR1_Total_Amount=//div[starts-with(@id,'GSTR1SummaryDetails')]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/table/tbody/tr/td[15]/div/div
+GSTR1_Search_ID=//div[@id='GSTR1SummaryDetailsPune1']/div/div/div/div/div/div/div/div[1]/div[1]/table[1]/tbody[1][1]/tr[1]/td[*]/input
+GSTR1_From_Date=//*[@class='x-toolbar x-small-editor']/table/tbody/tr/td[3]/div/img
+GSTR1_To_Date=//*[@class='x-toolbar x-small-editor']/table/tbody/tr/td[6]/div/img
+GSTR1_From_Today=(//*[@class='x-date-bottom']) [1]/table/tbody/tr/td[2]/em/button
+GSTR1_To_Today=(//*[@class='x-date-bottom']) [2]/table/tbody/tr/td[2]/em/button
+GSTR1_Fetch_Summery=(//button[text()='Fetch']) [1]
+
+
+
+
+******************* Credit Note ******************************
+#Against Otherwise
+CreditNoteModule=//map[@name='AlienAreas2']//area[7]
+Credit_Note_Otherwise=(//input[@name='rectype']) [2]
+Credit_Note_Against_Vendor=(//input[@name='rectype']) [3]
+Submit=//button[text()='Submit']
+Select_Customer_in_CN=//div[@id='x-form-el-selectCustomerundefinedcreditnotepanel']/div/input[2]
+Select_Customer=(//*[@class='x-layer x-combo-list ']/div/div/table/tbody/tr/td[contains(text(),'CC')]) [2]
+Select_Account=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table/tbody/tr/td[1]/div[1]
+Select_Account1=//div[@class='x-layer x-editor x-small-editor x-grid-editor']/div[1]/input[2]
+Click_Advertising=(//div[@class='x-layer x-combo-list ']) [*]/div/div/table/tbody/tr/td[contains(text(),'Advertising')]
+Document_Number=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table/tbody/tr/td[2]/div[1]
+Search_Product_in_CN=//div[@class='x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder']/div/table/tbody/tr/td[1]/input
+SelectPro1_in_CN=//div[@id='creditnotepanelProductSelectionWindow']/div[2]/div[1]/div/div/div/div/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/div/div/table/thead/tr/td[1]
+SelectPro2_in_CN=(//*[@class='x-grid3-col x-grid3-cell x-grid3-td-checker x-grid3-cell-first ']) [32]
+ADD_in_CN=//div[@id='creditnotepanelProductSelectionWindow']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[*]/em/button[contains(text(),'Add')]
+Amount_in_CN=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table/tbody/tr/td[4]/div
+Amount1_in_CN=(//div[@class='x-layer x-editor x-small-editor x-grid-editor'])/input
+Memo_in_CN=//textarea[@name='memo']
+Form_Total_Tax_Amount_in_CN=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table/tbody/tr/td[7]/div
+Form_Total_Amount1_in_CN=(//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table[1]/tbody/tr[1]/td[11]/div) [1]
+Tax_in_CN=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table[1]/tbody/tr[1]/td[8]/div
+Tax1_in_CN=//td[@class='x-grid3-col x-grid3-cell x-grid3-td-7  x-grid3-dirty-cell x-grid3-cell-selected']/div/div
+#Form_CGST_in_CN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[12]/div
+#Form_CGST_in_CN=//*[@class='bckgroundcolor-body bckgroundcolor-body-noheader bckgroundcolor-body-noborder']/div/div/div/div/div/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[12]/div
+Form_CGST_in_CN=//*[@id='termselectionwindowtest']/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[2]/div[1]/div[1]/table[1]/tbody/tr/td[12]
+Form_SGST_in_CN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[2]/table/tbody/tr/td[12]/div
+Form_CESS_in_CN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[3]/table/tbody/tr/td[12]/div
+Tax_Close_in_CN=//div[@class='x-panel-btns x-panel-btns-right']/table/tbody/tr/td[2]
+Reason_in_CN=(//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table[1]/tbody/tr[1]/td[12]/div) [1]
+Reason1_in_CN=(//div[@class='x-layer x-editor x-small-editor x-grid-editor']) [3]/div/input[2]
+Reason_Click=(//div[@class='x-layer x-combo-list ']) [*]/div/div[contains(text(),'Rounding Difference.')]
+Save_in_CN=//button[text()='Save']
+Yes_in_CN=//button[text()='Yes']
+Credit_Note_No=//span[@class='wtf-mb-text']/b[1]
+Success_OK_in_CN=//button[text()='OK']
+Credit_Note_Close=//li[@id='as__creditnotepanel']/a[1]
+Form_IGST_in_CN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[12]/div
+Form_CESS_in_CN1=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[2]/table/tbody/tr/td[12]/div
+#Click_Advertising=(//div[@class='x-layer x-combo-list ']) [2]/div/div/table/tbody/tr/td[contains(text(),'Advertising')]
+dropdown=//div[@id='x-form-el-selectCustomerundefinedcreditnotepanel']/div/img
+
+******************* Debit Note ******************************
+#Against Customer
+DebitNoteModule=//map[@name='AlienAreas1']//area[11]
+Debit_Note_Agaist_Customer=(//input[@name='rectype']) [3]
+Debit_Note_otherwise=(//input[@name='rectype']) [2]
+DN_Customer_dropdown=//div[@id='x-form-el-selectCustomerundefineddebitnotepanel']/div/img
+Select_Customer_in_DN=//div[@id='x-form-el-selectCustomerundefineddebitnotepanel']/div/input[2]
+Amount_in_DN=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table/tbody/tr/td[4]/div
+Amount1_in_DN=(//div[@class='x-layer x-editor x-small-editor x-grid-editor'])/input
+Form_Total_Tax_Amount_in_DN=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table/tbody/tr/td[7]/div
+Form_Total_Amount1_in_DN=(//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table[1]/tbody/tr[1]/td[11]/div) [1]
+Form_CGST_in_DN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[12]/div
+Form_SGST_in_DN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[2]/table/tbody/tr/td[12]/div
+Form_CESS_in_DN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[3]/table/tbody/tr/td[12]/div
+Debit_Note_Close=//li[@id='as__debitnotepanel']/a[1]
+SelectPro1_in_DN=//div[@id='debitnotepanelProductSelectionWindow']/div[2]/div[1]/div/div/div/div/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/div/div/table/thead/tr/td[1]
+ADD_in_DN=//div[@id='debitnotepanelProductSelectionWindow']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[*]/em/button[contains(text(),'Add')]
+Memo_in_DN=//textarea[@name='memo']
+Tax_Close_in_DN=//div[@class='x-panel-btns x-panel-btns-right']/table/tbody/tr/td[2]
+Tax_in_DN=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table[1]/tbody/tr[1]/td[8]/div
+Reason_in_DN=(//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table[1]/tbody/tr[1]/td[12]/div) [1]
+Reason1_in_DN=(//div[@class='x-layer x-editor x-small-editor x-grid-editor']) [3]/div/input[2]
+Save_in_DN=//button[text()='Save']
+Yes_in_DN=//button[text()='Yes']
+Debit_Note_No=//span[@class='wtf-mb-text']/b[1]
+Success_OK_in_DN=//button[text()='OK']
+Form_IGST_in_DN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[12]/div
+Form_CESS1_in_DN=//div[@id='TermSelGrid']/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[2]/table/tbody/tr/td[12]/div
+
+********************* Receive Payment ***************************************
+
+Receive_Payment_Module=//map[@name='AlienAreas2']//area[10]
+Receive_Payment_from_Customer=((//*[@class='x-panel-body x-panel-body-noheader x-panel-body-noborder']) [42]/form/div/div[1]/div[1]) [1]
+Select_Customer_in_Receipt=//*[@id='x-form-el-sequenceformat9receiptwindow']/div/input[2]
+Select_Document_type_in_RP=//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table/tbody/tr/td[4]/div
+Select_Document_type_in_RP1=(//div[@class='x-form-field-wrap x-trigger-wrap-focus'])/input[2]
+Click_Advanced=(//div[@class='x-layer x-combo-list ']) [*]/div/div[contains(text(),'Advanced / Deposit')]
+Document_Number_in_RP=(//td[@class='x-grid3-col x-grid3-cell x-grid3-td-5 ']/div) [1]
+#SelectPro1_in_RP=(//td[@class='x-grid3-col x-grid3-cell x-grid3-td-checker x-grid3-cell-first ']) [3]/div/div
+SelectProduct=//*[contains(@id,'ProductSelectionWindow')]//*[contains(text(),'Product ID')]/ancestor::tr//*[@class='x-grid3-hd-checker']
+#SelectPro1_in_RP=//div[@id='wtf-comp-1511ProductSelectionWindow']/div[2]/div[1]/div/div/div/div/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/div/div/table/thead/tr/td[1]
+ADD_in_RP=//div[@class='x-panel-btns x-panel-btns-right']/table/tbody/tr/td/table/tbody/tr/td[2]/em/button[contains(text(),'Add')]
+Amount_in_RP=(//div[@class='x-panel-body x-panel-body-noheader xedit-grid']/div/div/div[2]/div/div/table/tbody/tr/td[16]/div) [1]
+Amount1_in_RP=((//div[@class='x-layer x-editor x-small-editor x-grid-editor']) /input) [1]
+Amount12_in_RP=((//div[@class='x-layer x-editor x-small-editor x-grid-editor']) /input) [1]
+AdvancedReceipt_Memo=//textarea[@id='memo9receiptwindow']
+Advanced_Receipt_No=//*[@class='x-window x-window-plain x-window-dlg']/div[2]/div/div/div/div/div[1]/div[2]/span/b[1]
+#//*[@class='x-window-body']/div/div[2]/span/b[1]
+Receipt_Amount=//*[@id='receiptwindowsouthEastPanel']/div/div/div/div/div/div/table[1]/tbody/tr/td[2]/div
+Receive_Payment_close=//li[@id='as__receiptwindow']/a[1]
+
+
+************************ Entity Master **************************
+Masters_Module=//div[@id='mastersNavigationPanelID']/div/span/b[contains(text(),'Masters')]
+Dimesions=//div[@id='mastersNavigationPanelID']/div[2]/div/div/div/div/div/div/div/ul/div/li[5]/div/a/span[contains(text(),'Dimensions')]
+Search_Masters=//input[@id='quickSearch31']
+Entity_Click=//div[@id='masterconfigforsalesp']/div/div/div/div/div[1]/div[2]/div/div[2]/div/div/div/div/div/div[2]/div/div/table/tbody/tr/td/div[contains(text(),'Entity')]
+HSN_Click=//div[@id='masterconfigforsalesp']/div/div/div/div/div[1]/div[2]/div/div[2]/div/div/div/div/div/div[2]/div/div/table/tbody/tr/td/div[contains(text(),'HSN/SAC Code')]
+Master_Item_Menu=(//button[@class='x-btn-text accountingbase product']) [1]
+#Add_Master_Item=//ul[@class='x-menu-list']/li[1]/a
+Add_Master_Item=//img[@class='x-menu-item-icon pwnd menu-add']
+Edit_Master_Item=//img[@class='x-menu-item-icon accountingbase menu-edit']
+Entity_Enter=//input[@id='masteritemname']
+Entity_Description=//textarea[@name='itemdescription']
+Pin_Code=//input[@name='Custom_Pin Code']
+Entity_GSTIN=//input[@name='Custom_GSTIN']
+Entity_City=//input[@name='Custom_City']
+Entity_State=((//div[@class='x-form-element']) [16]/div/input) [2]
+Entity_State_Click=//div[@class='x-layer x-combo-list ']
+Entity_Save=(//button[contains(text(),'Save')]) [2]
+Entity_Refresh=//button[@class='x-btn-text x-tbar-loading']
+Master_Configuration_OK=//div[@class='x-window x-window-plain x-window-dlg']/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/em/button
+Master_Configuration_Close=//li[@id='as__masterconfigforsalesp']/a[1]
+Search_Entity=//div[@id='masterconfigforsalesp']/div/div/div/div[1]/div/div[1]/div[1]/div[1]/div[1]/table/tbody/tr/td/input
+Get_Entity=//div[@id='masterconfigforsalesp']/div/div/div/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[3]
+Check_Entity_Box=//div[@id='masterconfigforsalesp']/div/div/div/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[1]
+Delete_Master_Item=//img[@class='x-menu-item-icon accountingbase menu-delete']
+Delete_Master_Item_Ok=(//td[@class='x-btn-center']) [31]/em/button
+Get_Empty_Message=(//div[@class='grid-link-text']) [2]
+
+************************ HSN Master **************************
+
+HSN_Enter=//input[@id='masteritemname']
+Add_HSN_Description=//textarea[@name='itemdescription']
+
+*************** GST Input Rule *******************
+GST_Tax_Masters=//div[@id='mastersNavigationPanelID']/div[2]/div/div/div/div/div/div/div/ul/div/li[9]/div/img[1]
+GST_Input_Rule_Report=//div[@id='mastersNavigationPanelID']/div[2]/div/div/div/div/div/div/div/ul/div/li[9]/ul[1]/li[*]/div/a/span[contains(text(),'GST Input Rule Report')]
+Import_Button=//button[@class='x-btn-text pwnd importChrome']
+Import_CSV_file_icon=//ul[@class='x-menu-list']/li/a/img
+Choose_file=//input[@name='test']
+Date_Format_dropdown=(//div[@class='x-form-element']) [3]/div/img
+Select_Date_Format=//div[@class='x-layer x-combo-list ']/div/div[13]
+Next_button=//button[contains(text(), 'Next')]
+Auto_Map_Columns_button=//button[contains(text(), 'Auto Map Columns')]
+Analyze_Data_button=//button[contains(text(), 'Analyze Data')]
+Get_Validation=(//div[@class='x-grid3-scroller']) [*]/div/div/b[contains(text(),'All records are valid, Please click "Import Data" to continue.')]
+Import_Data_button=//button[contains(text(), 'Import Data')]
+Import_Status=//div[@id='importSummaryWin']/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div/div/div/h2
+Import_Status_close=//div[@id='importSummaryWin']/div[1]/div/div/div[1]/div[1]
+
+*************** GST Output Rule *******************
+GST_Output_Rule_Report=//div[@id='mastersNavigationPanelID']/div[2]/div/div/div/div/div/div/div/ul/div/li[9]/ul[1]/li[*]/div/a/span[contains(text(),'GST Output Rule Report')]
+

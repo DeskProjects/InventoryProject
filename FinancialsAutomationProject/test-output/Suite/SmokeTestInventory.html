@@ -1,0 +1,877 @@
+<html>
+<head>
+<title>TestNG:  SmokeTestInventory</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>SmokeTestInventory</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/44</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Apr 24 17:41:14 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>3 seconds (3594 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BaseSetUp.beforeTestLogin()'><b>beforeTestLogin</b><br>Test class: krawler.erp.testCases.Inventory.BaseSetUp<br>Parameters: https://in5.accounting.deskera.com/a/sg12/, admin, 1234</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=Backtrace:
+	Ordinal0 [0x00E7A903+1550595]
+	Ordinal0 [0x00DFA701+1025793]
+	Ordinal0 [0x00D7C58E+509326]
+	Ordinal0 [0x00D10FB9+69561]
+	Ordinal0 [0x00D28DD7+167383]
+	Ordinal0 [0x00D277F2+161778]
+	Ordinal0 [0x00D273CA+160714]
+	Ordinal0 [0x00D0221E+8734]
+	Ordinal0 [0x00D02606+9734]
+	Ordinal0 [0x00D02C80+11392]
+	Ordinal0 [0x00E142C7+1131207]
+	GetHandleVerifier [0x00F170FD+523789]
+	GetHandleVerifier [0x00F16E90+523168]
+	GetHandleVerifier [0x00F1E1E7+552695]
+	GetHandleVerifier [0x00F178FA+525834]
+	Ordinal0 [0x00E0B7FC+1095676]
+	Ordinal0 [0x00D02053+8275]
+	Ordinal0 [0x00D01DA7+7591]
+	GetHandleVerifier [0x0127A3BC+4075724]
+	BaseThreadInitThunk [0x7648FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C47A4E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C47A1E+238]
+, error=invalid session id, message=invalid session id}
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;DESKTOP-O2IJE2R&apos;, ip: &apos;192.168.43.19&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:651)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at krawler.erp.page.Utilities.enterTextNormalBox(Utilities.java:340)
+	at krawler.erp.page.Login.loginERP(Login.java:25)
+	at krawler.erp.testCases.Inventory.BaseSetUp.beforeTestLogin(BaseSetUp.java:37)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	... 36 more
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace634297796", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace634297796'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=Backtrace:
+	Ordinal0 [0x00E7A903+1550595]
+	Ordinal0 [0x00DFA701+1025793]
+	Ordinal0 [0x00D7C58E+509326]
+	Ordinal0 [0x00D10FB9+69561]
+	Ordinal0 [0x00D28DD7+167383]
+	Ordinal0 [0x00D277F2+161778]
+	Ordinal0 [0x00D273CA+160714]
+	Ordinal0 [0x00D0221E+8734]
+	Ordinal0 [0x00D02606+9734]
+	Ordinal0 [0x00D02C80+11392]
+	Ordinal0 [0x00E142C7+1131207]
+	GetHandleVerifier [0x00F170FD+523789]
+	GetHandleVerifier [0x00F16E90+523168]
+	GetHandleVerifier [0x00F1E1E7+552695]
+	GetHandleVerifier [0x00F178FA+525834]
+	Ordinal0 [0x00E0B7FC+1095676]
+	Ordinal0 [0x00D02053+8275]
+	Ordinal0 [0x00D01DA7+7591]
+	GetHandleVerifier [0x0127A3BC+4075724]
+	BaseThreadInitThunk [0x7648FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77C47A4E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C47A1E+238]
+, error=invalid session id, message=invalid session id}
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;DESKTOP-O2IJE2R&apos;, ip: &apos;192.168.43.19&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:651)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at krawler.erp.page.Utilities.enterTextNormalBox(Utilities.java:340)
+	at krawler.erp.page.Login.loginERP(Login.java:25)
+	at krawler.erp.testCases.Inventory.BaseSetUp.beforeTestLogin(BaseSetUp.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:656)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.expander()'><b>expander</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.afterMethod()'><b>afterMethod</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BaseSetUp.afterTest()'><b>afterTest</b><br>Test class: krawler.erp.testCases.Inventory.BaseSetUp</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.Create_ERP_NormalProduct()'><b>Create_ERP_NormalProduct</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.Create_INV_NormalProduct()'><b>Create_INV_NormalProduct</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.Create_StockIn_withQA()'><b>Create_StockIn_withQA</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.DO_QARepair_ApproveandReject()'><b>DO_QARepair_ApproveandReject</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.DO_QAapproveANDreject()'><b>DO_QAapproveANDreject</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.GRN_QA_Repair()'><b>GRN_QA_Repair</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.GRN_QAapproveANDreject()'><b>GRN_QAapproveANDreject</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.QA_ApprovalApproveReject()'><b>QA_ApprovalApproveReject</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.StockIN_without_QA()'><b>StockIN_without_QA</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.StockOUT_without_QA()'><b>StockOUT_without_QA</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.StockRepair_ApproveReject()'><b>StockRepair_ApproveReject</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.StockRequest_IssueandCollect()'><b>StockRequest_IssueandCollect</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.StockSales_without_QA()'><b>StockSales_without_QA</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.acceptANDreturn_InterStoreStockTransfer()'><b>acceptANDreturn_InterStoreStockTransfer</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.createANDverify_JobWorkOut_GR()'><b>createANDverify_JobWorkOut_GR</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.createANDverify_JobWorkOut_PI()'><b>createANDverify_JobWorkOut_PI</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.createANDverify_JobWorkOut_StockTransfer()'><b>createANDverify_JobWorkOut_StockTransfer</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.create_AssemblyProduct()'><b>create_AssemblyProduct</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.create_AutoBuildCS()'><b>create_AutoBuildCS</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.create_AutoBuildDO()'><b>create_AutoBuildDO</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.create_AutoBuildSI()'><b>create_AutoBuildSI</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.create_DeleiveryOrder_withQA()'><b>create_DeleiveryOrder_withQA</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.create_DeleiveryOrder_woQA()'><b>create_DeleiveryOrder_woQA</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.create_GRNwithQA()'><b>create_GRNwithQA</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.create_GRNwithoutQA()'><b>create_GRNwithoutQA</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.create_InterLocationStockTransfer()'><b>create_InterLocationStockTransfer</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.create_InterStoreStockTransfer()'><b>create_InterStoreStockTransfer</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.create_JobWorkOut_Order()'><b>create_JobWorkOut_Order</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.create_PurchaseReturn()'><b>create_PurchaseReturn</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.create_StockIssue()'><b>create_StockIssue</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.create_StockRequest()'><b>create_StockRequest</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.create_UNbuildAssemble()'><b>create_UNbuildAssemble</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.create_Vendor()'><b>create_Vendor</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.create_abProduct()'><b>create_abProduct</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.create_buildAssemble()'><b>create_buildAssemble</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.customerMaster()'><b>customerMaster</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.testCycleCountCalendar()'><b>testCycleCountCalendar</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.testCycleCountForm()'><b>testCycleCountForm</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.ERPModule.validate_GRN()'><b>validate_GRN</b><br>Test class: krawler.erp.testCases.Inventory.ERPModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.ERPModule@490ab905</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.validate_InterLocationStockTransfer()'><b>validate_InterLocationStockTransfer</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.validate_InterStoreStockTransfer()'><b>validate_InterStoreStockTransfer</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.validate_StockIssue()'><b>validate_StockIssue</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.InventoryModule.validate_StockRequest()'><b>validate_StockRequest</b><br>Test class: krawler.erp.testCases.Inventory.InventoryModule</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.InventoryModule@1e397ed7</td></tr>
+<tr>
+<td title='krawler.erp.testCases.Inventory.BuildAssembly.verify_JobWorkOut_Order()'><b>verify_JobWorkOut_Order</b><br>Test class: krawler.erp.testCases.Inventory.BuildAssembly</td>
+<td></td>
+<td>0</td>
+<td>krawler.erp.testCases.Inventory.BuildAssembly@56ac3a89</td></tr>
+</table><p>
+</body>
+</html>

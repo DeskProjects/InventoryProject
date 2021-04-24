@@ -1,0 +1,87 @@
+--------------------------------------------------- Set 1 having below 5 purchase side tax--------------------------------------------------------------------------------------
+
+GST(BL)@7.00%
+GST(EP)@0.00%
+GST(NR)@0.00%
+GST(OP)@0.00%
+GST(IGDS)@7.00%
+
+------> No entry will get captured in Box after made transaction with above taxes. 
+        So no Box will get impacted after made transactions with above taxes.
+
+---------------------------------------------------- Set 2 having below 5 purchase side tax--------------------------------------------------------------------------------------
+
+GST(IM)@7.00%
+GST(TX-E33)@7.00%
+GST(TX-N33)@7.00%
+GST(TX-RE)@7.00%
+GST(TX7)@7.00%
+
+-------> Entries goes to Box 5, Box 7 and Box 8 after made transaction with above taxes. 
+         So Box 5 will have 500 Box 7 will have 35 and Box 8 will have -35 amount after made transactions with above taxes.
+
+
+---------------------------------------------------- Set 3 having below one purchase side tax----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GST(ZP)@0.00%
+
+
+-------> Entries goes to Box 5 after made transaction with above tax. 
+         So Box 5 will have 100 amount i.e total amount will be 600 amount after made transactions with above tax.
+
+
+
+---------------------------------------------------- Set 4 having below one purchase side tax----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GST(ME)@0.00%
+
+-------> Entry goes to Box 5 , Box 9 and Box 7 after made transaction with above tax. 
+         So Box 5 will have 100 amount i.e total amount will be 700 amount for this box. And  Box 7 will have 0 amount  and Box 9 will have 100 amount after made transactions with above tax.
+
+
+
+
+
+
+
+*Note:- In DN otherwise case, all amount will go in negative values.*
+
+
+
+--------------------------------------------------- Set 1 having below two sales side tax-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GST(ES33)@0.00%
+GST(ESN33)@0.00%
+
+------> Entries goes to Box 3 , Box 4 and Box 13 after made transaction with above taxes.
+        So Box 3 will have 2000 amount , Box 4 will have 2000 amount  and Box 13 will have 2000 amount after made transactions with above tax.
+
+
+
+---------------------------------------------------- Set 2 having below two sales side tax----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GST(DS)@7.00%
+GST(SR)@7.00%
+
+-------> Entries goes to Box 1, Box 4, Box 6, Box 8 and Box 13 after made transaction with above taxes. 
+         So Box 1 will have 2000 amount and Box 4 will have 2000 amount i.e total amount will be 4000 for this box. And Box 6 will have 140 amount and Box 13 will have 2000 i.e now total amount will be 4000 for this box after made transactions with above taxes.
+
+
+
+
+---------------------------------------------------- Set 3 having below one sales side tax------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GST(ZR)@0.00%
+
+
+-------> Entries goes to Box 2 , Box 4 and Box 13 after made transaction with above tax.
+         So Box 2 will have 1000 amount , Box 4 will have 1000 amount i.e now total amount will be 5000 for this box. And Box 13 will have 1000 amount i.e now total amount will be 5000 for this box after made transactions with above tax.
+
+---------------------------------------------------- Set 4 having below one sales side tax--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GST(OS)@0.00%
+
+-------> Entry goes to Box 13 after made transaction with above tax.
+         So Box 13 will have 1000 amount i.e now total amount will be 6000 for this box after made transactions with above tax.
+         
+   *Note:- In CN otherwise case, all amount will go in negative values.*

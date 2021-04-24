@@ -1,0 +1,14 @@
+ClickOnGAD=//span[text()='Generate Asset Depreciation']
+SelectAG=//input[@name='productname']
+SelectAG1=//input[@name='productname']/following::span/img[2]
+Cross=//div[@id='Depreciation']//following::div[5]/input/following::span[1]/img[1]
+Asset=//div[@id='Depreciation']//following::div[5]/input
+AssetId=//form[@id='designpanelpreview']/following::div[80]/div[3]/div[3]/following::div[3]/table/tbody/tr
+Fetch=//button[text()='Fetch']
+CheckBox=//div[@id='Depreciation']/div/div/div/div/div/div/div/div[1]/div/table/tbody/tr/td[19]//following::div[28]/table/tbody/tr/td[1]/div
+Post=//button[text()='Post']
+Submit=//button[text()='Submit']
+Yes=//button[text()='Yes']
+Ok=//button[text()='OK']
+
+

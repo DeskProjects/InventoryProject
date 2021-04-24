@@ -1,0 +1,308 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import krawler.erp.LeaseManagementWithInventoryFlow.CRMHandle;
+import krawler.erp.LeaseManagementWithInventoryFlow.CustomerManagement;
+import krawler.erp.LeaseManagementWithInventoryFlow.LeaseContract1;
+import krawler.erp.LeaseManagementWithInventoryFlow.LeaseDeliveryOrder1;
+import krawler.erp.LeaseManagementWithInventoryFlow.LeaseInvoice1;
+import krawler.erp.LeaseManagementWithInventoryFlow.LeaseManagement1;
+import krawler.erp.LeaseManagementWithInventoryFlow.LeaseOrder1;
+import krawler.erp.LeaseManagementWithInventoryFlow.LeaseQuotation1;
+import krawler.erp.LeaseManagementWithInventoryFlow.LeaseSalesReturn1;
+import krawler.erp.LeaseManagementWithInventoryFlow.NormalSalesOrder;
+import krawler.erp.LeaseManagementWithInventoryFlow.OpenProductMaintenance1;
+import krawler.erp.LeaseManagementWithInventoryFlow.OpenProductReplacement1;
+import krawler.erp.LeaseManagementWithInventoryFlow.ProductManagement;
+import krawler.erp.LeaseManagementWithInventoryFlow.SwitchToCRM;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseContract;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseDeliveryOrder;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseManagement;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseOrder;
+import krawler.erp.RegressionLeaseManagementWithInventory.LeaseQuotation;
+import krawler.erp.RegressionLeaseManagementWithInventory.OpenProductMaintenance;
+import krawler.erp.page.CustomerMaster;
+import krawler.erp.page.Login;
+import krawler.erp.page.ProductMaster;
+import krawler.erp.page.Utilities;
+
+
+public class LeaseManagementWithInventoryFlowTC {
+	public static WebDriver driver;
+    public static String customerid="LeaseCustomer3"; 
+    public static String documentid="Lease7"; 
+    public static String productid="MyLeaseTestProduct";
+    public static String purchasePrice="100";
+    
+  
+    
+   // Login into ERP Application
+     @Parameters({ "server1","username","password" })
+      @Test(priority=1)
+      public void beforeTestLogin(String server1, String username, String password) throws InterruptedException, IOException, AWTException
+      {
+          Login ln = new Login();
+          WebDriver driver = Login.loginERP(server1, username, password,10);
+          	          this.driver = driver;
+          	              
+       }
+    
+    // Create Customer
+      @Test(priority=10)
+	  public void CreateCustomer() throws InterruptedException, IOException, AWTException
+	  {
+    	    CustomerManagement CM = new CustomerManagement();
+			CM.create_Customer(customerid, driver);
+			Thread.sleep(1000);
+	  }
+	  // Sync Customer into CRM application
+      @Test(priority=20)
+	 public void SyncCustomer() throws InterruptedException, IOException, AWTException		
+	 {
+	        CustomerManagement CM = new CustomerManagement();
+			CM.Sync_Customer(customerid, driver);
+			Thread.sleep(1000);
+	  }
+      
+      // Create Product
+      @Test(priority=30)
+      public void CreateProduct() throws InterruptedException, IOException, AWTException
+      {
+    	  ProductManagement PM = new ProductManagement();
+     	  PM.create_Product(productid,"4",driver);
+    	  Thread.sleep(1000);
+      }
+      
+      //Update Product Price and then Sync it into CRM application
+      @Test(priority=40)
+      public void UpdatePriceandSyncProduct() throws InterruptedException, AWTException, IOException
+      {
+    	  ProductManagement PM = new ProductManagement();
+    	  PM.debug_setProductPurchasePrice(productid, purchasePrice,driver);
+    	  Thread.sleep(1000);
+    
+      }
+      
+      // Create Service Type Product
+       @Test(priority=50)
+      public void CreateServiceTypeProduct() throws InterruptedException, IOException, AWTException
+      {
+    	  ProductManagement PM = new ProductManagement();
+     	  PM.Create_ServiceProduct(productid, driver);
+    	  Thread.sleep(1000);
+      }
+      
+      // Create Lease Quotation
+       @Test(priority=60)
+ 	  public void LMQuatationCreate() throws InterruptedException, IOException, AWTException {
+ 		LeaseManagement1 lm = new LeaseManagement1();
+ 	         lm.leaseManagementExpander(driver);
+ 			LeaseQuotation1 LMQ= new LeaseQuotation1();
+           	LMQ.LM_CreateQuotation(documentid, productid+"BS4", customerid, driver);
+ 			Thread.sleep(2000);
+ 			Utilities.refresh();
+ 			
+ 	  }
+ 	 
+ 	 // Create Lease Order
+ 	 @Test(priority=70 ) 
+    public void  LMOrderCreate() throws InterruptedException, IOException, AWTException {
+				LeaseManagement1 lm = new LeaseManagement1();
+				lm.leaseManagementExpander(driver);
+				
+					LeaseOrder1 LMO= new LeaseOrder1();
+					LMO.LM_CreateOrder(documentid, productid, customerid, driver);
+					Thread.sleep(2000);
+					Utilities.refresh();
+	  }
+   
+   // Create Lease Contract
+    @Test(priority=80 )
+ 	 public void  LContractCreate() throws InterruptedException, IOException, AWTException {
+ 				LeaseManagement1 lm = new LeaseManagement1();
+ 				lm.leaseManagementExpander(driver);
+ 				
+ 					LeaseContract1 LCon= new LeaseContract1();
+ 					LCon.LM_CreateContract(documentid, productid, customerid, driver);
+ 					Utilities.refresh();
+ 					
+ 	  }
+    
+  //  Create Lease Delivery Order
+   @Test(priority=90 )
+	 public void  LMDeliveryOrderCreate() throws InterruptedException, IOException, AWTException {
+				LeaseManagement1 lm = new LeaseManagement1();
+				lm.leaseManagementExpander(driver);
+				
+					LeaseDeliveryOrder1 LDO= new LeaseDeliveryOrder1();
+					LDO.LM_CreateDeliveryOrder(documentid, productid, customerid, driver);
+					Utilities.refresh();
+			 }
+			 
+    
+    // For Switch To CRM From ERP application
+    @Test(priority=100)
+    public void SwitchtoLoginCRM() throws InterruptedException, IOException, AWTException
+    {
+    	SwitchToCRM.SwitchToCRMApplication(driver);
+  
+
+      } 
+    
+   // Create Case From CRM application 
+   @Test(priority=110)
+
+    public void CRMCase() throws InterruptedException, IOException, AWTException
+    {
+    	CRMHandle CM= new CRMHandle();
+    	CM.CRM_Case(documentid,driver,customerid);
+    }
+    
+  // Create Maintenance Request From CRM application
+    @Test(priority=120)
+    public void CRM_MaintenanceRequest() throws InterruptedException, AWTException, IOException
+    {
+    CRMHandle CM= new CRMHandle();
+    CM.CRM_MaintenanceRequest(driver,customerid, documentid, productid);
+    }
+    
+
+    // Switch To ERP application
+    @Parameters({ "server1","username","password" })
+    @Test(priority=130)
+    public void Login_To_ERPapplication(String server1, String username, String password) throws InterruptedException, IOException, AWTException
+    {
+        Login ln = new Login();
+        WebDriver driver = Login.loginERP(server1, username, password,10);
+        	          this.driver = driver;
+        	              
+    }
+    
+    // Create Sales Order for Maintenance Request which is raised from CRM side.
+    @Test(priority=140)
+    public void CreateSOForMaintenance() throws InterruptedException, AWTException, IOException
+    {
+    	NormalSalesOrder NSO= new NormalSalesOrder();
+    	String MaintenaceNumber= CRMHandle.MaintenanceNumberforUse;
+    	NSO.create_salesOrder(documentid, productid, customerid, driver,MaintenaceNumber);
+    }
+    
+ // Switch To CRM application
+    @Parameters({ "server2","username","password" })
+    @Test(priority=150)
+    public void Login_To_CRMapplication(String server2, String username, String password) throws InterruptedException, IOException, AWTException
+    {
+        Login ln = new Login();
+        WebDriver driver = Login.loginERP(server2, username, password,10);
+        	          this.driver = driver;
+    }
+    
+  
+    // Check Maintenance Status
+    @Test(priority=160)
+    public void MaintenanceStatus_Check() throws InterruptedException, AWTException, IOException
+    {
+    	 CRMHandle CM= new CRMHandle();
+    	 CM.CRM_MaintenanceRequest_Verification(driver);
+    	 Utilities.refresh();
+    }
+        
+   // Create Replacement Request from CRM application
+      @Test(priority=170)
+      public void CRM_ReplacementRequest() throws InterruptedException, AWTException, IOException
+      {
+          CRMHandle CM= new CRMHandle();
+          CM.CRM_ReplacementRequest(driver,customerid, documentid, productid);
+      }
+      
+
+      // Switch To ERP application
+     @Parameters({ "server1","username","password" })
+      @Test(priority=180)
+      public void Switch_To_ERP(String server1, String username, String password) throws InterruptedException, IOException, AWTException
+      {
+          Login ln = new Login();
+          WebDriver driver = Login.loginERP(server1, username, password,10);
+          	         this.driver = driver;
+      }      
+      
+      // Create Second Lease Order with Replacement Request
+      @Test(priority=190 ) 
+      public void  LMOrderCreate_withReplcement() throws InterruptedException, IOException, AWTException {
+ 				LeaseManagement1 lm = new LeaseManagement1();
+ 				lm.leaseManagementExpander(driver);
+ 				LeaseOrder1 LMO= new LeaseOrder1();
+ 				String ReplcementNo= CRMHandle.MyCreatedno;
+ 				LMO.LM_CreateOrde_linked_WithReplacement(documentid, productid, customerid, driver,ReplcementNo);
+ 				Thread.sleep(2000);
+ 				Utilities.refresh();
+}
+     // Create Second Lease Delivery Order linked with those Lease order which has been created for Replacement Request.
+      @Test(priority=200)
+      public void LM_DeliveryOrder_Create_WithSecondLO() throws InterruptedException, IOException, AWTException
+      {
+    	  LeaseManagement1 lm = new LeaseManagement1();
+			lm.leaseManagementExpander(driver);
+			LeaseDeliveryOrder1 LDO1=new LeaseDeliveryOrder1();
+			LDO1.LM_CreateLDO_With_SecondLO(documentid, productid, customerid, driver);
+			Thread.sleep(2000);
+			Utilities.refresh();
+				
+      }
+      
+  // Create Lease Sales Return linked with First Lease DO
+      @Test(priority=210)
+      public void LM_SalesReturn_Create() throws InterruptedException, IOException, AWTException
+      {
+    	  LeaseManagement1 lm = new LeaseManagement1();
+			lm.leaseManagementExpander(driver);
+			LeaseSalesReturn1 LSR1= new LeaseSalesReturn1();
+			LSR1.LM_CreateSalesReturn(documentid, productid, customerid, driver);
+			Thread.sleep(2000);
+			Utilities.refresh();
+      }
+      
+   // Create Lease Sales Invoice linked with Second Lease Delivery Oder 
+      @Test(priority=220)
+      public void LM_SalesInvoice_Create() throws InterruptedException, IOException, AWTException{
+      LeaseManagement1 lm = new LeaseManagement1();
+		lm.leaseManagementExpander(driver);
+		LeaseInvoice1 LSI1= new LeaseInvoice1();
+		LSI1.LM_CreateInvoice(documentid, productid, customerid, driver);
+		Thread.sleep(2000);
+		Utilities.refresh();
+      }
+      
+   // Verify Product Replacement Report
+      @Test(priority=230)
+      public void LM_Product_Replacement_ReportVerification() throws InterruptedException, IOException, AWTException
+      {
+    	 LeaseManagement1 lm = new LeaseManagement1();
+  		lm.leaseManagementExpander(driver);
+  		OpenProductReplacement1 OPR1= new OpenProductReplacement1();
+  		String expectedText="Product Replacement Report";
+  		OPR1.LM_VerifyProductReplcaement(expectedText,driver);
+  		Thread.sleep(2000);
+      }
+      
+     // Verify Product Maintenance Report
+      @Test(priority=240)
+ 	  public void LM_ProductMaintenance_ReportVerification() throws InterruptedException, IOException, AWTException {
+ 		LeaseManagement lm = new LeaseManagement();
+ 		lm.leaseManagementExpander(driver);
+ 		OpenProductMaintenance1 OPR1= new OpenProductMaintenance1();
+ 		String expectedText1="Product Maintenance Report";
+ 		OPR1.LM_VerifyProductMaintenance(expectedText1, driver);
+ 		Thread.sleep(2000);
+ 		Utilities.refresh();
+ 	  }
+    
+    
+}  
+

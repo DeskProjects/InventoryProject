@@ -1,0 +1,42 @@
+LedgerIcon=//area[@onclick='callGeneralLedger()']
+DocCheckBox=//div[@id='newgeneralledgerreport']/div/div[2]/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[1]/div/div
+ClsButton=//li[@id='as__finalStmnt']/a[1]
+doc2=//div[@id='newgeneralledgerreport']/div/div[2]/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[1]/div/div
+GLdrpdwnCancel=//*[@id='accountmulselectcombo']/following::span[1]/img[1]
+GLdrpdwnOK=//*[@id='accountmulselectcombo']/following::span[1]/img[2]
+searchAccount=//*[@id='accountmulselectcombo']/following::input[1]
+GLcollapsed=//*[text()='Account Code']/ancestor::div[3]/following::div[1]//*[@class='x-grid3-row-expander']
+GLExpanded=//*[text()='Account Code']/ancestor::div[3]/following::div[1]//*[contains(@class,'x-grid3-row-expanded')]/table/tbody/tr[1]/td[1]/div/div
+
+
+***********************TrialBalancelaoding********
+TrialBalanceIcon=//area[@onclick='TrialBalance()']
+TrialDocCheckBox=//div[@id='TrialBalance']/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div[2]/div/div[1]/table/tbody/tr/td[3]
+NoRecord1=//div[@id='TrialBalance']//div[@class='grid-link-text']
+NoRecord=//div[@id='newgeneralledgerreport']//div[@class='grid-link-text']
+Closereport=//li[@id='as__finalStmnt']/a[1]
+TBsearchAccount=//*[@id='accountmulselectcombo']/following::input[1]
+
+**********ExportLedger*******************
+CSVFileDetails=//div[@class='x-layer x-menu' and contains(@style,'visible')]//*[text()='Export to CSV File(Details)']
+CSVFileSummary=//div[@class='x-layer x-menu' and contains(@style,'visible')]//*[text()='Export to CSV File(Summary)']
+XLSFileDetails=//div[@class='x-layer x-menu' and contains(@style,'visible')]//*[text()='Export to Excel File(Details)']
+XLSFileSummary=//div[@class='x-layer x-menu' and contains(@style,'visible')]//*[text()='Export to Excel File(Summary)']
+PDFDetails=//div[@class='x-layer x-menu' and contains(@style,'visible')]//*[text()='Export to PDF(Detail)']
+PDFSummary=//div[@class='x-layer x-menu' and contains(@style,'visible')]//*[text()='Export to PDF (Summary)']
+PortraitPDF=//div[@class='x-layer x-menu' and contains(@style,'visible')]//*[text()='Portrait']
+
+FirstAccount=//div[@id='newgeneralledgerreport']/div/div[2]/div/div/div[2]/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div[1]/table/tbody/tr[1]/td[1]/div/div
+TBFirstAccount=//div[@id='TrialBalance']//div[@class="x-grid3-body"]/div[1]//td[1]/div
+
+******VERIFICATION*********
+fromDate=//*[@name='stdate']/following::img[1]
+toDate=//*[@name='enddate']/following::img[1]
+switchToTrialBal=//*[@id='finalStmnt__TrialBalance']/a[2]//*[text()='Trial Balance']
+dropdownOKcheck=//*[@id='TrialBalance']//*[@id='accountmulselectcombo']/following::span[1]/img[2]
+dropdownCancelcheck=//*[@id='TrialBalance']//*[@id='accountmulselectcombo']/following::span[1]/img[1]
+TrialBalFetchBtn=//*[@id='TrialBalance']//button[text()='Fetch']
+
+
+
+

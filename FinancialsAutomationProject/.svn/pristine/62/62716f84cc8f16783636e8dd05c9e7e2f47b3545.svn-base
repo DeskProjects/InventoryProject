@@ -1,0 +1,25 @@
+**************Vendor_report_loading***********************
+viewAgedPayIcon=//map[@name='AlienAreas1']/area[7]
+DocumentCheckBox=//div[@id='mainAgedPayableSummary']/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[1]/table/tbody/tr/td[1]/div/div
+ReportViewTab=//span[text()='Report View']
+arrowImg=//div[@id='mainAgedPayableSummary']/div/div/div/div/div/div[2]/div/div[3]/div/table/tbody/tr/td[14]/div/img
+grandTotalSummary=//div[@id='GrandTotalSummaryTPLundefined']/div/div/div/div/table/tbody/tr[2]/td[2]/span/b/div
+********************ReportTab******************************************************************
+reportTabFetch=//div[@id='mainAgedPayableReport']/div/div/div/div/div/div[2]/div/div/div/table/tbody/tr/td[14]/table/tbody/tr/td[2]/em/button
+arrowImg2=//div[@id='mainAgedPayableReport']/div/div/div/div/div/div[2]/div/div[3]/div/table/tbody/tr/td[14]/div/img
+textAll2=//iframe[@frameborder='no']/following-sibling::div[@class='x-layer x-combo-list ' and contains(@style,'visibility: visible')]/div/div[text()='All']
+reportDocumentCheckBox=//div[@id='mainAgedPayableReport']/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/div[2]/div/table/tbody/tr/td[1]/div/div
+grandTotalSummary2=//div[@id='GrandTotalReportTPLundefined']/div/div/div/div/table/tbody/tr[2]/td[2]/span/b/div
+PrintBtn=//div[@id='mainAgedPayableReport']/div/div/div/div/div/div[2]/div/div[3]/div/table/tbody/tr/td[19]/table/tbody/tr/td[2]/em/button
+FramePrintBtn=//div[@class='x-window-footer']/div/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/em/button
+ExportBtn=//div[@id='mainAgedPayableReport']/div/div/div/div/div/div[2]/div/div[3]/div/table/tbody/tr/td[17]/table/tbody/tr/td[2]/em/button
+FrameExportBtn=//div[@class='x-window-footer']/div/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/em/button
+NoRecord=//div[@id='mainAgedPayableSummary']//div[@class="grid-link-text"]
+CloseReport=//li[@id='as__mainAgedPayable']/a[1]
+SummaryFirstrow=//div[@id="mainAgedPayableSummary"]//div[@class="x-grid3-cell-inner x-grid3-col-checker"]
+ReportViewfirst=//div[@id='mainAgedPayableReport']/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/div/div/div[2]/div/div/div[1]/div
+
+SelectVendorReport=//*[@id='mainAgedPayableReport']//*[text()='Select Vendor']/parent::td/following::td[1]//input
+ReportDrpDwnArrow=//*[@id='mainAgedPayableReport']//*[text()='Select Vendor']/parent::td/following::td[1]//span/img[2]
+ReportFetchBtn=//*[@id='mainAgedPayableReport']//*[text()='Fetch']
+

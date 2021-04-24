@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite A">
+
+  	<parameter name="server1" value="http://192.168.0.208:8080/dotcomsmoketesting/a/userpermission/"></parameter>
+			 
+  <parameter name="username" value="admin"></parameter>
+  <parameter name="password" value="1234"></parameter>
+   
+ <test name="Test">
+ <groups>
+	    <run>
+	    <include name="Userpermission"/>
+		<include name="Create"/>
+		
+		<!-- include name="Audit Trail"/>	
+		<include name="Create"/>	
+		<include name="Import"/>
+		<include name="Export"/>
+		<include name="Setting"/>
+		<include name="CED"/>
+		<include name="CED"/-->			
+	    </run> 
+</groups>
+  
+     <classes>
+   	 <!--class name="krawler.erp.testCases.SmokeTestSuiteSG.A.BaseSetUp"/-->
+   	 <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.PrerequiristSettings"/>
+   	 <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.MasterSetUp"/>
+   	 <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.PurchaseModule"/>
+     <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.SalesModule"/>
+     <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.MPRPModule"/>
+     <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.DNCNModule"/>   	 
+   	 <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.ReportLoader"/>
+ 
+ 
+    <!-- class name="krawler.erp.testCases.SmokeTestSuiteSG.A.PrerequiristSettings"/>
+    <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.PrerequiristSettings"/>
+    <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.MasterSetUp"/>
+    <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.PurchaseModule"/>
+     <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.SalesModule"/>
+     <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.MPRPModule"/>
+     <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.DNCNModule"/>
+    <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.ReportLoader"/>       	
+    <class name="krawler.erp.testCases.SmokeTestSuiteSG.A.PurchaseModule"/-->
+ 
+     
+   </classes> 
+  </test> 
+</suite> 

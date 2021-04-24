@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+	<test name="SmokeTestERP">
+		<parameter name="server1"
+			value="http://192.168.0.208:8080/dotcomsmoketesting/a/rahulv10/"></parameter>
+		<parameter name="server"
+			value="http://192.168.0.208:8080/diamonddemo/a/diamondaviation/"></parameter>
+		<parameter name="server"
+			value="https://us2.accounting.deskera.com/a/smoketestus2/"></parameter>
+		<parameter name="server"
+			value="http://192.168.0.208:8080/dotcomsmoketesting/a/mydebugtest1/"></parameter>
+		<parameter name="server"
+			value="http://192.168.0.208:8080/dotcomsmoketestingv21/a/smoketestv21/"></parameter>
+		<parameter name="server"
+			value="http://192.168.0.21:8080/stagingaccounting/a/automation1/"></parameter>
+		<parameter name="server"
+			value="http://192.168.0.208:8080/dotcomsmoketesting/a/automationtest/#"></parameter>
+
+		<parameter name="username" value="admin"></parameter>
+		<parameter name="password" value="1234"></parameter>
+
+		<groups>
+			<run>
+				<include name="Create" />
+				<include name="CED" />
+				<include name="Import" />
+				<include name="Export" />
+				<include name="Audit Trail" />
+				<include name="Verify" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="krawler.erp.testCases.SmokeTestSuiteSG.B.BaseSetUp" />
+			<class
+				name="krawler.erp.testCases.SmokeTestSuiteSG.B.PrerequiristSettings" />
+			<class name="krawler.erp.testCases.SmokeTestSuiteSG.B.MasterSetUp" />
+			<class name="krawler.erp.testCases.SmokeTestSuiteSG.B.PurchaseModule" />
+			<class name="krawler.erp.testCases.SmokeTestSuiteSG.B.SalesModule" />
+			<class name="krawler.erp.testCases.SmokeTestSuiteSG.B.DNCNModule" />
+			<class name="krawler.erp.testCases.SmokeTestSuiteSG.B.MPRPModule" />
+			<class name="krawler.erp.testCases.SmokeTestSuiteSG.B.ReportLoader" />
+
+
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

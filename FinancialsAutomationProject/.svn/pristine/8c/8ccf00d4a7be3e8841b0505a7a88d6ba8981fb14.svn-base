@@ -1,0 +1,62 @@
+PreferencesExpander=.//*[@id='systemNavigationPanelID']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/div/img[1]
+SystemControlsLink=.//*[@id='systemNavigationPanelID']/div[2]/div/div/div/div/div/div/div/ul/div/li[1]/ul/li[1]/div/a
+QAInspectionStore=.//*[@id='inspectionStorecompanyAccPrefWin']
+QARepairStore=.//*[@id='repairStorecompanyAccPrefWin']
+QAScrapStore=.//*[@id='scrapStorecompanyAccPrefWin']
+ActivateCycleCountCheckBox=.//*[@name='withcyclecount']
+saveAccountPreferencesBtn=//button[@class='x-btn-text pwnd save' and text()='Save']
+applyNewsettingsBtn=//button[@class='x-btn-text' and text()='Apply new settings']
+AccountPreferencesSavedOKBtn=//button[@class='x-btn-text' and text()='OK']
+AccountPreferencesTabCloseBtn=//li[contains(@id,'as__companyAccPrefWin')]/a[1]
+yesButton=//button[text()='Yes']
+
+***********MandotoryChecks*********************************
+negativeStockDO=//*[@name='negativeStock']/ancestor::div[4]/div[1]//*[@name='negativeStock']
+negativeStockSO=//*[@name='negativeStockSO']/ancestor::div[4]/div[1]//*[@name='negativeStockSO']
+negativeStockFormulaSI=//*[@name='negativeStockFormulaSI']/ancestor::div[4]/div[1]//*[@name='negativeStockFormulaSI']
+negativeStockSICS=//*[@name='negativeStockSICS']/ancestor::div[4]/div[1]//*[@name='negativeStockSICS']
+negativeStockPR=//*[@name='negativeStockPR']/ancestor::div[4]/div[1]//*[@name='negativeStockPR']
+creditControl=//*[@name='creditControl']/ancestor::div[4]/div[2]//*[@name='creditControl']
+creditControlOrder=//*[@name='creditControlOrder']/ancestor::div[4]/div[2]//*[@name='creditControlOrder']
+creditControlVendorOrder=//*[@name='creditControlVendorOrder']/ancestor::div[4]/div[2]//*[@name='creditControlVendorOrder']
+vendorCreditLimit=//*[@name='vendorCreditLimit']/ancestor::div[4]/div[2]//*[@name='vendorCreditLimit']
+minBudgetControl=//*[@name='minBudgetControl']/ancestor::div[4]/div[1]//*[@name='minBudgetControl']
+productSortByIdCase=//*[@id='productSortByIdCase']
+Importcurrencyname=//*[@id='currencyname']
+MainNegativeButton=//*[@name='isnegativestockforlocwar']
+alertMinMaxOrder=//*[@name='isMinMaxOrdering']
+
+***********MandotoryChecks-Inventory *********************************
+CycleCountActivate=//*[@name='withcyclecount']
+EnableQAflow=//*[@name='activateQAApprovalFlow']
+BuildAssemblyQA=.//*[@name='BuildAssemblyApprovalFlow']
+StockINQA=.//*[@id='companyAccPrefWinstockInQAApproval']
+ISSTwithQA=.//*[@id='companyAccPrefWininterstoreQAApproval']
+StockRequestQA=.//*[@id='companyAccPrefWinstockRequestReturnQAApproval']
+GRwithQA=.//*[@name='isQaApprovalFlow']
+DOwithQA=.//*[@name='isQaApprovalFlowInDO']
+UnitPriceforDO=//*[@name='unitPriceInDO']
+UnitPriceforGR=//*[@name='unitPriceInGR']
+UnitPriceforSR=//*[@name='unitPriceInSR']
+UnitPriceforPR=//*[@name='unitPriceInPR']
+EnableAccWithCode=//*[@for='accountWithCodeId']/following::div[2]/input
+EnableBatch=//*[@name='isBatchCompulsory']
+EnableSerial=//*[@name='isSerialCompulsory']
+*************WriteOFF*******************
+SIWriteOffAccount=//input[@id='invoicesWriteOffAccount']/ancestor::div[1]/input[2]
+RPWriteOffAccount=//input[@id='receiptsWriteOffAccount']/ancestor::div[1]/input[2]
+
+
+----------------------------------------------------------------Rahul--------------------------------------------
+PostManualJEforControlAccounts=//button[text()='Post Manual JE for Control Accounts']
+AllBtn1=//div[@id='ManualJEPostSettingWin']/div[2]/div[1]/div/div/div/div[2]/div/div/div/div/div[2]/div/table/tbody/tr/td[14]/div/input/following::img
+AllBtn2=//div[@class='x-layer x-combo-list ' and contains(@style,'visible')]/div/div[9]
+SalesOption=//*[text()='Product Sales Account, Product Sales Return Account']/ancestor::tr/td[4]/div/div
+UpdateBtn=//button[text()='Update']
+WarnYes=//div[@class='x-window x-window-plain x-window-dlg' and contains(@style,'visible')]/div[2]/div/following::div[6]/table/tbody/tr/td[2]/table/tbody/tr/td[2]/em/button
+OKBtn=//button[text()='OK']
+ClosedBtn=//div[@id='ManualJEPostSettingWin']/div[1]/div/div/div/div
+
+
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="SmokeTestERP(failed)">
+    <parameter name="server" value="http://192.168.0.208:8080/dotcomsmoketestingv21/a/automationtest1/"/>
+    <parameter name="password" value="1234"/>
+    <parameter name="server2" value="http://192.168.0.21:8080/stagingcrm/a/rahulerptest121/"/>
+    <parameter name="server1" value="http://192.168.0.21:8080/stagingaccounting/a/rahulerptest121/"/>
+    <parameter name="username" value="admin"/>
+    <classes>
+      <class name="krawler.erp.testCases.LeaseManagementWithFixedAssetFlowTC">
+        <methods>
+          <include name="LMDeliveryOrderCreate"/>
+        </methods>
+      </class> <!-- krawler.erp.testCases.LeaseManagementWithFixedAssetFlowTC -->
+    </classes>
+  </test> <!-- SmokeTestERP(failed) -->
+</suite> <!-- Failed suite [Suite] -->

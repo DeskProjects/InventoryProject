@@ -1,0 +1,26 @@
+CreditNoteIcon=//map[@name='AlienAreas2']/area[7]
+CreditSalesInvoice=.//*[text()='Credit Note against Sales Invoice:']//following-sibling::div[1]/div/input
+ClickSubmit=//button[text()='Submit']
+CreditSequence=.//*[@id='sequenceformatundefinedcreditnotepanel']
+CreditNoteNo=.//*[@id='cndnNumberundefinedcreditnotepanel']
+CustomerName=.//*[@id='selectCustomerundefinedcreditnotepanel']
+SalesInvoiceNo=.//*[@id='creditnotepanel']/div/div[1]/div/div/div/div[3]/div/div/div/div[1]/div[2]/div/div/table/tbody/tr/td[1]/div
+memo=.//*[@id='memoundefinedcreditnotepanel']
+EnterAmount=.//*[@id='creditnotepanel']/div/div[1]/div/div/div/div[3]/div/div/div/div[1]/div[2]/div[1]/div[1]/table/tbody/tr/td[9]/div
+SelectAccount=.//*[@id='centerpancreditnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[1]/div
+AccAmount=.//*[@id='centerpancreditnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[3]/div
+Reason=.//*[@id='centerpancreditnotepanel']/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[9]/div
+ClickSave=//button[text()='Save']
+ClickYes=//button[text()='Yes']
+ClickOk=//button[text()='OK']
+CloseForm=.//li[@id='as__creditnotepanel']/a[1]
+*********************************editdeletecode******************************************
+CreditNoteReport=//map[@name='AlienAreas3']/area[13]
+QuickSearch=.//input[@id='quickSearch19']
+DocumentCheckBox=.//div[@id='gridmsg19CreditNoteDetails']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div
+EditCNPIClose=//li[contains(@id,'as__EditCreditNote')]/a[1]
+EditCNPIButton=//button[@class='x-btn-text accountingbase edit' and text()='Edit']
+CNPIMemo=//textarea[contains(@id,'memo12EditCreditNote')]
+CNPIEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+deleteCNPIButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deleteCNPIPermButton=//*[contains(@style,'visible')]//*[contains(text(), 'Delete Credit Note Permanently')]/img

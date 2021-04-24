@@ -1,0 +1,28 @@
+********************PartyJE********************
+ClcikOnJEIcon=.//map[@name='AlienAreas5']/area[1]
+SelectPartyJEOption=.//*[text()='Party Journal Entry:']//following-sibling::div[1]/div/input
+ClickOnSubmit=.//button[text()='Submit']
+SequenceFormat=.//*[text()='Journal Entry Number*:']//parent::div//preceding-sibling::div[1]/div/div/input[2]
+EnterJENo.=.//*[text()='Journal Entry Number*:']//following-sibling::div[1]/input
+memo=.//textarea[@name='memo']
+ClickOnSaveButtton=.//button[text()='Save']
+ClickOnYes=.//button[text()='Yes']
+ClickOnOk=.//button[text()='OK']
+CloseFormPartyJE=.//li[@id='as__JournalEntry2']/a[1]
+NoRecord=//div[@id='JEMainTab']//div[@class='grid-link-text']
+***********************************Verification********************************************
+JournalEntryReport=//map[@name='AlienAreas3']/area[9]
+QuickSearch=.//input[@id='quickSearch24']
+FetchButton=.//button[text()='Fetch']
+CloseJournalEntryReport=.//li[@id='as__JEMainTab']/a[1]
+*********************************copyeditdeletecodePartyJE******************************************
+DocumentCheckBox=.//div[@id='gridmsg24NormalJournalEntryDetails']/div/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[2]/div/div
+copyPartyJEButton=//button[@class='x-btn-text accountingbase copy' and text()='Copy Journal Entry']
+copyPartyJEId=//*[contains(@id,'COPYJournalEntry2')]/div/div/div/div/div/div[1]/div/div/div/div[1]/div/form/div/div/div/div[1]/div/div/div/div[1]/div/div/div[3]/div/input
+saveCopiedPartyJEId=//button[@class='x-btn-text pwnd save' and text()='Save']
+CopyPartyJEClose=//li[contains(@id,'as__COPYJournalEntry')]/a[1]
+EditPartyJEButton=//button[@class='x-btn-text accountingbase edit' and text()='Edit Journal Entry']
+PartyJEEditSave=//button[@class='x-btn-text pwnd save' and text()='Save']
+EditPartyJEClose=//li[contains(@id,'as__EDITJournalEntry')]/a[1]
+deletePartyJEButton=//button[@class='x-btn-text accountingbase delete' and text()='Delete']
+deletePartyJEPermButton=//*[contains(@style,'visible')]//*[contains(text(), 'Delete Journal Entry Permanently')]/img

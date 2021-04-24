@@ -1,0 +1,2 @@
+ProductReplacement=//span[text()='Product Replacement Report']
+Title=//li[@id='as__productreplacementreportID']/a[2]/em/span/span

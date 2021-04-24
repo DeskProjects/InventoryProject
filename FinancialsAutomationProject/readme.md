@@ -1,0 +1,1 @@
+Automation Test Suite for inventory. Run TestNG.xml file 

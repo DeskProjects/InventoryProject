@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="server" value="http://192.168.1.72:8080/dotcomsmoketesting/a/mydebugtest1/"/>
+  <parameter name="password" value="1234"/>
+  <parameter name="server1" value="https://in5.accounting.deskera.com/a/sg12/"/>
+  <parameter name="username" value="admin"/>
+  <test name="SmokeTestInventory(failed)">
+    <parameter name="server" value="http://192.168.1.72:8080/dotcomsmoketesting/a/mydebugtest1/"/>
+    <parameter name="password" value="1234"/>
+    <parameter name="server1" value="https://in5.accounting.deskera.com/a/sg12/"/>
+    <parameter name="username" value="admin"/>
+    <classes>
+      <class name="krawler.erp.testCases.Inventory.BaseSetUp">
+        <methods>
+          <include name="beforeTestLogin"/>
+        </methods>
+      </class> <!-- krawler.erp.testCases.Inventory.BaseSetUp -->
+      <class name="krawler.erp.testCases.Inventory.InventoryModule">
+        <methods>
+          <include name="validate_InterStoreStockTransfer"/>
+          <include name="acceptANDreturn_InterStoreStockTransfer"/>
+          <include name="QA_ApprovalApproveReject"/>
+          <include name="testCycleCountCalendar"/>
+          <include name="StockSales_without_QA"/>
+          <include name="customerMaster"/>
+          <include name="Create_INV_NormalProduct"/>
+          <include name="create_AssemblyProduct"/>
+          <include name="Create_ERP_NormalProduct"/>
+          <include name="StockRequest_IssueandCollect"/>
+          <include name="create_InterStoreStockTransfer"/>
+          <include name="Create_StockIn_withQA"/>
+          <include name="StockOUT_without_QA"/>
+          <include name="validate_InterLocationStockTransfer"/>
+          <include name="create_abProduct"/>
+          <include name="create_InterLocationStockTransfer"/>
+          <include name="create_StockRequest"/>
+          <include name="validate_StockIssue"/>
+          <include name="StockRepair_ApproveReject"/>
+          <include name="create_StockIssue"/>
+          <include name="create_Vendor"/>
+          <include name="StockIN_without_QA"/>
+          <include name="validate_StockRequest"/>
+          <include name="testCycleCountForm"/>
+        </methods>
+      </class> <!-- krawler.erp.testCases.Inventory.InventoryModule -->
+      <class name="krawler.erp.testCases.Inventory.ERPModule">
+        <methods>
+          <include name="DO_QAapproveANDreject"/>
+          <include name="create_DeleiveryOrder_woQA"/>
+          <include name="validate_GRN"/>
+          <include name="create_DeleiveryOrder_withQA"/>
+          <include name="create_GRNwithQA"/>
+          <include name="GRN_QA_Repair"/>
+          <include name="DO_QARepair_ApproveandReject"/>
+          <include name="create_GRNwithoutQA"/>
+          <include name="GRN_QAapproveANDreject"/>
+          <include name="create_PurchaseReturn"/>
+        </methods>
+      </class> <!-- krawler.erp.testCases.Inventory.ERPModule -->
+      <class name="krawler.erp.testCases.Inventory.BuildAssembly">
+        <methods>
+          <include name="createANDverify_JobWorkOut_GR"/>
+          <include name="create_AutoBuildDO"/>
+          <include name="create_JobWorkOut_Order"/>
+          <include name="create_UNbuildAssemble"/>
+          <include name="create_AutoBuildCS"/>
+          <include name="create_buildAssemble"/>
+          <include name="create_AutoBuildSI"/>
+          <include name="createANDverify_JobWorkOut_StockTransfer"/>
+          <include name="createANDverify_JobWorkOut_PI"/>
+          <include name="verify_JobWorkOut_Order"/>
+        </methods>
+      </class> <!-- krawler.erp.testCases.Inventory.BuildAssembly -->
+    </classes>
+  </test> <!-- SmokeTestInventory(failed) -->
+</suite> <!-- Failed suite [Suite] -->

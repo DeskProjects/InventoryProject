@@ -1,0 +1,5 @@
+ClickOnASR=//*[text()='Asset Summary Report']
+Fetch=//button[text()='Fetch']
+CostAdditions=//*[text()='Cost - Additions(SG Dollar (SGD))']//following::div[17]/div
+NetBookValue=//*[text()='NBV(SG Dollar (SGD))']//following::div[24]/div
+Depreciation=//*[text()='Depreciation - Current Dep(SG Dollar (SGD))']//following::div[21]/div

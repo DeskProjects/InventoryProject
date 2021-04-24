@@ -1,0 +1,6 @@
+InventoryExpander=.//*[@id='inventory']/div/div
+ReportsExpander=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/div/img
+StockAgeingReportLink=.//*[@id='inventory']/div[2]/div/div/div/div/div/div/div/ul/div/li[2]/ul/li[1]/div/a
+QuickSearch=.//div[@id='stockageingdetail']/div/div/div/div/div[1]/div/table/tbody/tr/td[2]/input
+StockAgeingReportResultCount=//div[@id='stockledger']/div/div/div/div/div/div[2]/div/div[3]/div/table/following-sibling::div
+StockAgeingReportCloseBtn=//li[contains(@id,'as__stockageing')]/a[1]

@@ -1,0 +1,55 @@
+package krawler.erp.testCases;
+
+import java.awt.AWTException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import krawler.erp.CompanySignUP.CompanySignUp;
+import krawler.erp.page.Utilities;
+
+public class CompanySignupTC {
+public static WebDriver driver;
+//Please comment 2 urls from below 3 initialized urls. Only those url will be uncomment, on which we want to create company
+public static String url = "http://192.168.0.21:8080/ondemand/peruserplan/100"; 
+//public static String url = "http://apps.deskera.com/peruserplan/3";
+//public static String url = "http://192.168.0.208:8080/ondemand/peruserplan/100";
+
+public static String subdomain = "rahulerptest127";
+public static String username = "admin";
+public static String pwd = "1234";
+public static String SelectCurrency= "SGD"; // It can be one from "SGD" , "USD" , "MYR" and "INR"
+public static String SelectCountry= "SINGAPORE"; // It can be one from "SINGAPORE" , "UNITED STATES" , "MALAYSIA" and "INDIA"
+
+
+// Hit URL
+  @Test(priority=1)
+    public void NewCompanySignUP() throws InterruptedException, AWTException, IOException{
+	  CompanySignUp CGU = new CompanySignUp();
+	  this.driver = CGU.Intialdriver(url); 
+}
+  
+  // Fill Details 
+  @Test(priority=2)
+  public void CreateCompany() throws InterruptedException, AWTException, IOException{
+	  CompanySignUp CGU = new CompanySignUp();
+	  CGU.CreateCompany(driver,url, subdomain);
+	  Utilities.refresh();
+  }
+  
+  // Run Starting getting wizard
+    @Test(priority=3)
+    public void Run_Getting_Started_Wizard() throws InterruptedException, AWTException, IOException{
+    CompanySignUp CGU = new CompanySignUp();
+    CGU.Starting_Getting_Wizard(username, pwd, driver, subdomain, SelectCountry, SelectCurrency, url);
+    Utilities.refresh();
+}
+}

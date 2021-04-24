@@ -1,0 +1,13 @@
+Serial,Product,Batch
+QAIS1,prod12FebS3, 
+QAIS2,prod12FebS3, 
+QAIS3,prod12FebS3, 
+QAIS4,prod12FebS3, 
+QAIS5,prod12FebS3, 
+QAIS6,prod12FebS3, 
+QAIS1,prod12FebBS4,IB New
+QAIS2,prod12FebBS4,IB New
+QAIS3,prod12FebBS4,IB New
+QAIS4,prod12FebBS4,IB New
+QAIS5,prod12FebBS4,IB New
+QAIS6,prod12FebBS4,IB New
